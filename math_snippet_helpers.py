@@ -1,4 +1,5 @@
-global !p
+import re, os, vim, string, random
+
 texMathZones = ['texMathZone' + x for x in ['', 'X', 'XX', 'Env', 'EnvStarred', 'Ensured']]
 
 texIgnoreMathZones = ['texMathTextArg']
@@ -9,7 +10,6 @@ texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')
 
 ignore = texIgnoreMathZoneIds[0]
 
-
 def math():
   synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
   try:
@@ -17,5 +17,3 @@ def math():
     return first != ignore
   except StopIteration:
     return False
-endglobal
-

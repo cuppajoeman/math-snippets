@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+if [ ! -d "$HOME/.vim/math-snippets/" ]
+then
+  echo "Process will symlink files from $texnotesdir/snippets"
+  read -p "$HOME/.vim/math-snippets/ does not exist. mkdir? (yN) " yn
+  case $yn in
+      [Yy]* ) mkdir -p $HOME/.vim/math-snippets/; echo "[+] $HOME/.vim/math-snippets/ created" ;;
+      * ) echo "Script terminated" ; exit 0;;
+  esac
+else
+  echo "This operation will overwrite existing files (if any) from in the destination directory.
+  origin      : latex/snippets
+  destination : $HOME/.vim/math-snippets/"
+  read -p "Overwrite? (yN) " overwrite
+  case $overwrite in
+    [Yy]* ) ;;
+    * ) echo "Script terminated" ; exit 0 ;;
+  esac
+fi
+
+if [ ! -d "$HOME/.vim/pythonx/" ]
+then
+  echo "Process will symlink python files required for snippets"
+  read -p "$HOME/.vim/pythonx/ does not exist. mkdir? (yN) " yn
+  case $yn in
+      [Yy]* ) mkdir -p $HOME/.vim/pythonx/; echo "[+] $HOME/.vim/pythonx/ created" ;;
+      * ) echo "Script terminated" ; exit 0;;
+  esac
+else
+  echo "This operation will overwrite existing files (if any) from in the destination directory.
+  origin      : latex/snippets
+  destination : $HOME/.vim/pythonx/"
+  read -p "Overwrite? (yN) " overwrite
+  case $overwrite in
+    [Yy]* ) ;;
+    * ) echo "Script terminated" ; exit 0 ;;
+  esac
+fi
+
+find $(pwd -L) -type f -name "*.snippets" -exec bash -c '
+for file do 
+  ln -sf "$file" $HOME/.vim/math-snippets/
+done' bash {} +
+
+ln -sf $(pwd -L)"/math_snippet_helpers.py" $HOME/.vim/pythonx/
+
+echo "[~] symlinks with snippets established"
