@@ -1,25 +1,6 @@
 global !p
-texMathZones = ['texMathZone' + x for x in ['', 'X', 'XX', 'Env', 'EnvStarred', 'Ensured']]
-
-texIgnoreMathZones = ['texMathTextArg']
-
-texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
-
-texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
-
-ignore = texIgnoreMathZoneIds[0]
-
-
-def math():
-  synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
-  try:
-    first = next(i for i in reversed(synstackids) if i in texIgnoreMathZoneIds or i in texMathZoneIds)
-    return first != ignore
-  except StopIteration:
-    return False
+from math_snippet_helpers import *
 endglobal
-
-
 
 # WORDS
 #extends geometry_words
@@ -69,7 +50,7 @@ extends combinatorics
 #extends mathmatical_verbs
 #extends generic_symbols
 #extends calculus
-#extends function_properties
+extends function_properties
 #extends functions
 #extends proof
 #extends sequences
