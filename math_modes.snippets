@@ -1,0 +1,47 @@
+
+snippet pm "Punctuation Math" wA
+$${1:${VISUAL}}$`!p
+punctuation = t[2] and t[2][0] in [',', '.', '?', '-']
+if punctuation:
+	if len(t[2]) == 1:
+	  t[2] = t[2] + (' ' if t[2][0] in [',', '.', '?'] else '')
+	snip.rv=''
+else:
+	snip.rv=' '
+`$2
+endsnippet
+
+snippet mm "Math" wA
+$$1$ $0
+endsnippet
+
+snippet bb "Brilliant Math" wA
+\(${1:${VISUAL}}\)`!p
+punctuation = t[2] and t[2][0] in [',', '.', '?', '-']
+if punctuation:
+	if len(t[2]) == 1:
+	  t[2] = t[2] + (' ' if t[2][0] in [',', '.', '?'] else '')
+	snip.rv=''
+else:
+	snip.rv=' '
+`$2
+endsnippet
+
+snippet pz "piazza latex" wA
+$$${1:${VISUAL}}$$`!p
+punctuation = t[2] and t[2][0] in [',', '.', '?', '-']
+if punctuation:
+	if len(t[2]) == 1:
+	  t[2] = t[2] + (' ' if t[2][0] in [',', '.', '?'] else '')
+	snip.rv=''
+else:
+	snip.rv=' '
+`$2
+endsnippet
+
+snippet dm "Math" wA
+\[
+${1:${VISUAL}}
+\]
+$0
+endsnippet

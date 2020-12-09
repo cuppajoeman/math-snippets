@@ -1,0 +1,10 @@
+
+context "math()"
+snippet surj "surjective" iA
+\forall y \in ${1:CD}, \exists x \in ${2:D} \text{ s.t. } y = ${3:f}(x)$0
+endsnippet
+
+context "math()"
+snippet inj "injective" iA
+\forall x_1, x_2 \in ${1:D}, ${2:f}(x_1) = ${3:f}(x_2) \implies x_1 = x_2$0
+endsnippet

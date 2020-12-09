@@ -1,0 +1,35 @@
+
+context "math()"
+snippet edbo "expression with dots under some binary operation" iA
+$1 $2 $3 $2 \ldots $2 $4 $2 $5
+endsnippet
+
+context "math()"
+snippet cli "comma list" iA
+$1, $2,  \ldots,  $4, $5
+endsnippet
+
+context "math()"
+snippet sli "subscript list" iA
+$1_{1}, $1_{2},  \ldots,  $1_{$2 - 1}, $1_{$2}$0 
+endsnippet
+
+context "math()"
+snippet dli "double subscript list" iA
+$1_{1}$2_{1} ${3:operation/comma} $1_{2}$2_{2}$3  \ldots$3  $1_{$4 - 1}$2_{$4 - 1}$3 $1_{$4}$2_{$4}$0 
+endsnippet
+
+context "math()"
+snippet tli "triple subscripted" iA
+$1_{1}$2_{1}$3_{1} ${4:operation/comma} $1_{2}$2_{2}$2_{3} $4  \ldots $4  $1_{$5 - 1}$2_{$5 - 1}$3_{$5 - 1} $4 $1_{$5}$2_{$5}$3_{$5}$0 
+endsnippet
+
+context "math()"
+snippet fvars "some finite number of variables" iA
+$1_{1}, $1_{2},  \dots ,$1_{$2 - 1},$1_{$2}$0
+endsnippet
+
+context "math()"
+snippet dvar "some finite number of variables" iA
+$1_{1}$2_{1} $3 $1_{2}$2_{2} $3 dots$4 $3 $1_{$5 - 1}$2_{$5 - 1} $3 $1_{$5}$2_{$5}$0
+endsnippet

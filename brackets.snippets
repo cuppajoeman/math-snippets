@@ -1,0 +1,55 @@
+
+context "math()"
+snippet obrack "overbracket" iA
+\overbracket{$1}^{$2}$0
+endsnippet
+
+context "math()"
+snippet ubrack "underbracket" iA
+\underbracket{$1}_{$2}$0
+endsnippet
+
+context "math()"
+snippet () "left( right)" iA
+\left( ${1:${VISUAL}} \right)$0
+endsnippet
+
+context "math()"
+snippet [] "left[ right]" iA
+\left[ ${1:${VISUAL}} \right]$0
+endsnippet
+
+context "math()"
+snippet lr "left( right)" i
+\left( ${1:${VISUAL}} \right)$0
+endsnippet
+
+context "math()"
+snippet lr( "left( right)" i
+\left( ${1:${VISUAL}} \right)$0
+endsnippet
+
+context "math()"
+snippet lr| "left| right|" i
+\left| ${1:${VISUAL}} \right|$0
+endsnippet
+
+context "math()"
+snippet lr{ "left\{ right\}" i
+\left\\{ ${1:${VISUAL}} \right\\}$0
+endsnippet
+
+context "math()"
+snippet lrb "left\{ right\}" i
+\left\\{ ${1:${VISUAL}} \right\\}$0
+endsnippet
+
+context "math()"
+snippet lr[ "left[ right]" i
+\left[ ${1:${VISUAL}} \right]$0
+endsnippet
+
+context "math()"
+snippet lra "leftangle rightangle" iA
+\left<${1:${VISUAL}} \right>$0
+endsnippet

@@ -1,0 +1,86 @@
+
+snippet plot "Plot" w
+\begin{figure}[$1]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			xmin= ${2:-10}, xmax= ${3:10},
+			ymin= ${4:-10}, ymax = ${5:10},
+			axis lines = middle,
+		]
+			\addplot[domain=$2:$3, samples=${6:100}]{$7};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{$8}
+	\label{${9:$8}}
+\end{figure}
+endsnippet
+
+snippet nn "Tikz node" w
+\node[$5] (${1/[^0-9a-zA-Z]//g}${2}) ${3:at (${4:0,0}) }{$${1}$};
+$0
+endsnippet
+
+# snippet dr "Tikz draw" w
+# \draw[${1}] (${2:0, 0}) -- $4(${3:0,0});
+#$0
+# endsnippet
+
+snippet na "Tikz node above" w
+node[above`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+endsnippet
+
+snippet nb "Tikz node below" w
+node[below`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+endsnippet
+
+snippet nr "Tikz node right" w
+node[right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+endsnippet
+
+snippet nl "Tikz node left" w
+node[left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+endsnippet
+
+snippet nar "Tikz node above right" w
+node[above right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+endsnippet
+
+snippet nal "Tikz node above left" w
+node[above left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+endsnippet
+
+snippet nbr "Tikz node below right" w
+node[below right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+endsnippet
+
+snippet nbl "Tikz node below left" w
+node[below left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+endsnippet
+
+snippet frame "Tikz frame" w
+\draw[help lines, <->] (-$1, 0) -- ($1, 0);
+\draw[help lines, <->] (0, -$1) -- (0, $1);
+$0
+endsnippet
+
+snippet force "Tikz force" w
+\draw[force] (${1:0, 0}) -- $3 ++(${2:0, 0});
+$0
+endsnippet
+
+snippet tikz "Tikz" w
+\begin{figure}[htb]
+	\centering
+	\begin{tikzpicture}
+		$0
+	\end{tikzpicture}
+	\caption{$1}
+	\label{fig:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+\end{figure}
+endsnippet
+
+
+snippet co "Tikz coordinate" w
+coordinate ($1)$0
+endsnippet

@@ -1,0 +1,21 @@
+snippet prf "Proof" b
+\begin{proof}
+	$ $\newline
+	${1:${VISUAL}}
+\end{proof}
+endsnippet
+
+snippet prfbind "Proof by induction" b
+\begin{proof}
+	$ $\newline
+	\begin{itemize}
+		\item \textbf{Base Case:}\\\\
+			We show that $P(${1:0})$ holds, we know $2
+		\item \textbf{Induction Step:}\\\\
+			Let $k \in \mathbb{N}$ and assume that $P(k)$ holds, that is $3
+			We'll show that $P(k + 1)$ holds, so we must show that $4
+			We know $5
+	\end{itemize}
+	Thus by the principle of induction we have proven the original statement.
+\end{proof}
+endsnippet

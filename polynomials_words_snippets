@@ -1,0 +1,12 @@
+
+snippet deg "degree" w
+degree $0
+endsnippet
+
+snippet sol "solution(s)" w
+solution${1:s} $0
+endsnippet
+
+snippet zo "zero(s)" w
+zero${1:s} $0
+endsnippet

@@ -1,0 +1,16 @@
+
+context "math()"
+snippet sluit "overline" i
+\overline{$1}$0
+endsnippet
+
+snippet uline "underline" w
+\underline{$1}$0
+endsnippet
+
+context "math()"
+snippet dag "dag" bA
+\dag{`date +'%A %0d %B' | sed 's/.*/\u&/'`}
+
+$0
+endsnippet

@@ -1,0 +1,221 @@
+
+def create_matrix(snip):
+
+        matrix_str = (snip.buffer[snip.line].split('mat')[0]+'matrix').strip()
+
+        rows = 'x'.join(snip.buffer[snip.line].split("x", 2)[:-1])
+        cols = 'x'.join(snip.buffer[snip.line].split("x", 2)[-1:])
+
+        int_val = lambda string: int(''.join(s for s in string if s.isdigit()))
+
+        rows = int_val(rows)
+        cols = int_val(cols)
+
+        offset = cols + 1
+
+        line = snip.buffer[snip.line]
+        old_spacing = line[:len(line) - len(line.lstrip()) ]
+
+        snip.buffer[snip.line] = ''
+
+        final_str = old_spacing + "\\begin{"+matrix_str+"}${1:[$2]}\n"
+
+        for i in range(rows):
+                final_str += old_spacing + '\t'
+                final_str += " & ".join(['$' + str(i * cols + j + offset + 2) for j in range(cols)])
+
+                final_str += " \\\\\\\n"
+
+        final_str = final_str[:-4] + '\n'
+
+        final_str += old_spacing + "\\end{"+matrix_str+"}"
+
+        snip.expand_anon(final_str)
+
+
+def create_inline_matrix(snip):
+
+        until = int(snip.cursor[1])
+        rest = snip.buffer[snip.line][until:]
+        given_i = snip.buffer[snip.line][0:until].rfind('i') 
+        given = snip.buffer[snip.line][given_i:until]
+
+        # I don't think we'll be dealing with matricies over 1 digit in size...
+        rows = int(given.split("x", 2)[0][-1])
+        cols = int(given.split("x", 2)[-1][0])
+
+        offset = cols + 3
+
+        snip.buffer[snip.line] = snip.buffer[snip.line][0:until - 7] 
+
+        final_str = "\\mat ${1:[$2]}{"
+
+        for i in range(rows):
+                final_str += ' '
+                final_str += " & ".join(['$' + str(i * cols + j + offset) for j in range(cols)])
+                final_str += " \\\\\\"
+
+        final_str = final_str[:-3] +  "}$0"
+        final_str += rest
+
+        snip.expand_anon(final_str)
+
+context "math()"
+snippet vc "Vector" iA
+\vec{$1}$0
+endsnippet
+
+context "math()"
+snippet bv "Basis Vector" iA
+\left[ $1 \right]_{\mathcal{$2}}$0
+endsnippet
+
+context "math()"
+snippet comp "Comp" iA
+\mathit{comp}_{$1} {$2}$0
+endsnippet
+
+context "math()"
+snippet proj "Projection" iA
+\mathit{proj}_{$1} {$2}$0
+endsnippet
+
+context "math()"
+snippet span "Span" iA
+\mathit{span} {$1}$0
+endsnippet
+
+context "math()"
+snippet range "Range" iA
+\mathit{range} \left($1\right)$0
+endsnippet
+
+context "math()"
+snippet null "Null Space" iA
+\mathit{null} \left($1\right)$0
+endsnippet
+
+context "math()"
+snippet rank "rank" iA
+\mathit{rank} \left($1\right)$0
+endsnippet
+
+context "math()"
+snippet rref "Row Reduced Echelon Form" iA
+\mathit{rref} \left($1\right)$0
+endsnippet
+
+context "math()"
+snippet dim "dimension" iA
+\mathit{dim} \left($1\right)$0
+endsnippet
+
+context "math()"
+snippet det "determinant" iA
+\mathit{det} \left($1\right)$0
+endsnippet
+
+context "math()"
+snippet colsp "column space" iA
+\mathit{col} \left($1\right)$0
+endsnippet
+
+context "math()"
+snippet rowsp "row space" iA
+\mathit{row} \left($1\right)$0
+endsnippet
+
+# TODO: dry this up
+context "math()"
+snippet e1 "Basis" iA
+\vec{e_1}$0
+endsnippet
+
+context "math()"
+snippet e2 "Basis" iA
+\vec{e_2}$0
+endsnippet
+
+context "math()"
+snippet e3 "Basis" iA
+\vec{e_3}$0
+endsnippet
+
+
+context "math()"
+pre_expand "create_matrix(snip)"
+snippet "[^i]mat(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+
+context "math()"
+pre_expand "create_inline_matrix(snip)"
+snippet "imat(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+
+context "math()"
+pre_expand "test(snip)"
+snippet "(small|[gbBpvV])?ghp(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+
+context "math()"
+snippet 3mat "3 by 1 Matrix" iA
+\mat{ $1 \\\\ $2 \\\\ $3 }$0
+endsnippet
+
+context "math()"
+snippet 4mat "4 by 1 Matrix" iA
+\mat{ $1 \\\\ $2 \\\\ $3 \\\\ $4 }$0
+endsnippet
+
+# Jesus this is getting out of hand...
+context "math()"
+snippet 5mat "4 by 1 Matrix" iA
+\mat{ $1 \\\\ $2 \\\\ $3 \\\\ $4 \\\\ $5 }$0
+endsnippet
+
+context "math()"
+snippet 3rmat "1 by 3 Row Matrix" iA
+\mat{ $1 & $2 & $3 }$0
+endsnippet
+
+context "math()"
+snippet 2mat "2 by 1 Matrix" iA
+\mat{ $1 \\\\ $2 }$0
+endsnippet
+
+context "math()"
+snippet 2rmat "1 by 2 Row Matrix" iA
+\mat{ $1 & $2}$0
+endsnippet
+
+context "math()"
+snippet ges "Gauss Elimination Step" iA
+gmat$1x$2
+${3:\rightsquigarrow 
+ges}$4
+endsnippet
+
+context "math()"
+snippet rop "Row Operation" iA
+R_{$1} \mapsto $2R_{$1} ${3: + $4R_{$5}}$0
+endsnippet
+
+context "math()"
+snippet rops "Start Row Operation" iA
+\rowops
+endsnippet
+
+context "math()"
+snippet rad "Add rows" iA
+\add[$1]{$2}{$3}$0
+endsnippet
+
+context "math()"
+snippet rmul "Multiply row" iA
+\mult{$2}{\cdot $3}$0
+endsnippet
+
+context "math()"
+snippet rswap "Swap rows" iA
+\swap{$1}{$2}$0
+endsnippet
