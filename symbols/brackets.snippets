@@ -2,7 +2,6 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
-
 context "math()"
 snippet obrack "overbracket" iA
 \overbracket{$1}^{$2}$0
@@ -13,20 +12,16 @@ snippet ubrack "underbracket" iA
 \underbracket{$1}_{$2}$0
 endsnippet
 
-context "math()"
-snippet () "left( right)" iA
-\left( ${1:${VISUAL}} \right)$0
-endsnippet
+#context "math()"
+#snippet () "left( right)" iA
+#\left( ${1:${VISUAL}} \right)$0
+#endsnippet
 
-context "math()"
-snippet [] "left[ right]" iA
-\left[ ${1:${VISUAL}} \right]$0
-endsnippet
-
-context "math()"
-snippet lr "left( right)" i
-\left( ${1:${VISUAL}} \right)$0
-endsnippet
+#  Why is it so slow.
+#context "math()"
+#snippet [] "left[ right]" iA
+#\left[ ${1:${VISUAL}} \right]$0
+#endsnippet
 
 context "math()"
 snippet lr( "left( right)" i
@@ -49,7 +44,7 @@ snippet lrb "left\{ right\}" i
 endsnippet
 
 context "math()"
-snippet lr[ "left[ right]" i
+snippet lr[ "left[ right]" iA
 \left[ ${1:${VISUAL}} \right]$0
 endsnippet
 
