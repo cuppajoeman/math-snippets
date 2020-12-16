@@ -2,612 +2,722 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
-
-snippet ccrt "concretely" w
-concretely $0
+snippet sel "selected" w
+selected $0
 endsnippet
 
-snippet induc "induction" w
-induction $0
+snippet fxd "fixed" w
+fixed 
+endsnippet
+
+snippet opt "options" w
+options 
+endsnippet
+
+snippet aft "after" w
+after 
+endsnippet
+
+snippet vac "vacuously" w
+vacuously   
+endsnippet
+
+snippet ih "inductive hypothesis" w
+inductive hypothesis 
+endsnippet
+
+snippet evt "everything" w
+everything  
+endsnippet
+
+snippet win "wherein" w
+wherein 
+endsnippet
+
+snippet cl "clause" w
+clause
+endsnippet
+
+snippet clo "closed" w
+closed  
+endsnippet
+
+snippet fin "finally" w
+finally 
+endsnippet
+
+snippet wtp "want to prove" w
+want to prove 
+endsnippet
+
+snippet jst "justified" w
+justified 
+endsnippet
+
+snippet dedu "deduction" w
+deduction 
+endsnippet
+
+snippet obt "obtain" w
+obtain${1:s} 
+endsnippet
+
+snippet ccrt "concretely" w
+concretely 
+endsnippet
+
+snippet cpx "complexity" w
+complex${1:ity} 
+endsnippet
+
+snippet exa "exactly" w
+exactly
+endsnippet
+
+snippet fund "fundamental" w
+fundamental 
+endsnippet
+
+snippet csq "consequence" w
+consequence 
+endsnippet
+
+snippet ind "induction" w
+induction 
 endsnippet
 
 snippet ins "inspection" w
-inspection $0
+inspection 
 endsnippet
 
 snippet ojv "objective" w
-objective $0
+objective 
 endsnippet
 
 snippet aw "as well" w
-as well $0
+as well 
 endsnippet
 
 snippet ical "identical" w
-identical $0
+identical 
 endsnippet
 
 snippet om "omit" w
-omit $0
+omit 
 endsnippet
 
 snippet con "construct(ion)" w
-construct${1:ion} $0
+construct${1:ion} 
 endsnippet
 
 snippet arb "arbitrary" w
-arbitrary $0
+arbitrary 
 endsnippet
 
 snippet wrt "with respect to" w
-with respect to $0
+with respect to 
 endsnippet
 
 snippet can "canonical" w
-canonical $0
+canonical 
 endsnippet
 
 snippet sm "same" w
-same $0
+same 
 endsnippet
 
 snippet bal "but also" w
-but also $0
+but also 
 endsnippet
 
 snippet und "understand" w
-understand $0
+understand 
 endsnippet
 
 snippet sta "statement" w
-statement $0
+statement 
 endsnippet
 
 snippet op "operation(s)" w
-operation${1:s} $0
+operation${1:s} 
 endsnippet
 
 snippet perf "perform" w
-perform $0
+perform 
 endsnippet
 
 snippet q "question" w
-question $0
+question 
 endsnippet
 
 snippet wri "written" w
-written $0
+written 
 endsnippet
 
 snippet tir "their" w
-their $0
+their 
 endsnippet
 
 
 snippet dn "do not" w
-do not $0
+do not 
 endsnippet
 
 snippet dne "does not exist" w
-does not exist $0
+does not exist 
 endsnippet
 
 snippet wch "which" w
-which $0
+which 
 endsnippet
 
 snippet clr "clearly" w
-clearly $0
+clearly 
 endsnippet
 
 snippet ver "verified" w
-verified $0
+verified 
 endsnippet
 
 snippet hvnt "have not" w
-have not $0
+have not 
 endsnippet
 
 snippet smp "simply" w
-simply $0
+simply 
 endsnippet
 
 snippet bef "before" w
-before $0
+before 
 endsnippet
 
 snippet cor "correct" w
-correct $0
+correct 
 endsnippet
 
 snippet simp "simplify(ing)" w
-simplify${1:ing} $0
+simplify${1:ing} 
 endsnippet
 
 snippet cpt "compute" w
-comput${1:ations} $0
+comput${1:ations} 
 endsnippet
 
 snippet sup "suppose" w
-suppose 
+${1:s}uppose 
 endsnippet
 
 snippet Sup "Suppose" w
 Suppose 
 endsnippet
 
+snippet subst "substitute" w
+substitut${1:able}
+endsnippet
+
 snippet nm "namely" w
-namely $0
+namely 
 endsnippet
 
 snippet occ "occurs" w
-occurs $0
+occurs 
 endsnippet
 
 snippet anz "analyze" w
-analyze $0
+analyze 
 endsnippet
 
 snippet exp "expand" w
-expand${1:ing} $0
+expand${1:ing} 
 endsnippet
 
 snippet idn "identity" w
-identity $0
+identity 
 endsnippet
 
 snippet resp "respectively" w
-respectively $0
+respectively 
 endsnippet
 
 snippet disc "discussed" w
-discussed $0
+discussed 
 endsnippet
 
 snippet desc "describe" w
-describe $0
+describe 
 endsnippet
 
 snippet wn "we note" w
-${1:w}e note $0
+${1:w}e note 
 endsnippet
 
 snippet wc "(W/w)e commence" w
-${1:w}e commence $0
+${1:w}e commence 
 endsnippet
 
 snippet alt "alternate" w
-alternat${1:ively} $0
+alternat${1:ively} 
 endsnippet
 
 snippet yld "yield(s)" w
-yield${1:s} $0
+yield${1:s} 
 endsnippet
 
 snippet wy "which yields" w
-which yields $0
+which yields 
 endsnippet
 
 snippet fst "first" w
-first $0
+first 
 endsnippet
 
 snippet slv "solve" w
-solve $0
+solve 
 endsnippet
 
 snippet prev "previously" w
-previously $0
+previously 
 endsnippet
 
 snippet sat "satisfy" w
-satisfy $0
+satisfy 
 endsnippet
 
 snippet val "value(s)" w
-value${1:s} $0
+value${1:s} 
 endsnippet
 
 snippet poss "possible" w
-possible $0
+possible 
 endsnippet
 
 snippet fd "find(ing)" w
-find${1:ing} $0
+find${1:ing} 
 endsnippet
 
 snippet giv "given" w
-given $0
+given 
 endsnippet
 
 snippet mvr "moreover" w
-${1:m}oreover $0
+${1:m}oreover 
 endsnippet
 
 snippet corr "corresponding" w
-corresponding $0
+corresponding 
 endsnippet
 
 snippet app "appl(ying)" w
-appl${1:ying} $0
+appl${1:ying} 
 endsnippet
 
 snippet fac "factor" w
-factor $0
+factor 
 endsnippet
 
 snippet dir "direction" w
-direction $0
+direction 
 endsnippet
 
 snippet on "only" w
-only $0
+only 
 endsnippet
 
 snippet trv "trivial" w
-trivial $0
+trivial 
 endsnippet
 
 snippet ntrv "trivial" w
-non-trivial $0
+non-trivial 
 endsnippet
 
 snippet invo "invokes" w
-invoke${1:s} $0
+invoke${1:s} 
 endsnippet
 
 snippet indu "induce" w
-induce${1:s} $0
+induce${1:s} 
 endsnippet
 
 snippet gen "generate" w
-generate $0
+generate 
 endsnippet
 
 snippet unq "unique" w
-unique $0
+unique 
 endsnippet
 
 snippet mtd "method" w
-method $0
+method 
 endsnippet
 
 snippet gnt "guarenteed" w
-guarenteed $0
+guarenteed 
 endsnippet
 
 snippet elem "elementary" w
-elementary $0
+elementary 
 endsnippet
 
 snippet prcs "process" w
-process $0
+process 
 endsnippet
 
 snippet pro "procedure" w
-procedure $0
+procedure 
 endsnippet
 
 snippet eval "eval" w
-evalulate $0
+evalulate 
 endsnippet
 
 snippet equa "equation" w
-equation $0
+equation 
 endsnippet
 
 snippet eq "equal" w
-equal $0
+equal 
 endsnippet
 
 snippet iden "identity" w
-identity $0
+identity 
 endsnippet
 
 snippet lkw "likewise" w
-likewise $0
+likewise 
 endsnippet
 
 snippet cnt "cannot" w
-cannot $0
+cannot 
 endsnippet
 
 snippet imp "impossible" w
-impossible $0
+impossible 
 endsnippet
 
 snippet exc "exceed" w
-exceed $0
+exceed 
 endsnippet
 
 snippet proc "proceed" w
-proceed $0
+proceed 
 endsnippet
 
 snippet no "number" w
-number $0
+number${1:s} 
 endsnippet
 
 snippet cons "consider" w
-consider $0
+consider 
 endsnippet
 
 snippet cnst "consists" w
-consists $0
+consists 
 endsnippet
 
 snippet ind "indeed" w
-indeed $0
+indeed 
 endsnippet
 
 snippet rec "recall" w
-${1:r}ecall $0
+${1:r}ecall 
 endsnippet
 
 snippet recog "recognize" w
-recognize $0
+recognize 
 endsnippet
 
 snippet dif "different" w
-different $0
+different 
 endsnippet
 
 snippet orig "original" w
-original $0
+original 
 endsnippet
 
 snippet std "standard" w
-standard $0
+standard 
 endsnippet
 
 snippet sim "similar(ly)" w
-similar${1:ly} $0
+similar${1:ly} 
 endsnippet
 
 snippet simlt "simultaneously" w
-simultaneously $0
+simultaneously 
 endsnippet
 
 snippet rep "represent" w
-represent $0
+represent 
 endsnippet
 
-snippet equi "equivalently" w
-${1:e}quivalently $0
+snippet eqv "equivalently" w
+${1:e}quivalent${2:ly} 
 endsnippet
 
+snippet agr "agree" w
+agree 
+endsnippet
 
 snippet inv "invert" w
-invert${1:ible} $0
+invert${1:ible} 
 endsnippet
 
 snippet obs "observation" w
-${1:o}bserv${2:ation} $0
+${1:o}bserv${2:ation} 
 endsnippet
 
 snippet wo "we observe" w
-${1:w}e observe $0
+${1:w}e observe 
 endsnippet
 
 snippet conv "convert(s)" w
-convert${1:s} $0
+convert${1:s} 
 endsnippet
 
 
 snippet prop "propert(ies/y)" w
-propert${1:ies} $0
+propert${1:ies} 
 endsnippet
 
 snippet th "that" w
-that $0
+that 
 endsnippet
 
 snippet tn "then" w
-then $0
+then 
 endsnippet
 
 snippet red "reduced" w
-reduce${1:d} $0
+reduce${1:d} 
 endsnippet
 
 snippet areq "as required" w
-as required. $0
+as required. 
+endsnippet
+
+snippet aned "as needed" w
+as needed. 
 endsnippet
 
 snippet prec "precisely" w
-precisely $0
+precisely 
 endsnippet
 
 snippet req "require" w
-require $0
+require 
 endsnippet
 
 snippet ti "that is" w
-${1:t}hat is $0
+${1:t}hat is 
 endsnippet
 
 snippet wt "what" w
-what $0
+what 
 endsnippet
 
 snippet dt "determine(d)" w
-determine${1:d} $0
+determine${1:d} 
 endsnippet
 
 snippet sn "since" w
-since $0
+${1:s}ince 
 endsnippet
 
 snippet ts "thus" w
-thus $0
+${1:t}hus 
 endsnippet
 
 snippet twh "thus we have" w
-thus we have $0
+thus we have 
+endsnippet
+
+snippet stwh "so then we have" w
+so then we have
 endsnippet
 
 snippet wah "we also have" w
-we also have $0
+we also have 
 endsnippet
 
 snippet wa "we also" w
-we also $0
+we also 
 endsnippet
 
 snippet swk "so we know" w
-so we know $0
+so we know 
 endsnippet
 
 snippet ws "we say" w
-we say $0
+we say 
 endsnippet
 
 snippet swh "so we have" w
-so we have $0
+so we have 
 endsnippet
 
 snippet aswht "and so we have that" w
-and so we have that $0
+and so we have that 
+endsnippet
+
+snippet ath "and that" w
+and that 
 endsnippet
 
 snippet ww "(W/w)e will" w
-${1:w}e will $0
+${1:w}e will 
 endsnippet
 
 snippet Th "The" w
-The $0
+The 
 endsnippet
 
 snippet ass "assum(e/ing)" w
-${1:a}ssum${2:ing} $0
+${1:a}ssum${2:ing} 
 endsnippet
 
 snippet wh "we have" w
-${1:w}e have $0
+${1:w}e have 
 endsnippet
 
 snippet wk "we know" w
-${1:w}e know $0
+${1:w}e know 
 endsnippet
 
 snippet twk "thus we know" w
-${1:t}hus we know $0
+${1:t}hus we know 
 endsnippet
 
 snippet ho "hold(s)" w
-hold${1:s} $0
+hold${1:s} 
 endsnippet
 
 snippet ia "is a" w
-is a $0
+is a 
 endsnippet
 
 snippet ina "is not a" w
-is not a $0
+is not a 
 endsnippet
 
 snippet Ts "To show" w
-To show $0
+To show 
 endsnippet
 
-snippet wts "want to show" w
-want to show $0
+snippet whts "we have to show" w
+we have to show 
+endsnippet
+
+snippet wwts "we want to show" w
+we want to show 
 endsnippet
 
 snippet wws "we will show" w
-${1:w}e will show $0
+${1:w}e will show 
 endsnippet
 
 snippet wms "we must show" w
-${1:w}e must show $0
+${1:w}e must show 
+endsnippet
+
+snippet oms "one must show" w
+${1:o}ne must show 
 endsnippet
 
 snippet whs "we have shown" w
-${1:w}e have shown $0
+${1:w}e have shown 
 endsnippet
 
 snippet wwn "we will now" w
-${1:w}e will now $0
+${1:w}e will now 
 endsnippet
 
 snippet wwp "we will prove" w
-${1:w}e will prove $0
+${1:w}e will prove 
 endsnippet
 
 snippet ift "it follows that" w
-it follows that $0
+it follows that 
 endsnippet
 
 snippet fol "following" w
-follow${1:ing} $0
+follow${1:ing} 
 endsnippet
 
 snippet st "such that" w
-such that $0
+such that 
 endsnippet
 
 snippet sot "so that" w
-so that $0
+so that 
 endsnippet
 
 snippet sotn "so then" w
-so then $0
+so then 
 endsnippet
 
 snippet rc "recall" w
-recall $0
+recall 
 endsnippet
 
 snippet bc "because" w
-because $0
+because 
 endsnippet
 
 snippet bcm "become(s)" w
-become${1:s} $0
+become${1:s} 
 endsnippet
 
 snippet fa "for all" w
-for all $0
+for all 
+endsnippet
+
+snippet fey "for every" w
+for every 
 endsnippet
 
 snippet fe "for example" w
-for example $0
+for example 
 endsnippet
 
 snippet fay "for any" w
-for any $0
+for any 
 endsnippet
 
 snippet fs "for some" w
-for some $0
+for some 
 endsnippet
 
 snippet te "there exists" w
-there exists $0
+there exists 
 endsnippet
 
 snippet ex "exist" w
-exist${1:s} $0
+exist${1:s} 
 endsnippet
 
 snippet nex "not exist" w
-not exist${1:s} $0
+not exist${1:s} 
 endsnippet
 
 snippet twc "(T/t)hus we conclude" w
-${1:t}hus we conclude $0
+${1:t}hus we conclude 
 endsnippet
 
 snippet wkt "we know that" w
-${1:w}e know that $0
+${1:w}e know that 
 endsnippet
 
 snippet var "variable" w
-variable $0
+variable${1:s} 
+endsnippet
+
+snippet tfae "the following are equivalent" w
+the following are equivalent 
 endsnippet
 
 snippet wlog "without loss of generality" w
-without loss of generality $0
+without loss of generality 
 endsnippet
 
 snippet chg "change" w
@@ -615,54 +725,62 @@ change${1:s}
 endsnippet
 
 snippet prv "prove" w
-${1:p}rove $0
+${1:p}rove 
 endsnippet
 
 snippet rmk "remark" w
-remark $0
+remark 
 endsnippet
 
 snippet eqty "equality" w
-equality $0
+equality 
 endsnippet
 
 snippet dis "distinct" w
-distinct $0
+distinct 
 endsnippet
 
 snippet arv "arrive" w
-arrive $0
+arrive 
 endsnippet
 
 
 snippet lat "latter" w
-latter $0
+latter 
 endsnippet
 
 snippet rem "remember" w
-remember $0
+remember 
 endsnippet
 
 snippet defd "defined" w
-defined $0
+defined 
+endsnippet
+
+snippet bde "by definition" w
+by definition 
 endsnippet
 
 snippet def "definition" w
-definition $0
+definition 
 endsnippet
 
 snippet tog "together" w
-together $0
+together 
 endsnippet
 
 snippet tot "total" w
-total $0
+total 
 endsnippet
 
 snippet parti "particular" w
-particular $0
+particular 
+endsnippet
+
+snippet ft "fact" w
+fact 
 endsnippet
 
 snippet abv "above" w
-above $0
+above 
 endsnippet

@@ -2,7 +2,9 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
-
+snippet log "logic(al)" w
+${1:l}ogic${2:al} $0
+endsnippet
 
 snippet thm "theorem" w
 ${1:t}heorem $0
@@ -20,25 +22,28 @@ snippet assi "assign(ment)" w
 assign${1:ment} $0
 endsnippet
 
-snippet axi "axiom" w
-axiom $0
+snippet axi "axiom(s)" w
+axiom${1:s} $0
 endsnippet
 
-snippet prop "proposition" w
-proposition $0
+snippet propo "proposition" w
+proposition${1:al} 
 endsnippet
 
 snippet taut "tautology" w
 tautology $0
 endsnippet
 
+snippet quan "quantifier" w
+quantifier 
+endsnippet
 
 snippet thf "therefore" w
 ${1:t}herefore $0
 endsnippet
 
 snippet hn "hence" w
-hence $0
+${1:h}ence $0
 endsnippet
 
 snippet suff "sufficient" w
@@ -79,6 +84,18 @@ endsnippet
 
 snippet cont "contradiction" w
 contradiction $0
+endsnippet
+
+snippet hyp "hypothesis" w
+hypothesis $0
+endsnippet
+
+snippet infe "inference" w
+inference $0
+endsnippet
+
+snippet roi "rule of inference" w
+rule of inference $0
 endsnippet
 
 snippet iff "if and only if" w

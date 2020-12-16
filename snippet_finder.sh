@@ -1,3 +1,3 @@
 #!/bin/bash
-grep --exclude-dir=".git" -B 1 -A 1 -rwh \\\\$1
-
+cd ~/math-snippets
+grep --exclude-dir=".git" -B 1 -A 1 -rw \\\\$1 

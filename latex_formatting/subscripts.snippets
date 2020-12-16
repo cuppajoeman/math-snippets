@@ -2,7 +2,6 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
-
 context "math()"
 snippet ynn "yn" iA
 y_{n}$0
@@ -49,15 +48,16 @@ _{$1}$0
 endsnippet
 
 context "math()"
-snippet sbsp "sub-super script" iA
+snippet sbp "sub-super script" iA
 _{$1}^{$2}$0
-
-context "math()"
-snippet '([A-Za-z])\d(\d)' "auto subscript" wrA
-`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
 endsnippet
 
-context "math()"
-snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
-`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
-endsnippet
+#context "math()"
+#snippet '([A-Za-z])\d(\d)' "auto subscript" wrA
+#`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+#endsnippet
+
+#context "math()"
+#snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+#`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+#endsnippet

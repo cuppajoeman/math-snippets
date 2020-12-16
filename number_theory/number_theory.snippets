@@ -2,9 +2,20 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
+
+context "math()"
+snippet zz "zero" iA
+0
+endsnippet
+
 context "math()"
 snippet gcd "greatest common divisor" iA
 \gcd($1)$0
+endsnippet
+
+context "math()"
+snippet % "modulo" iA
+~\%~
 endsnippet
 
 context "math()"
@@ -14,7 +25,7 @@ endsnippet
 
 context "math()"
 snippet cong "a is congruent to b mod m" iA
-$1 \equiv $2 \mod$0
+$1 \equiv $2 \;(\bmod\; $3) 
 endsnippet
 
 context "math()"

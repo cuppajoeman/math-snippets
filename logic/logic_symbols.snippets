@@ -3,18 +3,28 @@ from math_snippet_helpers import *
 endglobal
 
 context "math()"
-snippet bimp "bi-conditional" Ai
+snippet Bimp "bi-conditional" Ai
 \Leftrightarrow$0
 endsnippet
 
 context "math()"
+snippet bimp "bi-conditional" Ai
+\leftrightarrow
+endsnippet
+
+context "math()"
+snippet tst "turnstile" Ai
+\vdash$0
+endsnippet
+
+context "math()"
 snippet imp "implies" Aw
-\implies$0
+\Rightarrow
 endsnippet
 
 context "math()"
 snippet limp "implies" Aw
-\impliedby$0
+\Leftarrow
 endsnippet
 
 context "math()"
