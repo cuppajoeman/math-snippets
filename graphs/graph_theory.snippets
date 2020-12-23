@@ -2,8 +2,17 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
+context "math()"
+snippet redg "right edge" iA
+$1 \mathrel{\bullet  \!\!\! \rightarrow} $2
+endsnippet
 
 context "math()"
-snippet edg "edge" iA
+snippet ledg "left edge" iA
+$1 \mathrel{\leftarrow  \!\!\! \bullet} $2
+endsnippet
+
+context "math()"
+snippet edg "edge" A
 $1 \mathrel{\bullet  \! {-} \! \bullet} $2
 endsnippet

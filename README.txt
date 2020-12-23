@@ -16,3 +16,4 @@ See the sample vimrc for something that uses YCM & Ultisnips
 
 TODO:
 don't double expand snippets, don't expand if it there is already a \ before the word.
+Autogenerate a website representation of these snippets that auto updates
