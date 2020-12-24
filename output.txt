@@ -1,0 +1,13802 @@
+snippet sympy "sympyblock " w
+sympy $1 sympy$0
+--
+snippet 'sympy(.*)sympy' "sympy" wr
+`!p
+--
+snippet vtx "vertex" w
+vertex $0
+--
+snippet ht "height" w
+height $0
+--
+snippet clo "close(st)" w
+close${1:st}
+--
+snippet tri "triangle" w
+triangle $0
+--
+snippet vol "volume" w
+volume $0
+--
+snippet gmt "geometric" w
+geometric $0
+--
+snippet ori "origin" w
+origin $0
+--
+snippet locd "located" w
+located $0
+--
+snippet cw "clockwise" w
+clockwise $0
+--
+snippet ccw "counter clockwise" w
+counter clockwise $0
+--
+snippet rot "rotation" w
+rotation $0
+--
+snippet refl "reflection" w
+reflection $0
+--
+snippet refld "reflected" w
+reflected $0
+--
+snippet rhom "rhombus" w
+rhombus $0
+--
+snippet rad "radius" w
+radius $0
+--
+snippet circ "circumference" w
+circumference $0
+--
+snippet rect "rectangle" w
+rectangle $0
+--
+snippet cir "circle" w
+circle $0
+--
+snippet ar "area" w
+area $0
+--
+snippet dist "distance" w
+distance $0
+--
+snippet ri "right" w
+right $0
+--
+snippet ang "angle" w
+angle $0
+--
+snippet quad "quadrant" w
+quadrant $0
+--
+snippet Iq "first quadrant" w
+first quadrant $0
+--
+snippet IIq "second quadrant" w
+second quadrant $0
+--
+snippet IIIq "third quadrant" w
+third quadrant $0
+--
+snippet IVq "fourth quadrant" w
+fourth quadrant $0
+--
+snippet xa "x-axis" w
+$x$-axis $0
+--
+snippet ya "y-axis" w
+$y$-axis $0
+--
+snippet seg "segment" w
+segment $0
+--
+snippet pt "point(s)" w
+point${1:s} $0
+--
+snippet sq "square" w
+square $0
+--
+snippet octa "octahedron" w
+octahedron $0
+--
+snippet cb "cube" w
+cube $0
+--
+snippet sph "sphere" w
+sphere $0
+--
+snippet hyp "hypotenuse" w
+hypotenuse $0
+--
+snippet pp "add two numbers" iA
+ + 
+--
+snippet pm "plus-minus" iA
+\pm 
+--
+snippet nn "add the negative" iA
+ - 
+--
+snippet mm "multiply two numbers" iA
+ \cdot 
+--
+snippet xx "cross" iA
+\times$0
+--
+snippet ** "cdot" iA
+\cdot$0
+--
+snippet sq "\sqrt{}" iA
+\sqrt{${1:${VISUAL}}}$0
+--
+snippet norm "norm" iA
+\left\Vert $1 \right\Vert$0
+--
+snippet abs "absolute" iA
+\left| $1 \right|$0
+--
+snippet sq "^2" iA
+^2$0
+--
+snippet cb "^3" iA
+^3$0
+--
+snippet tt "to the ... power" iA
+^{$1}$0
+--
+snippet min "minimum" iA
+\min\left($1, $2\right)$0
+--
+snippet max "maximum" iA
+\max\left($1, $2\right)$0
+--
+snippet invs "inverse" iA
+^{-1}$0
+--
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+--
+snippet f/ "Fraction" iA
+\\frac{$1}{$2}$0
+--
+snippet '((\d+)?(\\)?([A-Za-z]+)(\^((\{\d+\})|(\d)))?)/' "symbol frac" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+--
+snippet '(\d+)/' "number frac" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+--
+snippet '^.*\)/' "() frac" wrA
+`!p
+--
+snippet oper "operator" w
+operator $0
+--
+snippet pl "plus" w
+plus $0
+--
+snippet tsm "times" w
+times $0
+--
+snippet mul "multiplication" w
+multipl${1:ication} $0
+--
+snippet muld "multiplied" w
+multiplied $0
+--
+snippet add "addition" w
+addition $0
+--
+snippet subtr "subtraction" w
+subtract${1:ion} $0
+--
+snippet min "minimum" w
+minimum $0
+--
+snippet max "maximum" w
+maximum $0
+--
+snippet log "logic(al)" w
+${1:l}ogic${2:al} $0
+--
+snippet thm "theorem" w
+${1:t}heorem $0
+--
+snippet imp "implies" w
+implies
+--
+snippet val "valid" w
+valid $0
+--
+snippet assi "assign(ment)" w
+assign${1:ment} $0
+--
+snippet axi "axiom(s)" w
+axiom${1:s} $0
+--
+snippet propo "proposition" w
+proposition${1:al} 
+--
+snippet taut "tautology" w
+tautology $0
+--
+snippet quan "quantifier" w
+quantifier 
+--
+snippet thf "therefore" w
+${1:t}herefore $0
+--
+snippet hn "hence" w
+${1:h}ence $0
+--
+snippet suff "sufficient" w
+sufficient $0
+--
+snippet inc "incorrect" w
+incorrect $0
+--
+snippet imp "implication" w
+implication $0
+--
+snippet bimp "bi-implication" w
+bi-implication $0
+--
+snippet tr "true" w
+true $0
+--
+snippet fl "false" w
+false $0
+--
+snippet lem "lemma(s)" w
+lemma${1:s} $0
+--
+snippet contrap "contrapositive" w
+contrapositive $0
+--
+snippet a4c "assume for contradiction that" w
+assume for contradiction that $0
+--
+snippet cont "contradiction" w
+contradiction $0
+--
+snippet hyp "hypothesis" w
+hypothesis $0
+--
+snippet infe "inference" w
+inference $0
+--
+snippet roi "rule of inference" w
+rule of inference $0
+--
+snippet iff "if and only if" w
+if and only if $0
+--
+snippet IH "Induction Hypothesis" w
+Induction Hypothesis $0
+--
+snippet prin "principle" w
+principle $0
+--
+snippet Bimp "bi-conditional" Ai
+\Leftrightarrow$0
+--
+snippet bimp "bi-conditional" Ai
+\leftrightarrow
+--
+snippet tst "turnstile" Ai
+\vdash$0
+--
+snippet imp "implies" Aw
+\Rightarrow
+--
+snippet limp "implies" Aw
+\Leftarrow
+--
+snippet && "AND" iA
+\land$0
+--
+snippet not "NOT" iA
+\neg$0
+--
+snippet xor "XOR" iA
+\oplus$0
+--
+snippet VV "OR" iA
+\lor$0
+--
+snippet mdl "models" iA
+\models$0
+--
+snippet === "is" iA
+:\equiv$0
+--
+snippet fa "forall" iA
+\forall$0
+--
+snippet eqv "congruent/equiv" iA
+\equiv$0
+--
+snippet te "there exists" iA
+\exists $1 
+--
+snippet ee "equality" iA
+=$0
+--
+snippet neq "not equal" iA
+\neq$0
+--
+snippet ae "approx equals" iA
+\approx$0
+--
+snippet iff "iff" Ai
+\iff$0
+--
+snippet ~ "similar" Ai
+\sim$0
+--
+snippet ss "subset" w
+subset $0
+--
+snippet part "partition" w
+partition $0
+--
+snippet rat "rational" w
+rational $0
+--
+snippet nat "natural" w
+natural $0
+--
+snippet natn "natural numbers" w
+natural numbers $0
+--
+snippet Rea "the Real Numbers" w
+the Real Numbers $0
+--
+snippet Com "Real Numbers" w
+complex numbers $0
+--
+snippet int "integer(s)" w
+integer${1:s} $0
+--
+snippet ctn "contain" w
+contain $0
+--
+snippet uni "union" w
+union $0
+--
+snippet len "length" w
+length${1:s} $0
+--
+snippet ele "element(s)" w
+element${1:s} $0
+--
+snippet CC "Complex Numbers" iA
+\mathbb{C}$0
+--
+snippet RR "real" iA
+\mathbb{R}$0
+--
+snippet QQ "Q" iA
+\mathbb{Q}$0
+--
+snippet NN "N" iA
+\mathbb{N}$0
+--
+snippet ZZ "Z" iA
+\mathbb{Z}$0
+--
+snippet \\\ "setminus" iA
+\setminus$0
+--
+snippet pwr "Power set" iA
+\mathcal{P}($1)$0
+--
+snippet cc "subset" iA
+\subseteq$0
+--
+snippet bs "backwards subset" w
+\supseteq$0
+--
+snippet c= "subset equal" iA
+\subseteq$0
+--
+snippet neo "not in " iA
+\not\in$0
+--
+snippet eo "in " A
+\in$0
+--
+snippet ^^ "cap" iA
+\cap$0
+--
+snippet BU "Big Union" iA
+\bigcup_{${1:i}=${2:0}}^{${3:n}} ${4:${VISUAL}}$0
+--
+snippet UU "cup" iA
+\cup$0
+--
+snippet OO "emptyset" iA
+\emptyset$0
+--
+snippet set "set" iA
+\\left\\{ $1 \\right\\}$0
+--
+snippet pi "pi" iA
+\pi$0
+--
+snippet cn "Complex Number" iA
+${1:\alpha} + ${2:\beta} i$0
+--
+snippet Big-Oh "Big Oh Definition" w
+\exists c, n_{0} \in \mathbb{R^+} \text{ s.t. } \forall n \in \mathbb{N}, n \ge n_{0} \implies $1 \le c \cdot $2
+--
+snippet bO "Big Oh- Notation" w
+\mathcal{O}($1)$0
+--
+snippet BOM "Big Omega" w
+\Omega($1)$0
+--
+snippet algo "algorithm" w
+algorithm $0
+--
+snippet bin "binary" w
+binary $0
+--
+snippet deci "decimal" w
+decimal $0
+--
+snippet ineq "inequality" w
+inequality $0
+--
+snippet ge "greater than or equal to" w
+greater than or equal to $0
+--
+snippet le "less than or equal to" w
+less than or equal to $0
+--
+snippet le "leq" iA
+\le$0
+--
+snippet ge "geq" iA
+\ge$0
+--
+snippet obrack "overbracket" iA
+\overbracket{$1}^{$2}$0
+--
+snippet ubrack "underbracket" iA
+\underbracket{$1}_{$2}$0
+--
+#snippet () "left( right)" iA
+#\left( ${1:${VISUAL}} \right)$0
+--
+#snippet [] "left[ right]" iA
+#\left[ ${1:${VISUAL}} \right]$0
+--
+snippet lrp "left( right)" iA
+\left( ${1:${VISUAL}} \right)$0
+--
+snippet lr| "left| right|" i
+\left| ${1:${VISUAL}} \right|$0
+--
+snippet lr{ "left\{ right\}" i
+\left\\{ ${1:${VISUAL}} \right\\}$0
+--
+snippet lrb "left\{ right\}" i
+\left\\{ ${1:${VISUAL}} \right\\}$0
+--
+snippet lrs "left[ right]" iA
+\left[ ${1:${VISUAL}} \right]$0
+--
+snippet lra "leftangle rightangle" iA
+\left<${1:${VISUAL}} \right>$0
+--
+#snippet bar "bar" iA
+#\bar{$1}$0
+--
+snippet nabl "nabla" iA
+\nabla$0
+--
+snippet star "star" iA
+\star$0
+--
+snippet chi "chi" iA
+\chi
+--
+snippet psi "psi" iA
+\psi
+--
+snippet Psi "Psi" iA
+\Psi
+--
+snippet phi "phi" iA
+\phi
+--
+snippet Phi "Phi" iA
+\Phi
+--
+snippet alp "alpha" iA
+\alpha$0
+--
+snippet bet "beta" iA
+\beta$0
+--
+snippet gam "gamma" iA
+\gamma$0
+--
+snippet Gam "Gamma" iA
+\Gamma$0
+--
+snippet del "delta" iA
+\delta$0
+--
+snippet Del "delta" iA
+\Delta$0
+--
+snippet the "theta" iA
+\theta$0
+--
+snippet The "theta" iA
+\Theta$0
+--
+snippet ep "var epsilon" iA
+\varepsilon$0
+--
+snippet sig "sigma" iA
+\sigma$0
+--
+snippet Sig "sigma" iA
+\Sigma$0
+--
+snippet lam "lambda" iA
+\lambda$0
+--
+snippet Lam "lambda" iA
+\Lambda$0
+--
+snippet mu "mu" iA
+\mu$0
+--
+snippet box "box around equation" iA
+\boxed{$1}$0
+--
+snippet tag "tag" w
+\tag{$1}$0
+--
+snippet dtag "tag" w
+\label{eq:$1} \tag{$2}$0
+--
+snippet bar "overline" iA
+\overline{$1}$0
+--
+snippet nt "not" iA
+\not
+--
+snippet uline "underline" w
+\underline{$1}$0
+--
+snippet dag "dag" bA
+\dag{`date +'%A %0d %B' | sed 's/.*/\u&/'`}
+--
+snippet '(?<!\\)arcsin' "sin" rwA
+\arcsin$1{}$0
+--
+snippet '(?<!arc)(?<!\\)sin' "sin" rwA
+\sin $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!\\)arccos' "cos" rwA
+\arccos $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!arc)(?<!\\)cos' "cos" rwA
+\cos $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!\\)arctan' "tan" rwA
+\arctan $1 \left( ${2:\theta} \right)$0
+--
+# snippet '(?<!arc)(?<!\\)tan' "tan" rwA
+# \tan
+--
+snippet '(?<!\\)arccot' "cot" rwA
+\arccot $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!arc)(?<!\\)cot' "cot" rwA
+\cot $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!\\)arccsc' "csc" rwA
+\arccsc $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!arc)(?<!\\)csc' "csc" rwA
+\csc $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!\\)arcsec' "sec" rwA
+\arcsec $1 \left( ${2:\theta} \right)$0
+--
+# snippet '(?<!arc)(?<!\\)sec' "sec" rwA
+# \sec
+--
+snippet bthm "binomial theorem" iA
+\sum_{$1=0}^{$2} {$2 \choose $1} $3^{$2-$1} $4^{$1}  
+--
+snippet choo "n choose k" iA
+\binom{${1:n}}{${2:k}}$0
+--
+snippet nCk "n choose k" iA
+{{}^{${1:n}}\!C_{${2:k}}}
+--
+snippet nPk "n permute k" iA
+{{}^{${1:n}}\!P_{${2:k}}}
+--
+snippet cou "counts" w
+count${1:s} $0
+--
+snippet comb "combination" w
+combination $0
+--
+snippet perm "permutation" w
+permutation $0
+--
+snippet plot "Plot" w
+\begin{figure}[$1]
+--
+snippet nn "Tikz node" w
+\node[$5] (${1/[^0-9a-zA-Z]//g}${2}) ${3:at (${4:0,0}) }{$${1}$};
+--
+# snippet dr "Tikz draw" w
+# \draw[${1}] (${2:0, 0}) -- $4(${3:0,0});
+--
+snippet na "Tikz node above" w
+node[above`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+snippet nb "Tikz node below" w
+node[below`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+snippet nr "Tikz node right" w
+node[right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+snippet nl "Tikz node left" w
+node[left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+snippet nar "Tikz node above right" w
+node[above right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+snippet nal "Tikz node above left" w
+node[above left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+snippet nbr "Tikz node below right" w
+node[below right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+snippet nbl "Tikz node below left" w
+node[below left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+snippet frame "Tikz frame" w
+\draw[help lines, <->] (-$1, 0) -- ($1, 0);
+--
+snippet force "Tikz force" w
+\draw[force] (${1:0, 0}) -- $3 ++(${2:0, 0});
+--
+snippet tikz "Tikz" w
+\begin{figure}[htb]
+--
+snippet co "Tikz coordinate" w
+coordinate ($1)$0
+--
+snippet pm "Punctuation Math" wA
+$${1:${VISUAL}}$`!p
+--
+snippet mm "Math" wA
+$$1$ $0
+--
+snippet bb "Brilliant Math" wA
+\(${1:${VISUAL}}\)`!p
+--
+snippet pz "piazza latex" wA
+$$${1:${VISUAL}}$$`!p
+--
+snippet dm "Math" wA
+\[
+--
+snippet commu "commutivity" w
+commutivity $0
+--
+snippet assoc "associativity" w
+associativity $0
+--
+snippet distp "distributive property" w
+distributive property $0
+--
+snippet alg "algebra(ic)" w
+algebra${1:ic} $0
+--
+snippet ctq "complete the square" w
+complete the square $0
+--
+snippet prod "product" iA
+\prod_{$1}^{$2}
+--
+snippet FF "Field" iA
+\mathbb{F}$0
+--
+snippet tri "n-th triangular number" iA
+\sum_{${1:i}=1}^{${2:n}} $1 $0
+--
+snippet sum "sum" iA
+\sum_{${1:i}=${2:0}}^{${3:n}} ${4:${VISUAL}}$0
+--
+snippet sn "The Snippet Snippet"
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet wsn "Word Snippet Snippet"
+snippet ${1:Trigger} "${2:Word}" w
+$2 \$0
+--
+snippet tsn "Text Snippet Snippet"
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet msn "Math Snippet Snippet"
+context "math()"
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet ass "assuming" w
+assuming $0
+--
+snippet ord "ordered" w
+ordered $0
+--
+snippet incr "increas(ing)" w
+increas${1:ing} $0
+--
+snippet prod "product" w
+product $0
+--
+snippet ty "type" w
+type $0
+--
+snippet polyn "polynomial" w
+polynomial $0
+--
+snippet coe "coefficients" w
+coefficients $0
+--
+snippet stru "structure" w
+structure $0
+--
+snippet tup "tuple" w
+tuple $0
+--
+snippet dig "digits" w
+digits $0
+--
+snippet form "formula" w
+formula $0
+--
+snippet in "infinity" w
+infinity $0
+--
+snippet coor "coordinate" w
+coordinate${1:s} $0
+--
+snippet eqn "equation" w
+equation $0
+--
+snippet lang "language" w
+language
+--
+snippet nota "notation" w
+notation $0
+--
+snippet mt "math" w
+math${1:matical} $0
+--
+snippet sys "system" w
+system $0
+--
+snippet Supi "supposing" w
+supposing $0
+--
+snippet calc "calculate" w
+calculate $0
+--
+snippet aprx "approx(imate)" w
+approx${1:imate} $0
+--
+snippet comm "commence" w
+commence $0
+--
+snippet comp "compare" w
+compar${1:ing} $0
+--
+snippet mini "minimize" w
+minmize $0
+--
+snippet maxi "maximize" w
+maximize $0
+--
+snippet subs "substituting" w
+substitut${1:ing} $0
+--
+snippet substi "substituting" w
+substitutable $0
+--
+snippet ... "\ldots" iA
+\ldots$0
+--
+snippet v.. "\vdots" iA
+\vdots$0
+--
+snippet dots "Smart Dots" iA
+\dots${1:commas, binary, multiplication}$0
+--
+snippet ~> "squiggley arrow" A
+\rightsquigarrow$0
+--
+snippet xra "arrow with text" A
+\xrightarrow${1:[$2]}{$3}$0
+--
+snippet cvgs "converges" w
+converges $0
+--
+snippet cts "continuous" w
+continuous $0
+--
+snippet nbd "neighbourhood" w
+neighbourhood $0
+--
+snippet der "derivative" w
+derivative $0
+--
+snippet sup "supremum" w
+supremum $0
+--
+snippet inf "infimum" w
+infimum $0
+--
+snippet lim "limit" w
+limit $0
+--
+snippet dint "integral" w
+\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}\: d${4:x}$0
+--
+snippet int "integral" iA
+\int ${1:${VISUAL}}\: d${2:x}$0
+--
+snippet taylor "taylor" w
+\sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1$0
+--
+snippet lim "limit" w
+\lim_{${1:n}\to${2:\infty}}$0
+--
+snippet ddx "d/dx" wA
+\frac{d${1:}}{dx}$0
+--
+snippet part "d/dx" w
+\frac{\partial ${1:}}{\partial ${2:x}}$0
+--
+snippet oo "\infty" iA
+\infty$0
+--
+snippet >> ">>" iA
+\gg$0
+--
+snippet << "<<" iA
+\ll$0
+--
+snippet vrt "vertices" w
+vertices $0
+--
+snippet digra "graph" w
+directed graph $0
+--
+snippet gra "graph" w
+graph $0
+--
+snippet redg "right edge" iA
+$1 \mathrel{\bullet  \!\!\! \rightarrow} $2
+--
+snippet ledg "left edge" iA
+$1 \mathrel{\leftarrow  \!\!\! \bullet} $2
+--
+snippet edg "edge" A
+$1 \mathrel{\bullet  \! {-} \! \bullet} $2
+--
+snippet surj "surjective" iA
+\forall y \in ${1:CD}, \exists x \in ${2:D} \text{ s.t. } y = ${3:f}(x)$0
+--
+snippet inj "injective" iA
+\forall x_1, x_2 \in ${1:D}, ${2:f}(x_1) = ${3:f}(x_2) \implies x_1 = x_2$0
+--
+snippet rel "relation" w
+relation $0
+--
+snippet rflx "reflexive" w
+reflexive $0
+--
+snippet sym "symmetric" w
+symmetric $0
+--
+snippet ttv "transitive" w
+transitive $0
+--
+snippet eqv "equivalence" Options
+equivalence $0
+--
+snippet dom "domain" w
+domain $0
+--
+snippet cdom "codomain" w
+codomain $0
+--
+snippet ran "range" w
+range $0
+--
+snippet fun "function" w
+function $0
+--
+snippet invs "inverse" w
+inverse $0
+--
+snippet inj "injective" w
+injective $0
+--
+snippet surj "surjective" w
+surjective $0
+--
+snippet bij "bijective" w
+bijective $0
+--
+snippet oto "one-to-one" w
+one-to-one $0
+--
+snippet mp "map(ped)" w
+map${1:ped} $0
+--
+snippet udr "under" w
+under $0
+--
+snippet cmpo "composition" w
+composition $0
+--
+snippet log "logarithm" w
+logarithm $0
+--
+snippet predi "predicate" iA
+$1($2): \`\` $3 "\text{, where } $2 \in $4$0
+--
+snippet ceil "ceil" iA
+\left\lceil $1 \right\rceil$0
+--
+snippet bceil "ceil" iA
+\bigl\lceil $1 \bigr\rceil$0
+--
+snippet floor "floor" iA
+\left\lfloor $1 \right\rfloor$0
+--
+snippet log "logarthm" w
+\log_{${1:n}}($2)$0
+--
+snippet fun "function" iA
+${1:f} : $2 \to $3 
+--
+snippet fx "function at x" iA
+${1:f}\left(${2:x}\right)$0
+--
+snippet fog "function composition" i
+${1:f} \circ ${2:g}$0
+--
+snippet mpt "mapsto" iA
+\mapsto$0
+--
+snippet to "to" iA
+\to$0
+--
+snippet '(?<!\\)ln' "ln" rwA
+\ln($1)$0
+--
+snippet grp "group" w
+group $0
+--
+snippet abel "abelian" w
+abelian $0
+--
+snippet cmta "commutative" w
+commutative $0
+--
+snippet cmuta "commutative" w
+commutative $0
+--
+snippet deg "degree" w
+degree $0
+--
+snippet sol "solution(s)" w
+solution${1:s} $0
+--
+snippet zo "zero(s)" w
+zero${1:s} $0
+Binary file proof/.proof_words.snippets.swp matches
+--
+snippet prf "Proof" b
+\begin{proof}
+--
+snippet prfbind "Proof by induction" b
+\begin{proof}
+--
+snippet arg "argument" w
+argument $0
+--
+snippet ftsoc "for the sake of contradiction" w
+for the sake of contradiction $0
+--
+snippet seq "sequence" w
+sequence $0
+--
+snippet den "denoted" w
+denoted $0
+--
+snippet cld "called" w
+called $0
+--
+snippet clr "color" w
+color${1:ing} $0
+--
+snippet wst "we say that" w
+we say that $0
+--
+snippet neq "not equal" w
+not equal $0
+--
+snippet tech "technique" w
+technique $0
+--
+snippet sel "selected" w
+selected $0
+--
+snippet fxd "fixed" w
+fixed 
+--
+snippet opt "options" w
+options 
+--
+snippet aft "after" w
+after 
+--
+snippet vac "vacuously" w
+vacuously   
+--
+snippet ih "inductive hypothesis" w
+inductive hypothesis 
+--
+snippet evt "everything" w
+everything  
+--
+snippet win "wherein" w
+wherein 
+--
+snippet cl "clause" w
+clause
+--
+snippet clo "closed" w
+closed  
+--
+snippet fina "finally" w
+finally 
+--
+snippet wtp "want to prove" w
+want to prove 
+--
+snippet jst "justified" w
+justified 
+--
+snippet dedu "deduction" w
+deduction 
+--
+snippet obt "obtain" w
+obtain${1:s} 
+--
+snippet ccrt "concretely" w
+concretely 
+--
+snippet cpx "complexity" w
+complex${1:ity} 
+--
+snippet exa "exactly" w
+exactly
+--
+snippet fund "fundamental" w
+fundamental 
+--
+snippet csq "consequence" w
+consequence 
+--
+snippet ind "induction" w
+induction 
+--
+snippet ins "inspection" w
+inspection 
+--
+snippet ojv "objective" w
+objective 
+--
+snippet aw "as well" w
+as well 
+--
+snippet ical "identical" w
+identical 
+--
+snippet om "omit" w
+omit 
+--
+snippet con "construct(ion)" w
+construct${1:ion} 
+--
+snippet arb "arbitrary" w
+arbitrary 
+--
+snippet wrt "with respect to" w
+with respect to 
+--
+snippet can "canonical" w
+canonical 
+--
+snippet sm "same" w
+same 
+--
+snippet bal "but also" w
+but also 
+--
+snippet und "understand" w
+understand 
+--
+snippet sta "statement" w
+statement 
+--
+snippet op "operation(s)" w
+operation${1:s} 
+--
+snippet perf "perform" w
+perform 
+--
+snippet q "question" w
+question 
+--
+snippet wri "written" w
+written 
+--
+snippet tir "their" w
+their 
+--
+snippet dn "do not" w
+do not 
+--
+snippet dne "does not exist" w
+does not exist 
+--
+snippet wch "which" w
+which 
+--
+snippet clr "clearly" w
+clearly 
+--
+snippet ver "verified" w
+verified 
+--
+snippet hvnt "have not" w
+have not 
+--
+snippet smp "simply" w
+simply 
+--
+snippet bef "before" w
+before 
+--
+snippet cor "correct" w
+correct 
+--
+snippet simp "simplify(ing)" w
+simplify${1:ing} 
+--
+snippet cpt "compute" w
+comput${1:ations} 
+--
+snippet sup "suppose" w
+${1:s}uppose 
+--
+snippet Sup "Suppose" w
+Suppose 
+--
+snippet subst "substitute" w
+substitut${1:able}
+--
+snippet nm "namely" w
+namely 
+--
+snippet occ "occurs" w
+occurs 
+--
+snippet anz "analyze" w
+analyze 
+--
+snippet exp "expand" w
+expand${1:ing} 
+--
+snippet idn "identity" w
+identity 
+--
+snippet resp "respectively" w
+respectively 
+--
+snippet disc "discussed" w
+discussed 
+--
+snippet desc "describe" w
+describe 
+--
+snippet wn "we note" w
+${1:w}e note 
+--
+snippet wc "(W/w)e commence" w
+${1:w}e commence 
+--
+snippet alt "alternate" w
+alternat${1:ively} 
+--
+snippet yld "yield(s)" w
+yield${1:s} 
+--
+snippet wy "which yields" w
+which yields 
+--
+snippet fst "first" w
+first 
+--
+snippet slv "solve" w
+solve 
+--
+snippet prev "previously" w
+previously 
+--
+snippet sat "satisfy" w
+satisfy 
+--
+snippet val "value(s)" w
+value${1:s} 
+--
+snippet poss "possible" w
+possible 
+--
+snippet fd "find(ing)" w
+find${1:ing} 
+--
+snippet giv "given" w
+given 
+--
+snippet mvr "moreover" w
+${1:m}oreover 
+--
+snippet corr "corresponding" w
+corresponding 
+--
+snippet app "appl(ying)" w
+appl${1:ying} 
+--
+snippet fac "factor" w
+factor 
+--
+snippet dir "direction" w
+direction 
+--
+snippet on "only" w
+only 
+--
+snippet trv "trivial" w
+trivial 
+--
+snippet ntrv "trivial" w
+non-trivial 
+--
+snippet invo "invokes" w
+invoke${1:s} 
+--
+snippet indu "induce" w
+induce${1:s} 
+--
+snippet gen "generate" w
+generate 
+--
+snippet unq "unique" w
+unique 
+--
+snippet mtd "method" w
+method 
+--
+snippet gnt "guarenteed" w
+guarenteed 
+--
+snippet elem "elementary" w
+elementary 
+--
+snippet prcs "process" w
+process 
+--
+snippet pro "procedure" w
+procedure 
+--
+snippet eval "eval" w
+evalulate 
+--
+snippet equa "equation" w
+equation 
+--
+snippet eq "equal" w
+equal 
+--
+snippet iden "identity" w
+identity 
+--
+snippet lkw "likewise" w
+likewise 
+--
+snippet cnt "cannot" w
+cannot 
+--
+snippet imp "impossible" w
+impossible 
+--
+snippet exc "exceed" w
+exceed 
+--
+snippet proc "proceed" w
+proceed 
+--
+snippet no "number" w
+number${1:s} 
+--
+snippet cons "consider" w
+consider 
+--
+snippet cnst "consists" w
+consists 
+--
+snippet ind "indeed" w
+indeed 
+--
+snippet rec "recall" w
+${1:r}ecall 
+--
+snippet recog "recognize" w
+recognize 
+--
+snippet dif "different" w
+different 
+--
+snippet orig "original" w
+original 
+--
+snippet std "standard" w
+standard 
+--
+snippet sim "similar(ly)" w
+similar${1:ly} 
+--
+snippet simlt "simultaneously" w
+simultaneously 
+--
+snippet rep "represent" w
+represent 
+--
+snippet eqv "equivalently" w
+${1:e}quivalent${2:ly} 
+--
+snippet agr "agree" w
+agree 
+--
+snippet inv "invert" w
+invert${1:ible} 
+--
+snippet obs "observation" w
+${1:o}bserv${2:ation} 
+--
+snippet wo "we observe" w
+${1:w}e observe 
+--
+snippet conv "convert(s)" w
+convert${1:s} 
+--
+snippet prop "propert(ies/y)" w
+propert${1:ies} 
+--
+snippet th "that" w
+that 
+--
+snippet tn "then" w
+then 
+--
+snippet red "reduced" w
+reduce${1:d} 
+--
+snippet areq "as required" w
+as required. 
+--
+snippet aned "as needed" w
+as needed. 
+--
+snippet prec "precisely" w
+precisely 
+--
+snippet req "require" w
+require 
+--
+snippet ti "that is" w
+${1:t}hat is 
+--
+snippet wt "what" w
+what 
+--
+snippet dt "determine(d)" w
+determine${1:d} 
+--
+snippet sn "since" w
+${1:s}ince 
+--
+snippet ts "thus" w
+${1:t}hus 
+--
+snippet twh "thus we have" w
+thus we have 
+--
+snippet stwh "so then we have" w
+so then we have
+--
+snippet wah "we also have" w
+we also have 
+--
+snippet wa "we also" w
+we also 
+--
+snippet swk "so we know" w
+so we know 
+--
+snippet ws "we say" w
+we say 
+--
+snippet swh "so we have" w
+so we have 
+--
+snippet aswht "and so we have that" w
+and so we have that 
+--
+snippet ath "and that" w
+and that 
+--
+snippet ww "(W/w)e will" w
+${1:w}e will 
+--
+snippet Th "The" w
+The 
+--
+snippet ass "assum(e/ing)" w
+${1:a}ssum${2:ing} 
+--
+snippet wh "we have" w
+${1:w}e have 
+--
+snippet wk "we know" w
+${1:w}e know 
+--
+snippet twk "thus we know" w
+${1:t}hus we know 
+--
+snippet ho "hold(s)" w
+hold${1:s} 
+--
+snippet ia "is a" w
+is a 
+--
+snippet ina "is not a" w
+is not a 
+--
+snippet Ts "To show" w
+To show 
+--
+snippet whts "we have to show" w
+we have to show 
+--
+snippet wwts "we want to show" w
+we want to show 
+--
+snippet wws "we will show" w
+${1:w}e will show 
+--
+snippet wms "we must show" w
+${1:w}e must show 
+--
+snippet oms "one must show" w
+${1:o}ne must show 
+--
+snippet whs "we have shown" w
+${1:w}e have shown 
+--
+snippet wwn "we will now" w
+${1:w}e will now 
+--
+snippet wwp "we will prove" w
+${1:w}e will prove 
+--
+snippet ift "it follows that" w
+it follows that 
+--
+snippet fol "following" w
+follow${1:ing} 
+--
+snippet st "such that" w
+such that 
+--
+snippet sot "so that" w
+so that 
+--
+snippet sotn "so then" w
+so then 
+--
+snippet rc "recall" w
+recall 
+--
+snippet bc "because" w
+because 
+--
+snippet bcm "become(s)" w
+become${1:s} 
+--
+snippet fa "for all" w
+for all 
+--
+snippet fey "for every" w
+for every 
+--
+snippet fe "for example" w
+for example 
+--
+snippet fay "for any" w
+for any 
+--
+snippet fs "for some" w
+for some 
+--
+snippet te "there exists" w
+there exists 
+--
+snippet ex "exist" w
+exist${1:s} 
+--
+snippet nex "not exist" w
+not exist${1:s} 
+--
+snippet twc "(T/t)hus we conclude" w
+${1:t}hus we conclude 
+--
+snippet wkt "we know that" w
+${1:w}e know that 
+--
+snippet var "variable" w
+variable${1:s} 
+--
+snippet tfae "the following are equivalent" w
+the following are equivalent 
+--
+snippet wlog "without loss of generality" w
+without loss of generality 
+--
+snippet chg "change" w
+change${1:s}
+--
+snippet prv "prove" w
+${1:p}rove 
+--
+snippet rmk "remark" w
+remark 
+--
+snippet eqty "equality" w
+equality 
+--
+snippet dist "distinct" w
+distinct 
+--
+snippet arv "arrive" w
+arrive 
+--
+snippet lat "latter" w
+latter 
+--
+snippet rem "remember" w
+remember 
+--
+snippet defd "defined" w
+defined 
+--
+snippet bde "by definition" w
+by definition 
+--
+snippet def "definition" w
+definition 
+--
+snippet tog "together" w
+together 
+--
+snippet tot "total" w
+total 
+--
+snippet parti "particular" w
+particular 
+--
+snippet ft "fact" w
+fact 
+--
+snippet abv "above" w
+above 
+--
+snippet seq "sequence" w
+\left \\{ a _ { n } \right \\} _ { n = 0 } ^ \infty
+--
+snippet zz "zero" w
+zero 
+--
+snippet cong "congruent" w
+congruent 
+--
+snippet rmd "remainder" w
+remainder $0
+--
+snippet mod "modulo" w
+modulo $0
+--
+snippet mulpl "multiple(s)" w
+multiple${1:s} $0
+--
+snippet div "division" w
+division $0
+--
+snippet divd "divide" w
+divide $0
+--
+snippet divi "divisible" w
+divisible $0
+--
+snippet zz "zero" iA
+0
+--
+snippet gcd "greatest common divisor" iA
+\gcd($1)$0
+--
+snippet % "modulo" iA
+~\%~
+--
+snippet mod "modulo" iA
+\Mod{$1}$0
+--
+snippet cong "a is congruent to b mod m" iA
+$1 \equiv $2 \;(\bmod\; $3) 
+--
+snippet || "divides" iA
+\mid$0
+--
+snippet n| "does not divide" iA
+\nmid$0
+--
+snippet t. "therefore" iA
+\therefore$0
+--
+snippet pos "positive" w
+positive${1:ly} $0
+--
+snippet neg "negative" w
+negative${1:ly} $0
+--
+snippet fin "finite" w
+finite $0
+--
+snippet nz "non-zero" w
+non-zero $0
+--
+snippet inf "infinite" w
+infinite $0
+--
+snippet abs "absolute value" w
+absolute value $0
+--
+snippet enu "enumerate" bA
+\begin{enumerate}
+--
+snippet itz "itemize" bA
+\begin{itemize}
+--
+snippet * "bullet point in list" A
+\item $0
+--
+snippet ali "Align" bA
+\begin{align*}
+--
+snippet tali "Align" bA
+\begin{align*}
+--
+snippet gather "Gather" bA
+\begin{gather*}
+--
+snippet ar "Array" b
+\begin{array*}{${1:rl}}
+--
+snippet eq "Equation" b
+\begin{equation}
+--
+snippet eqnn "Equation without number" b
+\begin{equation*}
+--
+snippet al "Align" b
+\begin{align*}
+--
+snippet col "column(s)" w
+column${1:s} $0
+--
+snippet rred "row reduction" w
+row reduction $0
+--
+snippet rref "reduced row echelon form" w
+reduced row echelon form $0
+--
+snippet mat "matrix" w
+matrix $0
+--
+snippet mats "matricies" w
+matricies $0
+--
+snippet lc "linear combination" w
+linear combination $0
+--
+snippet pl "plane" w
+plane $0
+--
+snippet rnt "Rank Nullity Theorem" w
+Rank Nullity Theorem $0
+--
+snippet ntlc "linear combination" w
+non-trivial linear combination $0
+--
+snippet cxlc "convex linear combination" w
+convex linear combination${1:s} $0
+--
+snippet piv "pivot(s)" w
+pivot${1:s} $0
+--
+snippet lin "linear" w
+linear $0
+--
+snippet li "linear independent" w
+linear independent $0
+--
+snippet lyi "linearly independent" w
+linearly independent $0
+--
+snippet lyd "linearly dependent" w
+linearly dependent $0
+--
+snippet ld "linearly dependent" w
+linear dependent $0
+--
+snippet sca "scalar" w
+scalar${1:s} $0
+--
+snippet eibas "eigen basis" w
+eigen basis $0
+--
+snippet eivec "eigen vector" w
+eigen vector${1:s} $0
+--
+snippet eival "eigen value" w
+eigen value${1:s} $0
+--
+snippet eisp "eigen space" w
+eigen space $0
+--
+snippet sp "space" w
+space $0
+--
+snippet geomul "geometric multiplicity" w
+geometric multiplicity $0
+--
+snippet algmul "algebraic multiplicity" w
+algebraic multiplicity $0
+--
+snippet ve "vector" w
+vector${1:s} $0
+--
+snippet ba "basis" w
+basis $0
+--
+snippet nsp "null space" w
+null space $0
+--
+snippet csp "column space" w
+column space $0
+--
+snippet rsp "row space" w
+row space $0
+--
+snippet vsp "vector space" w
+vector space $0
+--
+snippet proj "projection" w
+project${1:ion} $0
+--
+snippet ker "kernel" w
+kernel $0
+--
+snippet lt "linear transformation" w
+linear transformation $0
+--
+snippet trns "transformation" w
+transformation $0
+--
+snippet tpos "transpose" w
+transpose $0
+--
+snippet vspace "vector space" w
+vector space$0 $0
+--
+snippet dim "dimension" w
+dimension${1:al} $0
+--
+snippet det "determinant" w
+determinant $0
+--
+snippet chpoly "characteristic polynomial" w
+characteristic polynomial $0
+--
+snippet im "image" w
+image $0
+--
+snippet orth "orthogonal" w
+orthogonal $0
+--
+snippet zv "zero vector" w
+zero vector $0
+--
+snippet cpnt "component" w
+component $0
+--
+snippet dgzbl "diagonalizable" w
+diagonalizable $0
+--
+snippet dgzn "diagonalization" w
+diagonalization $0
+--
+snippet utri "upper triangular" w
+upper triangular $0
+--
+snippet ltri "lower triangular" w
+lower triangular $0
+--
+snippet trir "triangular" w
+triangular $0
+--
+snippet plp "parallelpiped" w
+parallelpiped $0
+--
+snippet plg "parallelogram" w
+parallelogram $0
+--
+snippet indp "independent" w
+independent $0
+--
+snippet dep "dependent" w
+dependent $0
+--
+snippet orie "oriented" w
+oriented $0
+--
+snippet str "stretch(es)" w
+stretch${1:es} $0
+--
+snippet diag "diagonal" w
+diagonal $0
+--
+snippet lwr "lower" w
+lower $0
+--
+snippet upr "upper" w
+upper $0
+--
+snippet vc "Vector" iA
+\vec{$1}$0
+--
+snippet bv "Basis Vector" iA
+\left[ $1 \right]_{\mathcal{$2}}$0
+--
+snippet comp "Comp" iA
+\mathit{comp}_{$1} {$2}$0
+--
+snippet proj "Projection" iA
+\mathit{proj}_{$1} {$2}$0
+--
+snippet span "Span" iA
+\mathit{span} {$1}$0
+--
+snippet range "Range" iA
+\mathit{range} \left($1\right)$0
+--
+snippet null "Null Space" iA
+\mathit{null} \left($1\right)$0
+--
+snippet rank "rank" iA
+\mathit{rank} \left($1\right)$0
+--
+snippet rref "Row Reduced Echelon Form" iA
+\mathit{rref} \left($1\right)$0
+--
+snippet dim "dimension" iA
+\mathit{dim} \left($1\right)$0
+--
+snippet det "determinant" iA
+\mathit{det} \left($1\right)$0
+--
+snippet colsp "column space" iA
+\mathit{col} \left($1\right)$0
+--
+snippet rowsp "row space" iA
+\mathit{row} \left($1\right)$0
+--
+snippet e1 "Basis" iA
+\vec{e_1}$0
+--
+snippet e2 "Basis" iA
+\vec{e_2}$0
+--
+snippet e3 "Basis" iA
+\vec{e_3}$0
+--
+snippet "[^i]mat(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet "imat(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet "(small|[gbBpvV])?ghp(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet 3mat "3 by 1 Matrix" iA
+\mat{ $1 \\\\ $2 \\\\ $3 }$0
+--
+snippet 4mat "4 by 1 Matrix" iA
+\mat{ $1 \\\\ $2 \\\\ $3 \\\\ $4 }$0
+--
+snippet 5mat "4 by 1 Matrix" iA
+\mat{ $1 \\\\ $2 \\\\ $3 \\\\ $4 \\\\ $5 }$0
+--
+snippet 3rmat "1 by 3 Row Matrix" iA
+\mat{ $1 & $2 & $3 }$0
+--
+snippet 2mat "2 by 1 Matrix" iA
+\mat{ $1 \\\\ $2 }$0
+--
+snippet 2rmat "1 by 2 Row Matrix" iA
+\mat{ $1 & $2}$0
+--
+snippet ges "Gauss Elimination Step" iA
+gmat$1x$2
+--
+snippet rop "Row Operation" iA
+R_{$1} \mapsto $2R_{$1} ${3: + $4R_{$5}}$0
+--
+snippet rops "Start Row Operation" iA
+\rowops
+--
+snippet rad "Add rows" iA
+\add[$1]{$2}{$3}$0
+--
+snippet rmul "Multiply row" iA
+\mult{$2}{\cdot $3}$0
+--
+snippet rswap "Swap rows" iA
+\swap{$1}{$2}$0
+--
+snippet ynn "yn" iA
+y_{n}$0
+--
+snippet xii "xi" iA
+x_{i}$0
+--
+snippet yii "yi" iA
+y_{i}$0
+--
+snippet xjj "xj" iA
+x_{j}$0
+--
+snippet yjj "yj" iA
+y_{j}$0
+--
+snippet xp1 "x" iA
+x_{n+1}$0
+--
+snippet n0 "x" iA
+n_{0}$0
+--
+snippet xmm "x" iA
+x_{m}$0
+--
+snippet ss "subscript" iA
+_{$1}$0
+--
+snippet sbp "sub-super script" iA
+_{$1}^{$2}$0
+--
+#snippet '([A-Za-z])\d(\d)' "auto subscript" wrA
+#`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+--
+#snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+#`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+--
+snippet srel "stackrel" iA
+\stackrel{$1}{$2}$0
+--
+snippet cal "mathcal" iA
+\mathcal{$1}$0
+--
+snippet fk "mathfrak" iA
+\mathfrak{$1}$0
+--
+snippet bb "mathbb" iA
+\mathbb{$1}$0
+--
+snippet tit "italicized text ;)" iA
+\mathit{$1}$0
+--
+snippet bf "text bf" iA
+\textbf{$1}$0
+--
+snippet txt "text" iA
+\text{$1}$0
+--
+snippet sxt "spaced text" iA
+\text{ $1 }$0
+--
+snippet rhs "right hand side" w
+right hand side $0
+--
+snippet lhs "left hand side" w
+left hand side $0
+--
+snippet edbo "expression with dots under some binary operation" iA
+$1 $2 $3 $2 \ldots $2 $4 $2 $5
+--
+snippet sedbo "subscripted expression with dots under some binary operation" iA
+$1_1 $2 $1_2 $2 \ldots $2 $1_{${3:n}-1} $2 $1_{$3}
+--
+snippet cli "comma list" iA
+$1, $2,  \ldots,  $4, $5
+--
+snippet sli "subscript list" iA
+$1_{1}, $1_{2},  \ldots,  $1_{$2 - 1}, $1_{$2}$0 
+--
+snippet dli "double subscript list" iA
+$1_{1}$2_{1} ${3:operation/comma} $1_{2}$2_{2}$3  \ldots$3  $1_{$4 - 1}$2_{$4 - 1}$3 $1_{$4}$2_{$4}$0 
+--
+snippet tli "triple subscripted" iA
+$1_{1}$2_{1}$3_{1} ${4:operation/comma} $1_{2}$2_{2}$2_{3} $4  \ldots $4  $1_{$5 - 1}$2_{$5 - 1}$3_{$5 - 1} $4 $1_{$5}$2_{$5}$3_{$5}$0 
+--
+snippet fvars "some finite number of variables" iA
+$1_{1}, $1_{2},  \dots ,$1_{$2 - 1},$1_{$2}$0
+--
+snippet dvar "some finite number of variables" iA
+$1_{1}$2_{1} $3 $1_{2}$2_{2} $3 dots$4 $3 $1_{$5 - 1}$2_{$5 - 1} $3 $1_{$5}$2_{$5}$0
+sympy "sympyblock
+sympy $1 sympy$0
+--
+'sympy(.*)sympy' "sympy"
+`!p
+--
+vtx "vertex"
+vertex $0
+--
+ht "height"
+height $0
+--
+clo "close(st)"
+close${1:st}
+--
+tri "triangle"
+triangle $0
+--
+vol "volume"
+volume $0
+--
+gmt "geometric"
+geometric $0
+--
+ori "origin"
+origin $0
+--
+locd "located"
+located $0
+--
+cw "clockwise"
+clockwise $0
+--
+ccw "counter
+counter clockwise $0
+--
+rot "rotation"
+rotation $0
+--
+refl "reflection"
+reflection $0
+--
+refld "reflected"
+reflected $0
+--
+rhom "rhombus"
+rhombus $0
+--
+rad "radius"
+radius $0
+--
+circ "circumference"
+circumference $0
+--
+rect "rectangle"
+rectangle $0
+--
+cir "circle"
+circle $0
+--
+ar "area"
+area $0
+--
+dist "distance"
+distance $0
+--
+ri "right"
+right $0
+--
+ang "angle"
+angle $0
+--
+quad "quadrant"
+quadrant $0
+--
+Iq "first
+first quadrant $0
+--
+IIq "second
+second quadrant $0
+--
+IIIq "third
+third quadrant $0
+--
+IVq "fourth
+fourth quadrant $0
+--
+xa "x-axis"
+$x$-axis $0
+--
+ya "y-axis"
+$y$-axis $0
+--
+seg "segment"
+segment $0
+--
+pt "point(s)"
+point${1:s} $0
+--
+sq "square"
+square $0
+--
+octa "octahedron"
+octahedron $0
+--
+cb "cube"
+cube $0
+--
+sph "sphere"
+sphere $0
+--
+hyp "hypotenuse"
+hypotenuse $0
+--
+sympy "sympyblock
+sympy $1 sympy$0
+--
+'sympy(.*)sympy' "sympy"
+`!p
+--
+vtx "vertex"
+vertex $0
+--
+ht "height"
+height $0
+--
+clo "close(st)"
+close${1:st}
+--
+tri "triangle"
+triangle $0
+--
+vol "volume"
+volume $0
+--
+gmt "geometric"
+geometric $0
+--
+ori "origin"
+origin $0
+--
+locd "located"
+located $0
+--
+cw "clockwise"
+clockwise $0
+--
+ccw "counter
+counter clockwise $0
+--
+rot "rotation"
+rotation $0
+--
+refl "reflection"
+reflection $0
+--
+refld "reflected"
+reflected $0
+--
+rhom "rhombus"
+rhombus $0
+--
+rad "radius"
+radius $0
+--
+circ "circumference"
+circumference $0
+--
+rect "rectangle"
+rectangle $0
+--
+cir "circle"
+circle $0
+--
+ar "area"
+area $0
+--
+dist "distance"
+distance $0
+--
+ri "right"
+right $0
+--
+ang "angle"
+angle $0
+--
+quad "quadrant"
+quadrant $0
+--
+Iq "first
+first quadrant $0
+--
+IIq "second
+second quadrant $0
+--
+IIIq "third
+third quadrant $0
+--
+IVq "fourth
+fourth quadrant $0
+--
+xa "x-axis"
+$x$-axis $0
+--
+ya "y-axis"
+$y$-axis $0
+--
+seg "segment"
+segment $0
+--
+pt "point(s)"
+point${1:s} $0
+--
+sq "square"
+square $0
+--
+octa "octahedron"
+octahedron $0
+--
+cb "cube"
+cube $0
+--
+sph "sphere"
+sphere $0
+--
+hyp "hypotenuse"
+hypotenuse $0
+--
+pp "add
++
+--
+pm "plus-minus"
+\pm
+--
+nn "add
+-
+--
+mm "multiply
+\cdot
+--
+xx "cross"
+\times$0
+--
+README.txt algebra
+\cdot$0
+--
+sq "\sqrt{}"
+\sqrt{${1:${VISUAL}}}$0
+--
+norm "norm"
+\left\Vert $1 \right\Vert$0
+--
+abs "absolute"
+\left| $1 \right|$0
+--
+sq "^2"
+^2$0
+--
+cb "^3"
+^3$0
+--
+tt "to
+^{$1}$0
+--
+min "minimum"
+\min\left($1, $2\right)$0
+--
+max "maximum"
+\max\left($1, $2\right)$0
+--
+invs "inverse"
+^{-1}$0
+--
+// "Fraction"
+\\frac{$1}{$2}$0
+--
+f/ "Fraction"
+\\frac{$1}{$2}$0
+--
+'((\d+)?(\\)?([A-Za-z]+)(\^((\{\d+\})|(\d)))?)/' "symbol
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+--
+'(\d+)/' "number
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+--
+'^.*\)/' "()
+`!p
+--
+oper "operator"
+operator $0
+--
+pl "plus"
+plus $0
+--
+tsm "times"
+times $0
+--
+mul "multiplication"
+multipl${1:ication} $0
+--
+muld "multiplied"
+multiplied $0
+--
+add "addition"
+addition $0
+--
+subtr "subtraction"
+subtract${1:ion} $0
+--
+min "minimum"
+minimum $0
+--
+max "maximum"
+maximum $0
+--
+log "logic(al)"
+${1:l}ogic${2:al} $0
+--
+thm "theorem"
+${1:t}heorem $0
+--
+imp "implies"
+implies
+--
+val "valid"
+valid $0
+--
+assi "assign(ment)"
+assign${1:ment} $0
+--
+axi "axiom(s)"
+axiom${1:s} $0
+--
+propo "proposition"
+proposition${1:al}
+--
+taut "tautology"
+tautology $0
+--
+quan "quantifier"
+quantifier
+--
+thf "therefore"
+${1:t}herefore $0
+--
+hn "hence"
+${1:h}ence $0
+--
+suff "sufficient"
+sufficient $0
+--
+inc "incorrect"
+incorrect $0
+--
+imp "implication"
+implication $0
+--
+bimp "bi-implication"
+bi-implication $0
+--
+tr "true"
+true $0
+--
+fl "false"
+false $0
+--
+lem "lemma(s)"
+lemma${1:s} $0
+--
+contrap "contrapositive"
+contrapositive $0
+--
+a4c "assume
+assume for contradiction that $0
+--
+cont "contradiction"
+contradiction $0
+--
+hyp "hypothesis"
+hypothesis $0
+--
+infe "inference"
+inference $0
+--
+roi "rule
+rule of inference $0
+--
+iff "if
+if and only if $0
+--
+IH "Induction
+Induction Hypothesis $0
+--
+prin "principle"
+principle $0
+--
+Bimp "bi-conditional"
+\Leftrightarrow$0
+--
+bimp "bi-conditional"
+\leftrightarrow
+--
+tst "turnstile"
+\vdash$0
+--
+imp "implies"
+\Rightarrow
+--
+limp "implies"
+\Leftarrow
+--
+&& "AND"
+\land$0
+--
+not "NOT"
+\neg$0
+--
+xor "XOR"
+\oplus$0
+--
+VV "OR"
+\lor$0
+--
+mdl "models"
+\models$0
+--
+=== "is"
+:\equiv$0
+--
+fa "forall"
+\forall$0
+--
+eqv "congruent/equiv"
+\equiv$0
+--
+te "there
+\exists $1
+--
+ee "equality"
+=$0
+--
+neq "not
+\neq$0
+--
+ae "approx
+\approx$0
+--
+iff "iff"
+\iff$0
+--
+~ "similar"
+\sim$0
+--
+ss "subset"
+subset $0
+--
+part "partition"
+partition $0
+--
+rat "rational"
+rational $0
+--
+nat "natural"
+natural $0
+--
+natn "natural
+natural numbers $0
+--
+Rea "the
+the Real Numbers $0
+--
+Com "Real
+complex numbers $0
+--
+int "integer(s)"
+integer${1:s} $0
+--
+ctn "contain"
+contain $0
+--
+uni "union"
+union $0
+--
+len "length"
+length${1:s} $0
+--
+ele "element(s)"
+element${1:s} $0
+--
+CC "Complex
+\mathbb{C}$0
+--
+RR "real"
+\mathbb{R}$0
+--
+QQ "Q"
+\mathbb{Q}$0
+--
+NN "N"
+\mathbb{N}$0
+--
+ZZ "Z"
+\mathbb{Z}$0
+--
+\\\ "setminus"
+\setminus$0
+--
+pwr "Power
+\mathcal{P}($1)$0
+--
+cc "subset"
+\subseteq$0
+--
+bs "backwards
+\supseteq$0
+--
+c= "subset
+\subseteq$0
+--
+neo "not
+\not\in$0
+--
+eo "in
+\in$0
+--
+^^ "cap"
+\cap$0
+--
+BU "Big
+\bigcup_{${1:i}=${2:0}}^{${3:n}} ${4:${VISUAL}}$0
+--
+UU "cup"
+\cup$0
+--
+OO "emptyset"
+\emptyset$0
+--
+set "set"
+\\left\\{ $1 \\right\\}$0
+--
+pi "pi"
+\pi$0
+--
+cn "Complex
+${1:\alpha} + ${2:\beta} i$0
+--
+Big-Oh "Big
+\exists c, n_{0} \in \mathbb{R^+} \text{ s.t. } \forall n \in \mathbb{N}, n \ge n_{0} \implies $1 \le c \cdot $2
+--
+bO "Big
+\mathcal{O}($1)$0
+--
+BOM "Big
+\Omega($1)$0
+--
+algo "algorithm"
+algorithm $0
+--
+bin "binary"
+binary $0
+--
+deci "decimal"
+decimal $0
+--
+ineq "inequality"
+inequality $0
+--
+ge "greater
+greater than or equal to $0
+--
+le "less
+less than or equal to $0
+--
+le "leq"
+\le$0
+--
+ge "geq"
+\ge$0
+--
+obrack "overbracket"
+\overbracket{$1}^{$2}$0
+--
+ubrack "underbracket"
+\underbracket{$1}_{$2}$0
+--
+() "left(
+#\left( ${1:${VISUAL}} \right)$0
+--
+[] "left[
+#\left[ ${1:${VISUAL}} \right]$0
+--
+lrp "left(
+\left( ${1:${VISUAL}} \right)$0
+--
+lr| "left|
+\left| ${1:${VISUAL}} \right|$0
+--
+lr{ "left\{
+\left\\{ ${1:${VISUAL}} \right\\}$0
+--
+lrb "left\{
+\left\\{ ${1:${VISUAL}} \right\\}$0
+--
+lrs "left[
+\left[ ${1:${VISUAL}} \right]$0
+--
+lra "leftangle
+\left<${1:${VISUAL}} \right>$0
+--
+bar "bar"
+#\bar{$1}$0
+--
+nabl "nabla"
+\nabla$0
+--
+star "star"
+\star$0
+--
+chi "chi"
+\chi
+--
+psi "psi"
+\psi
+--
+Psi "Psi"
+\Psi
+--
+phi "phi"
+\phi
+--
+Phi "Phi"
+\Phi
+--
+alp "alpha"
+\alpha$0
+--
+bet "beta"
+\beta$0
+--
+gam "gamma"
+\gamma$0
+--
+Gam "Gamma"
+\Gamma$0
+--
+del "delta"
+\delta$0
+--
+Del "delta"
+\Delta$0
+--
+the "theta"
+\theta$0
+--
+The "theta"
+\Theta$0
+--
+ep "var
+\varepsilon$0
+--
+sig "sigma"
+\sigma$0
+--
+Sig "sigma"
+\Sigma$0
+--
+lam "lambda"
+\lambda$0
+--
+Lam "lambda"
+\Lambda$0
+--
+mu "mu"
+\mu$0
+--
+box "box
+\boxed{$1}$0
+--
+tag "tag"
+\tag{$1}$0
+--
+dtag "tag"
+\label{eq:$1} \tag{$2}$0
+--
+bar "overline"
+\overline{$1}$0
+--
+nt "not"
+\not
+--
+uline "underline"
+\underline{$1}$0
+--
+dag "dag"
+\dag{`date +'%A %0d %B' | sed 's/.*/\u&/'`}
+--
+'(?<!\\)arcsin' "sin"
+\arcsin$1{}$0
+--
+'(?<!arc)(?<!\\)sin' "sin"
+\sin $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arccos' "cos"
+\arccos $1 \left( ${2:\theta} \right)$0
+--
+'(?<!arc)(?<!\\)cos' "cos"
+\cos $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arctan' "tan"
+\arctan $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!arc)(?<!\\)tan'
+# \tan
+--
+'(?<!\\)arccot' "cot"
+\arccot $1 \left( ${2:\theta} \right)$0
+--
+'(?<!arc)(?<!\\)cot' "cot"
+\cot $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arccsc' "csc"
+\arccsc $1 \left( ${2:\theta} \right)$0
+--
+'(?<!arc)(?<!\\)csc' "csc"
+\csc $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arcsec' "sec"
+\arcsec $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!arc)(?<!\\)sec'
+# \sec
+--
+bthm "binomial
+\sum_{$1=0}^{$2} {$2 \choose $1} $3^{$2-$1} $4^{$1}
+--
+choo "n
+\binom{${1:n}}{${2:k}}$0
+--
+nCk "n
+{{}^{${1:n}}\!C_{${2:k}}}
+--
+nPk "n
+{{}^{${1:n}}\!P_{${2:k}}}
+--
+cou "counts"
+count${1:s} $0
+--
+comb "combination"
+combination $0
+--
+perm "permutation"
+permutation $0
+--
+plot "Plot"
+\begin{figure}[$1]
+--
+nn "Tikz
+\node[$5] (${1/[^0-9a-zA-Z]//g}${2}) ${3:at (${4:0,0}) }{$${1}$};
+--
+snippet dr
+# \draw[${1}] (${2:0, 0}) -- $4(${3:0,0});
+--
+na "Tikz
+node[above`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nb "Tikz
+node[below`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nr "Tikz
+node[right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nl "Tikz
+node[left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nar "Tikz
+node[above right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nal "Tikz
+node[above left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nbr "Tikz
+node[below right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nbl "Tikz
+node[below left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+frame "Tikz
+\draw[help lines, <->] (-$1, 0) -- ($1, 0);
+--
+force "Tikz
+\draw[force] (${1:0, 0}) -- $3 ++(${2:0, 0});
+--
+tikz "Tikz"
+\begin{figure}[htb]
+--
+co "Tikz
+coordinate ($1)$0
+--
+pm "Punctuation
+$${1:${VISUAL}}$`!p
+--
+mm "Math"
+$$1$ $0
+--
+bb "Brilliant
+\(${1:${VISUAL}}\)`!p
+--
+pz "piazza
+$$${1:${VISUAL}}$$`!p
+--
+dm "Math"
+\[
+--
+commu "commutivity"
+commutivity $0
+--
+assoc "associativity"
+associativity $0
+--
+distp "distributive
+distributive property $0
+--
+alg "algebra(ic)"
+algebra${1:ic} $0
+--
+ctq "complete
+complete the square $0
+--
+prod "product"
+\prod_{$1}^{$2}
+--
+FF "Field"
+\mathbb{F}$0
+--
+tri "n-th
+\sum_{${1:i}=1}^{${2:n}} $1 $0
+--
+sum "sum"
+\sum_{${1:i}=${2:0}}^{${3:n}} ${4:${VISUAL}}$0
+--
+sn "The
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet wsn "Word Snippet Snippet"
+snippet ${1:Trigger} "${2:Word}" w
+\$0
+--
+snippet tsn "Text Snippet Snippet"
+${1:Trigger} "${2:Description}"
+${0}
+--
+msn "Math
+context "math()"
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet ass "assuming" w
+$0
+--
+snippet ord "ordered" w
+$0
+--
+snippet incr "increas(ing)" w
+$0
+--
+snippet prod "product" w
+$0
+--
+snippet ty "type" w
+$0
+--
+snippet polyn "polynomial" w
+$0
+--
+snippet coe "coefficients" w
+$0
+--
+snippet stru "structure" w
+$0
+--
+snippet tup "tuple" w
+$0
+--
+snippet dig "digits" w
+$0
+--
+snippet form "formula" w
+$0
+--
+snippet in "infinity" w
+$0
+--
+snippet coor "coordinate" w
+$0
+--
+snippet eqn "equation" w
+$0
+--
+snippet lang "language" w
+language
+--
+snippet nota "notation" w
+$0
+--
+snippet mt "math" w
+$0
+--
+snippet sys "system" w
+$0
+--
+snippet Supi "supposing" w
+$0
+--
+snippet calc "calculate" w
+$0
+--
+snippet aprx "approx(imate)" w
+$0
+--
+snippet comm "commence" w
+$0
+--
+snippet comp "compare" w
+$0
+--
+snippet mini "minimize" w
+$0
+--
+snippet maxi "maximize" w
+$0
+--
+snippet subs "substituting" w
+$0
+--
+snippet substi "substituting" w
+$0
+--
+snippet ... "\ldots" iA
+\ldots$0
+--
+snippet v.. "\vdots" iA
+\vdots$0
+--
+snippet dots "Smart Dots" iA
+binary, multiplication}$0
+--
+snippet ~> "squiggley arrow" A
+\rightsquigarrow$0
+--
+snippet xra "arrow with text" A
+\xrightarrow${1:[$2]}{$3}$0
+--
+snippet cvgs "converges" w
+$0
+--
+snippet cts "continuous" w
+$0
+--
+snippet nbd "neighbourhood" w
+$0
+--
+snippet der "derivative" w
+$0
+--
+snippet sup "supremum" w
+$0
+--
+snippet inf "infimum" w
+$0
+--
+snippet lim "limit" w
+$0
+--
+snippet dint "integral" w
+${3:${VISUAL}}\: d${4:x}$0
+--
+snippet int "integral" iA
+${1:${VISUAL}}\: d${2:x}$0
+--
+snippet taylor "taylor" w
+${4:c_$1} (x-a)^$1$0
+--
+snippet lim "limit" w
+\lim_{${1:n}\to${2:\infty}}$0
+--
+snippet ddx "d/dx" wA
+\frac{d${1:}}{dx}$0
+--
+snippet part "d/dx" w
+${1:}}{\partial ${2:x}}$0
+--
+snippet oo "\infty" iA
+\infty$0
+--
+snippet >> ">>" iA
+\gg$0
+--
+snippet << "<<" iA
+\ll$0
+--
+snippet vrt "vertices" w
+$0
+--
+snippet digra "graph" w
+graph $0
+--
+snippet gra "graph" w
+$0
+--
+snippet redg "right edge" iA
+\mathrel{\bullet \!\!\!
+--
+snippet ledg "left edge" iA
+\mathrel{\leftarrow \!\!\!
+--
+snippet edg "edge" A
+\mathrel{\bullet \!
+--
+snippet surj "surjective" iA
+y \in
+--
+snippet inj "injective" iA
+x_1, x_2
+--
+snippet rel "relation" w
+$0
+--
+snippet rflx "reflexive" w
+$0
+--
+snippet sym "symmetric" w
+$0
+--
+snippet ttv "transitive" w
+$0
+--
+snippet eqv "equivalence" Options
+$0
+--
+snippet dom "domain" w
+$0
+--
+snippet cdom "codomain" w
+$0
+--
+snippet ran "range" w
+$0
+--
+snippet fun "function" w
+$0
+--
+snippet invs "inverse" w
+$0
+--
+snippet inj "injective" w
+$0
+--
+snippet surj "surjective" w
+$0
+--
+snippet bij "bijective" w
+$0
+--
+snippet oto "one-to-one" w
+$0
+--
+snippet mp "map(ped)" w
+$0
+--
+snippet udr "under" w
+$0
+--
+snippet cmpo "composition" w
+$0
+--
+snippet log "logarithm" w
+$0
+--
+snippet predi "predicate" iA
+\`\` $3
+--
+snippet ceil "ceil" iA
+$1 \right\rceil$0
+--
+snippet bceil "ceil" iA
+$1 \bigr\rceil$0
+--
+snippet floor "floor" iA
+$1 \right\rfloor$0
+--
+snippet log "logarthm" w
+\log_{${1:n}}($2)$0
+--
+snippet fun "function" iA
+: $2
+--
+snippet fx "function at x" iA
+${1:f}\left(${2:x}\right)$0
+--
+snippet fog "function composition" i
+\circ ${2:g}$0
+--
+snippet mpt "mapsto" iA
+\mapsto$0
+--
+snippet to "to" iA
+\to$0
+--
+snippet '(?<!\\)ln' "ln" rwA
+\ln($1)$0
+--
+snippet grp "group" w
+$0
+--
+snippet abel "abelian" w
+$0
+--
+snippet cmta "commutative" w
+$0
+--
+snippet cmuta "commutative" w
+$0
+--
+snippet deg "degree" w
+$0
+--
+snippet sol "solution(s)" w
+$0
+--
+snippet zo "zero(s)" w
+$0
+--
+snippet prf "Proof" b
+\begin{proof}
+--
+snippet prfbind "Proof by induction" b
+\begin{proof}
+--
+snippet arg "argument" w
+$0
+--
+snippet ftsoc "for the sake of contradiction" w
+the sake
+--
+snippet seq "sequence" w
+$0
+--
+snippet den "denoted" w
+$0
+--
+snippet cld "called" w
+$0
+--
+snippet clr "color" w
+$0
+--
+snippet wst "we say that" w
+say that
+--
+snippet neq "not equal" w
+equal $0
+--
+snippet tech "technique" w
+$0
+--
+snippet sel "selected" w
+$0
+--
+snippet fxd "fixed" w
+fixed
+--
+snippet opt "options" w
+options
+--
+snippet aft "after" w
+after
+--
+snippet vac "vacuously" w
+vacuously
+--
+snippet ih "inductive hypothesis" w
+hypothesis
+--
+snippet evt "everything" w
+everything
+--
+snippet win "wherein" w
+wherein
+--
+snippet cl "clause" w
+clause
+--
+snippet clo "closed" w
+closed
+--
+snippet fina "finally" w
+finally
+--
+snippet wtp "want to prove" w
+to prove
+--
+snippet jst "justified" w
+justified
+--
+snippet dedu "deduction" w
+deduction
+--
+snippet obt "obtain" w
+obtain${1:s}
+--
+snippet ccrt "concretely" w
+concretely
+--
+snippet cpx "complexity" w
+complex${1:ity}
+--
+snippet exa "exactly" w
+exactly
+--
+snippet fund "fundamental" w
+fundamental
+--
+snippet csq "consequence" w
+consequence
+--
+snippet ind "induction" w
+induction
+--
+snippet ins "inspection" w
+inspection
+--
+snippet ojv "objective" w
+objective
+--
+snippet aw "as well" w
+well
+--
+snippet ical "identical" w
+identical
+--
+snippet om "omit" w
+omit
+--
+snippet con "construct(ion)" w
+construct${1:ion}
+--
+snippet arb "arbitrary" w
+arbitrary
+--
+snippet wrt "with respect to" w
+respect to
+--
+snippet can "canonical" w
+canonical
+--
+snippet sm "same" w
+same
+--
+snippet bal "but also" w
+also
+--
+snippet und "understand" w
+understand
+--
+snippet sta "statement" w
+statement
+--
+snippet op "operation(s)" w
+operation${1:s}
+--
+snippet perf "perform" w
+perform
+--
+snippet q "question" w
+question
+--
+snippet wri "written" w
+written
+--
+snippet tir "their" w
+their
+--
+snippet dn "do not" w
+not
+--
+snippet dne "does not exist" w
+not exist
+--
+snippet wch "which" w
+which
+--
+snippet clr "clearly" w
+clearly
+--
+snippet ver "verified" w
+verified
+--
+snippet hvnt "have not" w
+not
+--
+snippet smp "simply" w
+simply
+--
+snippet bef "before" w
+before
+--
+snippet cor "correct" w
+correct
+--
+snippet simp "simplify(ing)" w
+simplify${1:ing}
+--
+snippet cpt "compute" w
+comput${1:ations}
+--
+snippet sup "suppose" w
+${1:s}uppose
+--
+snippet Sup "Suppose" w
+Suppose
+--
+snippet subst "substitute" w
+substitut${1:able}
+--
+snippet nm "namely" w
+namely
+--
+snippet occ "occurs" w
+occurs
+--
+snippet anz "analyze" w
+analyze
+--
+snippet exp "expand" w
+expand${1:ing}
+--
+snippet idn "identity" w
+identity
+--
+snippet resp "respectively" w
+respectively
+--
+snippet disc "discussed" w
+discussed
+--
+snippet desc "describe" w
+describe
+--
+snippet wn "we note" w
+note
+--
+snippet wc "(W/w)e commence" w
+commence
+--
+snippet alt "alternate" w
+alternat${1:ively}
+--
+snippet yld "yield(s)" w
+yield${1:s}
+--
+snippet wy "which yields" w
+yields
+--
+snippet fst "first" w
+first
+--
+snippet slv "solve" w
+solve
+--
+snippet prev "previously" w
+previously
+--
+snippet sat "satisfy" w
+satisfy
+--
+snippet val "value(s)" w
+value${1:s}
+--
+snippet poss "possible" w
+possible
+--
+snippet fd "find(ing)" w
+find${1:ing}
+--
+snippet giv "given" w
+given
+--
+snippet mvr "moreover" w
+${1:m}oreover
+--
+snippet corr "corresponding" w
+corresponding
+--
+snippet app "appl(ying)" w
+appl${1:ying}
+--
+snippet fac "factor" w
+factor
+--
+snippet dir "direction" w
+direction
+--
+snippet on "only" w
+only
+--
+snippet trv "trivial" w
+trivial
+--
+snippet ntrv "trivial" w
+non-trivial
+--
+snippet invo "invokes" w
+invoke${1:s}
+--
+snippet indu "induce" w
+induce${1:s}
+--
+snippet gen "generate" w
+generate
+--
+snippet unq "unique" w
+unique
+--
+snippet mtd "method" w
+method
+--
+snippet gnt "guarenteed" w
+guarenteed
+--
+snippet elem "elementary" w
+elementary
+--
+snippet prcs "process" w
+process
+--
+snippet pro "procedure" w
+procedure
+--
+snippet eval "eval" w
+evalulate
+--
+snippet equa "equation" w
+equation
+--
+snippet eq "equal" w
+equal
+--
+snippet iden "identity" w
+identity
+--
+snippet lkw "likewise" w
+likewise
+--
+snippet cnt "cannot" w
+cannot
+--
+snippet imp "impossible" w
+impossible
+--
+snippet exc "exceed" w
+exceed
+--
+snippet proc "proceed" w
+proceed
+--
+snippet no "number" w
+number${1:s}
+--
+snippet cons "consider" w
+consider
+--
+snippet cnst "consists" w
+consists
+--
+snippet ind "indeed" w
+indeed
+--
+snippet rec "recall" w
+${1:r}ecall
+--
+snippet recog "recognize" w
+recognize
+--
+snippet dif "different" w
+different
+--
+snippet orig "original" w
+original
+--
+snippet std "standard" w
+standard
+--
+snippet sim "similar(ly)" w
+similar${1:ly}
+--
+snippet simlt "simultaneously" w
+simultaneously
+--
+snippet rep "represent" w
+represent
+--
+snippet eqv "equivalently" w
+${1:e}quivalent${2:ly}
+--
+snippet agr "agree" w
+agree
+--
+snippet inv "invert" w
+invert${1:ible}
+--
+snippet obs "observation" w
+${1:o}bserv${2:ation}
+--
+snippet wo "we observe" w
+observe
+--
+snippet conv "convert(s)" w
+convert${1:s}
+--
+snippet prop "propert(ies/y)" w
+propert${1:ies}
+--
+snippet th "that" w
+that
+--
+snippet tn "then" w
+then
+--
+snippet red "reduced" w
+reduce${1:d}
+--
+snippet areq "as required" w
+required.
+--
+snippet aned "as needed" w
+needed.
+--
+snippet prec "precisely" w
+precisely
+--
+snippet req "require" w
+require
+--
+snippet ti "that is" w
+is
+--
+snippet wt "what" w
+what
+--
+snippet dt "determine(d)" w
+determine${1:d}
+--
+snippet sn "since" w
+${1:s}ince
+--
+snippet ts "thus" w
+${1:t}hus
+--
+snippet twh "thus we have" w
+we have
+--
+snippet stwh "so then we have" w
+then we
+--
+snippet wah "we also have" w
+also have
+--
+snippet wa "we also" w
+also
+--
+snippet swk "so we know" w
+we know
+--
+snippet ws "we say" w
+say
+--
+snippet swh "so we have" w
+we have
+--
+snippet aswht "and so we have that" w
+so we
+--
+snippet ath "and that" w
+that
+--
+snippet ww "(W/w)e will" w
+will
+--
+snippet Th "The" w
+The
+--
+snippet ass "assum(e/ing)" w
+${1:a}ssum${2:ing}
+--
+snippet wh "we have" w
+have
+--
+snippet wk "we know" w
+know
+--
+snippet twk "thus we know" w
+we know
+--
+snippet ho "hold(s)" w
+hold${1:s}
+--
+snippet ia "is a" w
+a
+--
+snippet ina "is not a" w
+not a
+--
+snippet Ts "To show" w
+show
+--
+snippet whts "we have to show" w
+have to
+--
+snippet wwts "we want to show" w
+want to
+--
+snippet wws "we will show" w
+will show
+--
+snippet wms "we must show" w
+must show
+--
+snippet oms "one must show" w
+must show
+--
+snippet whs "we have shown" w
+have shown
+--
+snippet wwn "we will now" w
+will now
+--
+snippet wwp "we will prove" w
+will prove
+--
+snippet ift "it follows that" w
+follows that
+--
+snippet fol "following" w
+follow${1:ing}
+--
+snippet st "such that" w
+that
+--
+snippet sot "so that" w
+that
+--
+snippet sotn "so then" w
+then
+--
+snippet rc "recall" w
+recall
+--
+snippet bc "because" w
+because
+--
+snippet bcm "become(s)" w
+become${1:s}
+--
+snippet fa "for all" w
+all
+--
+snippet fey "for every" w
+every
+--
+snippet fe "for example" w
+example
+--
+snippet fay "for any" w
+any
+--
+snippet fs "for some" w
+some
+--
+snippet te "there exists" w
+exists
+--
+snippet ex "exist" w
+exist${1:s}
+--
+snippet nex "not exist" w
+exist${1:s}
+--
+snippet twc "(T/t)hus we conclude" w
+we conclude
+--
+snippet wkt "we know that" w
+know that
+--
+snippet var "variable" w
+variable${1:s}
+--
+snippet tfae "the following are equivalent" w
+following are
+--
+snippet wlog "without loss of generality" w
+loss of
+--
+snippet chg "change" w
+change${1:s}
+--
+snippet prv "prove" w
+${1:p}rove
+--
+snippet rmk "remark" w
+remark
+--
+snippet eqty "equality" w
+equality
+--
+snippet dist "distinct" w
+distinct
+--
+snippet arv "arrive" w
+arrive
+--
+snippet lat "latter" w
+latter
+--
+snippet rem "remember" w
+remember
+--
+snippet defd "defined" w
+defined
+--
+snippet bde "by definition" w
+definition
+--
+snippet def "definition" w
+definition
+--
+snippet tog "together" w
+together
+--
+snippet tot "total" w
+total
+--
+snippet parti "particular" w
+particular
+--
+snippet ft "fact" w
+fact
+--
+snippet abv "above" w
+above
+--
+snippet seq "sequence" w
+\\{ a
+--
+snippet zz "zero" w
+zero
+--
+snippet cong "congruent" w
+congruent
+--
+snippet rmd "remainder" w
+$0
+--
+snippet mod "modulo" w
+$0
+--
+snippet mulpl "multiple(s)" w
+$0
+--
+snippet div "division" w
+$0
+--
+snippet divd "divide" w
+$0
+--
+snippet divi "divisible" w
+$0
+--
+snippet zz "zero" iA
+0
+--
+snippet gcd "greatest common divisor" iA
+\gcd($1)$0
+--
+snippet % "modulo" iA
+~\%~
+--
+snippet mod "modulo" iA
+\Mod{$1}$0
+--
+snippet cong "a is congruent to b mod m" iA
+\equiv $2
+--
+snippet || "divides" iA
+\mid$0
+--
+snippet n| "does not divide" iA
+\nmid$0
+--
+snippet t. "therefore" iA
+\therefore$0
+--
+snippet pos "positive" w
+$0
+--
+snippet neg "negative" w
+$0
+--
+snippet fin "finite" w
+$0
+--
+snippet nz "non-zero" w
+$0
+--
+snippet inf "infinite" w
+$0
+--
+snippet abs "absolute value" w
+value $0
+--
+snippet enu "enumerate" bA
+\begin{enumerate}
+--
+snippet itz "itemize" bA
+\begin{itemize}
+--
+snippet README.txt algebra calculus combinatorics complex computer_science constants construct_math_snippets.sh equation extern_prog generic geometry graphs group_theory inequalities latex_environments latex_formatting linear_algebra logic math.snippets math.snippets.header math_snippet_helpers.py number_theory operators output.txt polynomials proof relations sample_vimrc sequences sets snippet_finder.sh snippets.snippets symbols symlinker test.sh tex tex.snippets trigonometry "bullet point in list" A
+$0
+--
+snippet ali "Align" bA
+\begin{align*}
+--
+snippet tali "Align" bA
+\begin{align*}
+--
+snippet gather "Gather" bA
+\begin{gather*}
+--
+snippet ar "Array" b
+\begin{array*}{${1:rl}}
+--
+snippet eq "Equation" b
+\begin{equation}
+--
+snippet eqnn "Equation without number" b
+\begin{equation*}
+--
+snippet al "Align" b
+\begin{align*}
+--
+snippet col "column(s)" w
+$0
+--
+snippet rred "row reduction" w
+reduction $0
+--
+snippet rref "reduced row echelon form" w
+row echelon
+--
+snippet mat "matrix" w
+$0
+--
+snippet mats "matricies" w
+$0
+--
+snippet lc "linear combination" w
+combination $0
+--
+snippet pl "plane" w
+$0
+--
+snippet rnt "Rank Nullity Theorem" w
+Nullity Theorem
+--
+snippet ntlc "linear combination" w
+linear combination
+--
+snippet cxlc "convex linear combination" w
+linear combination${1:s}
+--
+snippet piv "pivot(s)" w
+$0
+--
+snippet lin "linear" w
+$0
+--
+snippet li "linear independent" w
+independent $0
+--
+snippet lyi "linearly independent" w
+independent $0
+--
+snippet lyd "linearly dependent" w
+dependent $0
+--
+snippet ld "linearly dependent" w
+dependent $0
+--
+snippet sca "scalar" w
+$0
+--
+snippet eibas "eigen basis" w
+basis $0
+--
+snippet eivec "eigen vector" w
+vector${1:s} $0
+--
+snippet eival "eigen value" w
+value${1:s} $0
+--
+snippet eisp "eigen space" w
+space $0
+--
+snippet sp "space" w
+$0
+--
+snippet geomul "geometric multiplicity" w
+multiplicity $0
+--
+snippet algmul "algebraic multiplicity" w
+multiplicity $0
+--
+snippet ve "vector" w
+$0
+--
+snippet ba "basis" w
+$0
+--
+snippet nsp "null space" w
+space $0
+--
+snippet csp "column space" w
+space $0
+--
+snippet rsp "row space" w
+space $0
+--
+snippet vsp "vector space" w
+space $0
+--
+snippet proj "projection" w
+$0
+--
+snippet ker "kernel" w
+$0
+--
+snippet lt "linear transformation" w
+transformation $0
+--
+snippet trns "transformation" w
+$0
+--
+snippet tpos "transpose" w
+$0
+--
+snippet vspace "vector space" w
+space$0 $0
+--
+snippet dim "dimension" w
+$0
+--
+snippet det "determinant" w
+$0
+--
+snippet chpoly "characteristic polynomial" w
+polynomial $0
+--
+snippet im "image" w
+$0
+--
+snippet orth "orthogonal" w
+$0
+--
+snippet zv "zero vector" w
+vector $0
+--
+snippet cpnt "component" w
+$0
+--
+snippet dgzbl "diagonalizable" w
+$0
+--
+snippet dgzn "diagonalization" w
+$0
+--
+snippet utri "upper triangular" w
+triangular $0
+--
+snippet ltri "lower triangular" w
+triangular $0
+--
+snippet trir "triangular" w
+$0
+--
+snippet plp "parallelpiped" w
+$0
+--
+snippet plg "parallelogram" w
+$0
+--
+snippet indp "independent" w
+$0
+--
+snippet dep "dependent" w
+$0
+--
+snippet orie "oriented" w
+$0
+--
+snippet str "stretch(es)" w
+$0
+--
+snippet diag "diagonal" w
+$0
+--
+snippet lwr "lower" w
+$0
+--
+snippet upr "upper" w
+$0
+--
+snippet vc "Vector" iA
+\vec{$1}$0
+--
+snippet bv "Basis Vector" iA
+$1 \right]_{\mathcal{$2}}$0
+--
+snippet comp "Comp" iA
+{$2}$0
+--
+snippet proj "Projection" iA
+{$2}$0
+--
+snippet span "Span" iA
+{$1}$0
+--
+snippet range "Range" iA
+\left($1\right)$0
+--
+snippet null "Null Space" iA
+\left($1\right)$0
+--
+snippet rank "rank" iA
+\left($1\right)$0
+--
+snippet rref "Row Reduced Echelon Form" iA
+\left($1\right)$0
+--
+snippet dim "dimension" iA
+\left($1\right)$0
+--
+snippet det "determinant" iA
+\left($1\right)$0
+--
+snippet colsp "column space" iA
+\left($1\right)$0
+--
+snippet rowsp "row space" iA
+\left($1\right)$0
+--
+snippet e1 "Basis" iA
+\vec{e_1}$0
+--
+snippet e2 "Basis" iA
+\vec{e_2}$0
+--
+snippet e3 "Basis" iA
+\vec{e_3}$0
+--
+snippet "[^i]mat(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet "imat(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet "(small|[gbBpvV])?ghp(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet 3mat "3 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 4mat "4 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 5mat "4 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 3rmat "1 by 3 Row Matrix" iA
+$1 &
+--
+snippet 2mat "2 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 2rmat "1 by 2 Row Matrix" iA
+$1 &
+--
+snippet ges "Gauss Elimination Step" iA
+gmat$1x$2
+--
+snippet rop "Row Operation" iA
+\mapsto $2R_{$1}
+--
+snippet rops "Start Row Operation" iA
+\rowops
+--
+snippet rad "Add rows" iA
+\add[$1]{$2}{$3}$0
+--
+snippet rmul "Multiply row" iA
+$3}$0
+--
+snippet rswap "Swap rows" iA
+\swap{$1}{$2}$0
+--
+snippet ynn "yn" iA
+y_{n}$0
+--
+snippet xii "xi" iA
+x_{i}$0
+--
+snippet yii "yi" iA
+y_{i}$0
+--
+snippet xjj "xj" iA
+x_{j}$0
+--
+snippet yjj "yj" iA
+y_{j}$0
+--
+snippet xp1 "x" iA
+x_{n+1}$0
+--
+snippet n0 "x" iA
+n_{0}$0
+--
+snippet xmm "x" iA
+x_{m}$0
+--
+snippet ss "subscript" iA
+_{$1}$0
+--
+snippet sbp "sub-super script" iA
+_{$1}^{$2}$0
+--
+#snippet '([A-Za-z])\d(\d)' "auto subscript" wrA
+snip.rv =
+--
+#snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+snip.rv =
+--
+snippet srel "stackrel" iA
+\stackrel{$1}{$2}$0
+--
+snippet cal "mathcal" iA
+\mathcal{$1}$0
+--
+snippet fk "mathfrak" iA
+\mathfrak{$1}$0
+--
+snippet bb "mathbb" iA
+\mathbb{$1}$0
+--
+snippet tit "italicized text ;)" iA
+\mathit{$1}$0
+--
+snippet bf "text bf" iA
+\textbf{$1}$0
+--
+snippet txt "text" iA
+\text{$1}$0
+--
+snippet sxt "spaced text" iA
+$1 }$0
+--
+snippet rhs "right hand side" w
+hand side
+--
+snippet lhs "left hand side" w
+hand side
+--
+snippet edbo "expression with dots under some binary operation" iA
+$2 $3
+--
+snippet sedbo "subscripted expression with dots under some binary operation" iA
+$2 $1_2
+--
+snippet cli "comma list" iA
+$2, \ldots,
+--
+snippet sli "subscript list" iA
+$1_{2}, \ldots,
+--
+snippet dli "double subscript list" iA
+${3:operation/comma} $1_{2}$2_{2}$3
+--
+snippet tli "triple subscripted" iA
+${4:operation/comma} $1_{2}$2_{2}$2_{3}
+--
+snippet fvars "some finite number of variables" iA
+$1_{2}, \dots
+--
+snippet dvar "some finite number of variables" iA
+$3 $1_{2}$2_{2}
+--
+snippet pp "add two numbers" iA
++
+--
+snippet pm "plus-minus" iA
+\pm
+--
+snippet nn "add the negative" iA
+-
+--
+snippet mm "multiply two numbers" iA
+\cdot
+--
+snippet xx "cross" iA
+\times$0
+--
+snippet README.txt algebra calculus combinatorics complex computer_science constants construct_math_snippets.sh equation extern_prog generic geometry graphs group_theory inequalities latex_environments latex_formatting linear_algebra logic math.snippets math.snippets.header math_snippet_helpers.py number_theory operators output.txt polynomials proof relations sample_vimrc sequences sets snippet_finder.sh snippets.snippets symbols symlinker test.sh tex tex.snippets trigonometry "cdot" iA
+\cdot$0
+--
+snippet sq "\sqrt{}" iA
+\sqrt{${1:${VISUAL}}}$0
+--
+snippet norm "norm" iA
+$1 \right\Vert$0
+--
+snippet abs "absolute" iA
+$1 \right|$0
+--
+snippet sq "^2" iA
+^2$0
+--
+snippet cb "^3" iA
+^3$0
+--
+snippet tt "to the ... power" iA
+^{$1}$0
+--
+snippet min "minimum" iA
+$2\right)$0
+--
+snippet max "maximum" iA
+$2\right)$0
+--
+snippet invs "inverse" iA
+^{-1}$0
+--
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+--
+snippet f/ "Fraction" iA
+\\frac{$1}{$2}$0
+--
+snippet '((\d+)?(\\)?([A-Za-z]+)(\^((\{\d+\})|(\d)))?)/' "symbol frac" wrA
+snip.rv =
+--
+snippet '(\d+)/' "number frac" wrA
+snip.rv =
+--
+snippet '^.*\)/' "() frac" wrA
+`!p
+--
+snippet oper "operator" w
+$0
+--
+snippet pl "plus" w
+$0
+--
+snippet tsm "times" w
+$0
+--
+snippet mul "multiplication" w
+$0
+--
+snippet muld "multiplied" w
+$0
+--
+snippet add "addition" w
+$0
+--
+snippet subtr "subtraction" w
+$0
+--
+snippet min "minimum" w
+$0
+--
+snippet max "maximum" w
+$0
+--
+snippet log "logic(al)" w
+$0
+--
+snippet thm "theorem" w
+$0
+--
+snippet imp "implies" w
+implies
+--
+snippet val "valid" w
+$0
+--
+snippet assi "assign(ment)" w
+$0
+--
+snippet axi "axiom(s)" w
+$0
+--
+snippet propo "proposition" w
+proposition${1:al}
+--
+snippet taut "tautology" w
+$0
+--
+snippet quan "quantifier" w
+quantifier
+--
+snippet thf "therefore" w
+$0
+--
+snippet hn "hence" w
+$0
+--
+snippet suff "sufficient" w
+$0
+--
+snippet inc "incorrect" w
+$0
+--
+snippet imp "implication" w
+$0
+--
+snippet bimp "bi-implication" w
+$0
+--
+snippet tr "true" w
+$0
+--
+snippet fl "false" w
+$0
+--
+snippet lem "lemma(s)" w
+$0
+--
+snippet contrap "contrapositive" w
+$0
+--
+snippet a4c "assume for contradiction that" w
+for contradiction
+--
+snippet cont "contradiction" w
+$0
+--
+snippet hyp "hypothesis" w
+$0
+--
+snippet infe "inference" w
+$0
+--
+snippet roi "rule of inference" w
+of inference
+--
+snippet iff "if and only if" w
+and only
+--
+snippet IH "Induction Hypothesis" w
+Hypothesis $0
+--
+snippet prin "principle" w
+$0
+--
+snippet Bimp "bi-conditional" Ai
+\Leftrightarrow$0
+--
+snippet bimp "bi-conditional" Ai
+\leftrightarrow
+--
+snippet tst "turnstile" Ai
+\vdash$0
+--
+snippet imp "implies" Aw
+\Rightarrow
+--
+snippet limp "implies" Aw
+\Leftarrow
+--
+snippet && "AND" iA
+\land$0
+--
+snippet not "NOT" iA
+\neg$0
+--
+snippet xor "XOR" iA
+\oplus$0
+--
+snippet VV "OR" iA
+\lor$0
+--
+snippet mdl "models" iA
+\models$0
+--
+snippet === "is" iA
+:\equiv$0
+--
+snippet fa "forall" iA
+\forall$0
+--
+snippet eqv "congruent/equiv" iA
+\equiv$0
+--
+snippet te "there exists" iA
+$1
+--
+snippet ee "equality" iA
+=$0
+--
+snippet neq "not equal" iA
+\neq$0
+--
+snippet ae "approx equals" iA
+\approx$0
+--
+snippet iff "iff" Ai
+\iff$0
+--
+snippet ~ "similar" Ai
+\sim$0
+--
+snippet ss "subset" w
+$0
+--
+snippet part "partition" w
+$0
+--
+snippet rat "rational" w
+$0
+--
+snippet nat "natural" w
+$0
+--
+snippet natn "natural numbers" w
+numbers $0
+--
+snippet Rea "the Real Numbers" w
+Real Numbers
+--
+snippet Com "Real Numbers" w
+numbers $0
+--
+snippet int "integer(s)" w
+$0
+--
+snippet ctn "contain" w
+$0
+--
+snippet uni "union" w
+$0
+--
+snippet len "length" w
+$0
+--
+snippet ele "element(s)" w
+$0
+--
+snippet CC "Complex Numbers" iA
+\mathbb{C}$0
+--
+snippet RR "real" iA
+\mathbb{R}$0
+--
+snippet QQ "Q" iA
+\mathbb{Q}$0
+--
+snippet NN "N" iA
+\mathbb{N}$0
+--
+snippet ZZ "Z" iA
+\mathbb{Z}$0
+--
+snippet \\\ "setminus" iA
+\setminus$0
+--
+snippet pwr "Power set" iA
+\mathcal{P}($1)$0
+--
+snippet cc "subset" iA
+\subseteq$0
+--
+snippet bs "backwards subset" w
+\supseteq$0
+--
+snippet c= "subset equal" iA
+\subseteq$0
+--
+snippet neo "not in " iA
+\not\in$0
+--
+snippet eo "in " A
+\in$0
+--
+snippet ^^ "cap" iA
+\cap$0
+--
+snippet BU "Big Union" iA
+${4:${VISUAL}}$0
+--
+snippet UU "cup" iA
+\cup$0
+--
+snippet OO "emptyset" iA
+\emptyset$0
+--
+snippet set "set" iA
+$1 \\right\\}$0
+--
+snippet pi "pi" iA
+\pi$0
+--
+snippet cn "Complex Number" iA
++ ${2:\beta}
+--
+snippet Big-Oh "Big Oh Definition" w
+c, n_{0}
+--
+snippet bO "Big Oh- Notation" w
+\mathcal{O}($1)$0
+--
+snippet BOM "Big Omega" w
+\Omega($1)$0
+--
+snippet algo "algorithm" w
+$0
+--
+snippet bin "binary" w
+$0
+--
+snippet deci "decimal" w
+$0
+--
+snippet ineq "inequality" w
+$0
+--
+snippet ge "greater than or equal to" w
+than or
+--
+snippet le "less than or equal to" w
+than or
+--
+snippet le "leq" iA
+\le$0
+--
+snippet ge "geq" iA
+\ge$0
+--
+snippet obrack "overbracket" iA
+\overbracket{$1}^{$2}$0
+--
+snippet ubrack "underbracket" iA
+\underbracket{$1}_{$2}$0
+--
+#snippet () "left( right)" iA
+${1:${VISUAL}} \right)$0
+--
+#snippet [] "left[ right]" iA
+${1:${VISUAL}} \right]$0
+--
+snippet lrp "left( right)" iA
+${1:${VISUAL}} \right)$0
+--
+snippet lr| "left| right|" i
+${1:${VISUAL}} \right|$0
+--
+snippet lr{ "left\{ right\}" i
+${1:${VISUAL}} \right\\}$0
+--
+snippet lrb "left\{ right\}" i
+${1:${VISUAL}} \right\\}$0
+--
+snippet lrs "left[ right]" iA
+${1:${VISUAL}} \right]$0
+--
+snippet lra "leftangle rightangle" iA
+\right>$0
+--
+#snippet bar "bar" iA
+#\bar{$1}$0
+--
+snippet nabl "nabla" iA
+\nabla$0
+--
+snippet star "star" iA
+\star$0
+--
+snippet chi "chi" iA
+\chi
+--
+snippet psi "psi" iA
+\psi
+--
+snippet Psi "Psi" iA
+\Psi
+--
+snippet phi "phi" iA
+\phi
+--
+snippet Phi "Phi" iA
+\Phi
+--
+snippet alp "alpha" iA
+\alpha$0
+--
+snippet bet "beta" iA
+\beta$0
+--
+snippet gam "gamma" iA
+\gamma$0
+--
+snippet Gam "Gamma" iA
+\Gamma$0
+--
+snippet del "delta" iA
+\delta$0
+--
+snippet Del "delta" iA
+\Delta$0
+--
+snippet the "theta" iA
+\theta$0
+--
+snippet The "theta" iA
+\Theta$0
+--
+snippet ep "var epsilon" iA
+\varepsilon$0
+--
+snippet sig "sigma" iA
+\sigma$0
+--
+snippet Sig "sigma" iA
+\Sigma$0
+--
+snippet lam "lambda" iA
+\lambda$0
+--
+snippet Lam "lambda" iA
+\Lambda$0
+--
+snippet mu "mu" iA
+\mu$0
+--
+snippet box "box around equation" iA
+\boxed{$1}$0
+--
+snippet tag "tag" w
+\tag{$1}$0
+--
+snippet dtag "tag" w
+\tag{$2}$0
+--
+snippet bar "overline" iA
+\overline{$1}$0
+--
+snippet nt "not" iA
+\not
+--
+snippet uline "underline" w
+\underline{$1}$0
+--
+snippet dag "dag" bA
++'%A %0d
+--
+snippet '(?<!\\)arcsin' "sin" rwA
+\arcsin$1{}$0
+--
+snippet '(?<!arc)(?<!\\)sin' "sin" rwA
+$1 \left(
+--
+snippet '(?<!\\)arccos' "cos" rwA
+$1 \left(
+--
+snippet '(?<!arc)(?<!\\)cos' "cos" rwA
+$1 \left(
+--
+snippet '(?<!\\)arctan' "tan" rwA
+$1 \left(
+--
+# snippet '(?<!arc)(?<!\\)tan' "tan" rwA
+\tan
+--
+snippet '(?<!\\)arccot' "cot" rwA
+$1 \left(
+--
+snippet '(?<!arc)(?<!\\)cot' "cot" rwA
+$1 \left(
+--
+snippet '(?<!\\)arccsc' "csc" rwA
+$1 \left(
+--
+snippet '(?<!arc)(?<!\\)csc' "csc" rwA
+$1 \left(
+--
+snippet '(?<!\\)arcsec' "sec" rwA
+$1 \left(
+--
+# snippet '(?<!arc)(?<!\\)sec' "sec" rwA
+\sec
+--
+snippet bthm "binomial theorem" iA
+{$2 \choose
+--
+snippet choo "n choose k" iA
+\binom{${1:n}}{${2:k}}$0
+--
+snippet nCk "n choose k" iA
+{{}^{${1:n}}\!C_{${2:k}}}
+--
+snippet nPk "n permute k" iA
+{{}^{${1:n}}\!P_{${2:k}}}
+--
+snippet cou "counts" w
+$0
+--
+snippet comb "combination" w
+$0
+--
+snippet perm "permutation" w
+$0
+--
+snippet plot "Plot" w
+\begin{figure}[$1]
+--
+snippet nn "Tikz node" w
+(${1/[^0-9a-zA-Z]//g}${2}) ${3:at
+--
+# snippet dr "Tikz draw" w
+\draw[${1}] (${2:0,
+--
+snippet na "Tikz node above" w
+snip.rv=', '
+--
+snippet nb "Tikz node below" w
+snip.rv=', '
+--
+snippet nr "Tikz node right" w
+snip.rv=', '
+--
+snippet nl "Tikz node left" w
+snip.rv=', '
+--
+snippet nar "Tikz node above right" w
+right`!p snip.rv=',
+--
+snippet nal "Tikz node above left" w
+left`!p snip.rv=',
+--
+snippet nbr "Tikz node below right" w
+right`!p snip.rv=',
+--
+snippet nbl "Tikz node below left" w
+left`!p snip.rv=',
+--
+snippet frame "Tikz frame" w
+lines, <->]
+--
+snippet force "Tikz force" w
+(${1:0, 0})
+--
+snippet tikz "Tikz" w
+\begin{figure}[htb]
+--
+snippet co "Tikz coordinate" w
+($1)$0
+--
+snippet pm "Punctuation Math" wA
+$${1:${VISUAL}}$`!p
+--
+snippet mm "Math" wA
+$0
+--
+snippet bb "Brilliant Math" wA
+\(${1:${VISUAL}}\)`!p
+--
+snippet pz "piazza latex" wA
+$$${1:${VISUAL}}$$`!p
+--
+snippet dm "Math" wA
+\[
+--
+snippet commu "commutivity" w
+$0
+--
+snippet assoc "associativity" w
+$0
+--
+snippet distp "distributive property" w
+property $0
+--
+snippet alg "algebra(ic)" w
+$0
+--
+snippet ctq "complete the square" w
+the square
+--
+snippet prod "product" iA
+\prod_{$1}^{$2}
+--
+snippet FF "Field" iA
+\mathbb{F}$0
+--
+snippet tri "n-th triangular number" iA
+$1 $0
+--
+snippet sum "sum" iA
+${4:${VISUAL}}$0
+--
+snippet sn "The Snippet Snippet"
+${1:Trigger} "${2:Description}"
+${0}
+--
+wsn "Word
+snippet ${1:Trigger} "${2:Word}" w
+$2 \$0
+--
+snippet tsn "Text Snippet Snippet"
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet msn "Math Snippet Snippet"
+"math()"
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet ass "assuming" w
+assuming $0
+--
+snippet ord "ordered" w
+ordered $0
+--
+snippet incr "increas(ing)" w
+increas${1:ing} $0
+--
+snippet prod "product" w
+product $0
+--
+snippet ty "type" w
+type $0
+--
+snippet polyn "polynomial" w
+polynomial $0
+--
+snippet coe "coefficients" w
+coefficients $0
+--
+snippet stru "structure" w
+structure $0
+--
+snippet tup "tuple" w
+tuple $0
+--
+snippet dig "digits" w
+digits $0
+--
+snippet form "formula" w
+formula $0
+--
+snippet in "infinity" w
+infinity $0
+--
+snippet coor "coordinate" w
+coordinate${1:s} $0
+--
+snippet eqn "equation" w
+equation $0
+--
+snippet lang "language" w
+language
+--
+snippet nota "notation" w
+notation $0
+--
+snippet mt "math" w
+math${1:matical} $0
+--
+snippet sys "system" w
+system $0
+--
+snippet Supi "supposing" w
+supposing $0
+--
+snippet calc "calculate" w
+calculate $0
+--
+snippet aprx "approx(imate)" w
+approx${1:imate} $0
+--
+snippet comm "commence" w
+commence $0
+--
+snippet comp "compare" w
+compar${1:ing} $0
+--
+snippet mini "minimize" w
+minmize $0
+--
+snippet maxi "maximize" w
+maximize $0
+--
+snippet subs "substituting" w
+substitut${1:ing} $0
+--
+snippet substi "substituting" w
+substitutable $0
+--
+snippet ... "\ldots" iA
+\ldots$0
+--
+snippet v.. "\vdots" iA
+\vdots$0
+--
+snippet dots "Smart Dots" iA
+\dots${1:commas, binary, multiplication}$0
+--
+snippet ~> "squiggley arrow" A
+\rightsquigarrow$0
+--
+snippet xra "arrow with text" A
+\xrightarrow${1:[$2]}{$3}$0
+--
+snippet cvgs "converges" w
+converges $0
+--
+snippet cts "continuous" w
+continuous $0
+--
+snippet nbd "neighbourhood" w
+neighbourhood $0
+--
+snippet der "derivative" w
+derivative $0
+--
+snippet sup "supremum" w
+supremum $0
+--
+snippet inf "infimum" w
+infimum $0
+--
+snippet lim "limit" w
+limit $0
+--
+snippet dint "integral" w
+\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}\: d${4:x}$0
+--
+snippet int "integral" iA
+\int ${1:${VISUAL}}\: d${2:x}$0
+--
+snippet taylor "taylor" w
+\sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1$0
+--
+snippet lim "limit" w
+\lim_{${1:n}\to${2:\infty}}$0
+--
+snippet ddx "d/dx" wA
+\frac{d${1:}}{dx}$0
+--
+snippet part "d/dx" w
+\frac{\partial ${1:}}{\partial ${2:x}}$0
+--
+snippet oo "\infty" iA
+\infty$0
+--
+snippet >> ">>" iA
+\gg$0
+--
+snippet << "<<" iA
+\ll$0
+--
+snippet vrt "vertices" w
+vertices $0
+--
+snippet digra "graph" w
+directed graph $0
+--
+snippet gra "graph" w
+graph $0
+--
+snippet redg "right edge" iA
+$1 \mathrel{\bullet \!\!\! \rightarrow} $2
+--
+snippet ledg "left edge" iA
+$1 \mathrel{\leftarrow \!\!\! \bullet} $2
+--
+snippet edg "edge" A
+$1 \mathrel{\bullet \! {-} \! \bullet} $2
+--
+snippet surj "surjective" iA
+\forall y \in ${1:CD}, \exists x \in ${2:D} \text{ s.t. } y = ${3:f}(x)$0
+--
+snippet inj "injective" iA
+\forall x_1, x_2 \in ${1:D}, ${2:f}(x_1) = ${3:f}(x_2) \implies x_1 = x_2$0
+--
+snippet rel "relation" w
+relation $0
+--
+snippet rflx "reflexive" w
+reflexive $0
+--
+snippet sym "symmetric" w
+symmetric $0
+--
+snippet ttv "transitive" w
+transitive $0
+--
+snippet eqv "equivalence" Options
+equivalence $0
+--
+snippet dom "domain" w
+domain $0
+--
+snippet cdom "codomain" w
+codomain $0
+--
+snippet ran "range" w
+range $0
+--
+snippet fun "function" w
+function $0
+--
+snippet invs "inverse" w
+inverse $0
+--
+snippet inj "injective" w
+injective $0
+--
+snippet surj "surjective" w
+surjective $0
+--
+snippet bij "bijective" w
+bijective $0
+--
+snippet oto "one-to-one" w
+one-to-one $0
+--
+snippet mp "map(ped)" w
+map${1:ped} $0
+--
+snippet udr "under" w
+under $0
+--
+snippet cmpo "composition" w
+composition $0
+--
+snippet log "logarithm" w
+logarithm $0
+--
+snippet predi "predicate" iA
+$1($2): \`\` $3 "\text{, where } $2 \in $4$0
+--
+snippet ceil "ceil" iA
+\left\lceil $1 \right\rceil$0
+--
+snippet bceil "ceil" iA
+\bigl\lceil $1 \bigr\rceil$0
+--
+snippet floor "floor" iA
+\left\lfloor $1 \right\rfloor$0
+--
+snippet log "logarthm" w
+\log_{${1:n}}($2)$0
+--
+snippet fun "function" iA
+${1:f} : $2 \to $3
+--
+snippet fx "function at x" iA
+${1:f}\left(${2:x}\right)$0
+--
+snippet fog "function composition" i
+${1:f} \circ ${2:g}$0
+--
+snippet mpt "mapsto" iA
+\mapsto$0
+--
+snippet to "to" iA
+\to$0
+--
+snippet '(?<!\\)ln' "ln" rwA
+\ln($1)$0
+--
+snippet grp "group" w
+group $0
+--
+snippet abel "abelian" w
+abelian $0
+--
+snippet cmta "commutative" w
+commutative $0
+--
+snippet cmuta "commutative" w
+commutative $0
+--
+snippet deg "degree" w
+degree $0
+--
+snippet sol "solution(s)" w
+solution${1:s} $0
+--
+snippet zo "zero(s)" w
+zero${1:s} $0
+file proof/.proof_words.snippets.swp
+--
+snippet prf "Proof" b
+\begin{proof}
+--
+snippet prfbind "Proof by induction" b
+\begin{proof}
+--
+snippet arg "argument" w
+$0
+--
+snippet ftsoc "for the sake of contradiction" w
+the sake
+--
+snippet seq "sequence" w
+$0
+--
+snippet den "denoted" w
+$0
+--
+snippet cld "called" w
+$0
+--
+snippet clr "color" w
+$0
+--
+snippet wst "we say that" w
+say that
+--
+snippet neq "not equal" w
+equal $0
+--
+snippet tech "technique" w
+$0
+--
+snippet sel "selected" w
+$0
+--
+snippet fxd "fixed" w
+fixed
+--
+snippet opt "options" w
+options
+--
+snippet aft "after" w
+after
+--
+snippet vac "vacuously" w
+vacuously
+--
+snippet ih "inductive hypothesis" w
+hypothesis
+--
+snippet evt "everything" w
+everything
+--
+snippet win "wherein" w
+wherein
+--
+snippet cl "clause" w
+clause
+--
+snippet clo "closed" w
+closed
+--
+snippet fina "finally" w
+finally
+--
+snippet wtp "want to prove" w
+to prove
+--
+snippet jst "justified" w
+justified
+--
+snippet dedu "deduction" w
+deduction
+--
+snippet obt "obtain" w
+obtain${1:s}
+--
+snippet ccrt "concretely" w
+concretely
+--
+snippet cpx "complexity" w
+complex${1:ity}
+--
+snippet exa "exactly" w
+exactly
+--
+snippet fund "fundamental" w
+fundamental
+--
+snippet csq "consequence" w
+consequence
+--
+snippet ind "induction" w
+induction
+--
+snippet ins "inspection" w
+inspection
+--
+snippet ojv "objective" w
+objective
+--
+snippet aw "as well" w
+well
+--
+snippet ical "identical" w
+identical
+--
+snippet om "omit" w
+omit
+--
+snippet con "construct(ion)" w
+construct${1:ion}
+--
+snippet arb "arbitrary" w
+arbitrary
+--
+snippet wrt "with respect to" w
+respect to
+--
+snippet can "canonical" w
+canonical
+--
+snippet sm "same" w
+same
+--
+snippet bal "but also" w
+also
+--
+snippet und "understand" w
+understand
+--
+snippet sta "statement" w
+statement
+--
+snippet op "operation(s)" w
+operation${1:s}
+--
+snippet perf "perform" w
+perform
+--
+snippet q "question" w
+question
+--
+snippet wri "written" w
+written
+--
+snippet tir "their" w
+their
+--
+snippet dn "do not" w
+not
+--
+snippet dne "does not exist" w
+not exist
+--
+snippet wch "which" w
+which
+--
+snippet clr "clearly" w
+clearly
+--
+snippet ver "verified" w
+verified
+--
+snippet hvnt "have not" w
+not
+--
+snippet smp "simply" w
+simply
+--
+snippet bef "before" w
+before
+--
+snippet cor "correct" w
+correct
+--
+snippet simp "simplify(ing)" w
+simplify${1:ing}
+--
+snippet cpt "compute" w
+comput${1:ations}
+--
+snippet sup "suppose" w
+${1:s}uppose
+--
+snippet Sup "Suppose" w
+Suppose
+--
+snippet subst "substitute" w
+substitut${1:able}
+--
+snippet nm "namely" w
+namely
+--
+snippet occ "occurs" w
+occurs
+--
+snippet anz "analyze" w
+analyze
+--
+snippet exp "expand" w
+expand${1:ing}
+--
+snippet idn "identity" w
+identity
+--
+snippet resp "respectively" w
+respectively
+--
+snippet disc "discussed" w
+discussed
+--
+snippet desc "describe" w
+describe
+--
+snippet wn "we note" w
+note
+--
+snippet wc "(W/w)e commence" w
+commence
+--
+snippet alt "alternate" w
+alternat${1:ively}
+--
+snippet yld "yield(s)" w
+yield${1:s}
+--
+snippet wy "which yields" w
+yields
+--
+snippet fst "first" w
+first
+--
+snippet slv "solve" w
+solve
+--
+snippet prev "previously" w
+previously
+--
+snippet sat "satisfy" w
+satisfy
+--
+snippet val "value(s)" w
+value${1:s}
+--
+snippet poss "possible" w
+possible
+--
+snippet fd "find(ing)" w
+find${1:ing}
+--
+snippet giv "given" w
+given
+--
+snippet mvr "moreover" w
+${1:m}oreover
+--
+snippet corr "corresponding" w
+corresponding
+--
+snippet app "appl(ying)" w
+appl${1:ying}
+--
+snippet fac "factor" w
+factor
+--
+snippet dir "direction" w
+direction
+--
+snippet on "only" w
+only
+--
+snippet trv "trivial" w
+trivial
+--
+snippet ntrv "trivial" w
+non-trivial
+--
+snippet invo "invokes" w
+invoke${1:s}
+--
+snippet indu "induce" w
+induce${1:s}
+--
+snippet gen "generate" w
+generate
+--
+snippet unq "unique" w
+unique
+--
+snippet mtd "method" w
+method
+--
+snippet gnt "guarenteed" w
+guarenteed
+--
+snippet elem "elementary" w
+elementary
+--
+snippet prcs "process" w
+process
+--
+snippet pro "procedure" w
+procedure
+--
+snippet eval "eval" w
+evalulate
+--
+snippet equa "equation" w
+equation
+--
+snippet eq "equal" w
+equal
+--
+snippet iden "identity" w
+identity
+--
+snippet lkw "likewise" w
+likewise
+--
+snippet cnt "cannot" w
+cannot
+--
+snippet imp "impossible" w
+impossible
+--
+snippet exc "exceed" w
+exceed
+--
+snippet proc "proceed" w
+proceed
+--
+snippet no "number" w
+number${1:s}
+--
+snippet cons "consider" w
+consider
+--
+snippet cnst "consists" w
+consists
+--
+snippet ind "indeed" w
+indeed
+--
+snippet rec "recall" w
+${1:r}ecall
+--
+snippet recog "recognize" w
+recognize
+--
+snippet dif "different" w
+different
+--
+snippet orig "original" w
+original
+--
+snippet std "standard" w
+standard
+--
+snippet sim "similar(ly)" w
+similar${1:ly}
+--
+snippet simlt "simultaneously" w
+simultaneously
+--
+snippet rep "represent" w
+represent
+--
+snippet eqv "equivalently" w
+${1:e}quivalent${2:ly}
+--
+snippet agr "agree" w
+agree
+--
+snippet inv "invert" w
+invert${1:ible}
+--
+snippet obs "observation" w
+${1:o}bserv${2:ation}
+--
+snippet wo "we observe" w
+observe
+--
+snippet conv "convert(s)" w
+convert${1:s}
+--
+snippet prop "propert(ies/y)" w
+propert${1:ies}
+--
+snippet th "that" w
+that
+--
+snippet tn "then" w
+then
+--
+snippet red "reduced" w
+reduce${1:d}
+--
+snippet areq "as required" w
+required.
+--
+snippet aned "as needed" w
+needed.
+--
+snippet prec "precisely" w
+precisely
+--
+snippet req "require" w
+require
+--
+snippet ti "that is" w
+is
+--
+snippet wt "what" w
+what
+--
+snippet dt "determine(d)" w
+determine${1:d}
+--
+snippet sn "since" w
+${1:s}ince
+--
+snippet ts "thus" w
+${1:t}hus
+--
+snippet twh "thus we have" w
+we have
+--
+snippet stwh "so then we have" w
+then we
+--
+snippet wah "we also have" w
+also have
+--
+snippet wa "we also" w
+also
+--
+snippet swk "so we know" w
+we know
+--
+snippet ws "we say" w
+say
+--
+snippet swh "so we have" w
+we have
+--
+snippet aswht "and so we have that" w
+so we
+--
+snippet ath "and that" w
+that
+--
+snippet ww "(W/w)e will" w
+will
+--
+snippet Th "The" w
+The
+--
+snippet ass "assum(e/ing)" w
+${1:a}ssum${2:ing}
+--
+snippet wh "we have" w
+have
+--
+snippet wk "we know" w
+know
+--
+snippet twk "thus we know" w
+we know
+--
+snippet ho "hold(s)" w
+hold${1:s}
+--
+snippet ia "is a" w
+a
+--
+snippet ina "is not a" w
+not a
+--
+snippet Ts "To show" w
+show
+--
+snippet whts "we have to show" w
+have to
+--
+snippet wwts "we want to show" w
+want to
+--
+snippet wws "we will show" w
+will show
+--
+snippet wms "we must show" w
+must show
+--
+snippet oms "one must show" w
+must show
+--
+snippet whs "we have shown" w
+have shown
+--
+snippet wwn "we will now" w
+will now
+--
+snippet wwp "we will prove" w
+will prove
+--
+snippet ift "it follows that" w
+follows that
+--
+snippet fol "following" w
+follow${1:ing}
+--
+snippet st "such that" w
+that
+--
+snippet sot "so that" w
+that
+--
+snippet sotn "so then" w
+then
+--
+snippet rc "recall" w
+recall
+--
+snippet bc "because" w
+because
+--
+snippet bcm "become(s)" w
+become${1:s}
+--
+snippet fa "for all" w
+all
+--
+snippet fey "for every" w
+every
+--
+snippet fe "for example" w
+example
+--
+snippet fay "for any" w
+any
+--
+snippet fs "for some" w
+some
+--
+snippet te "there exists" w
+exists
+--
+snippet ex "exist" w
+exist${1:s}
+--
+snippet nex "not exist" w
+exist${1:s}
+--
+snippet twc "(T/t)hus we conclude" w
+we conclude
+--
+snippet wkt "we know that" w
+know that
+--
+snippet var "variable" w
+variable${1:s}
+--
+snippet tfae "the following are equivalent" w
+following are
+--
+snippet wlog "without loss of generality" w
+loss of
+--
+snippet chg "change" w
+change${1:s}
+--
+snippet prv "prove" w
+${1:p}rove
+--
+snippet rmk "remark" w
+remark
+--
+snippet eqty "equality" w
+equality
+--
+snippet dist "distinct" w
+distinct
+--
+snippet arv "arrive" w
+arrive
+--
+snippet lat "latter" w
+latter
+--
+snippet rem "remember" w
+remember
+--
+snippet defd "defined" w
+defined
+--
+snippet bde "by definition" w
+definition
+--
+snippet def "definition" w
+definition
+--
+snippet tog "together" w
+together
+--
+snippet tot "total" w
+total
+--
+snippet parti "particular" w
+particular
+--
+snippet ft "fact" w
+fact
+--
+snippet abv "above" w
+above
+--
+snippet seq "sequence" w
+\\{ a
+--
+snippet zz "zero" w
+zero
+--
+snippet cong "congruent" w
+congruent
+--
+snippet rmd "remainder" w
+$0
+--
+snippet mod "modulo" w
+$0
+--
+snippet mulpl "multiple(s)" w
+$0
+--
+snippet div "division" w
+$0
+--
+snippet divd "divide" w
+$0
+--
+snippet divi "divisible" w
+$0
+--
+snippet zz "zero" iA
+0
+--
+snippet gcd "greatest common divisor" iA
+\gcd($1)$0
+--
+snippet % "modulo" iA
+~\%~
+--
+snippet mod "modulo" iA
+\Mod{$1}$0
+--
+snippet cong "a is congruent to b mod m" iA
+\equiv $2
+--
+snippet || "divides" iA
+\mid$0
+--
+snippet n| "does not divide" iA
+\nmid$0
+--
+snippet t. "therefore" iA
+\therefore$0
+--
+snippet pos "positive" w
+$0
+--
+snippet neg "negative" w
+$0
+--
+snippet fin "finite" w
+$0
+--
+snippet nz "non-zero" w
+$0
+--
+snippet inf "infinite" w
+$0
+--
+snippet abs "absolute value" w
+value $0
+--
+snippet enu "enumerate" bA
+\begin{enumerate}
+--
+snippet itz "itemize" bA
+\begin{itemize}
+--
+snippet README.txt algebra calculus combinatorics complex computer_science constants construct_math_snippets.sh equation extern_prog generic geometry graphs group_theory inequalities latex_environments latex_formatting linear_algebra logic math.snippets math.snippets.header math_snippet_helpers.py number_theory operators output.txt polynomials proof relations sample_vimrc sequences sets snippet_finder.sh snippets.snippets symbols symlinker test.sh tex tex.snippets trigonometry "bullet point in list" A
+$0
+--
+snippet ali "Align" bA
+\begin{align*}
+--
+snippet tali "Align" bA
+\begin{align*}
+--
+snippet gather "Gather" bA
+\begin{gather*}
+--
+snippet ar "Array" b
+\begin{array*}{${1:rl}}
+--
+snippet eq "Equation" b
+\begin{equation}
+--
+snippet eqnn "Equation without number" b
+\begin{equation*}
+--
+snippet al "Align" b
+\begin{align*}
+--
+list=$(grep -A 1 -rwih 'snippet')
+i=0
+--
+snippet col "column(s)" w
+$0
+--
+snippet rred "row reduction" w
+reduction $0
+--
+snippet rref "reduced row echelon form" w
+row echelon
+--
+snippet mat "matrix" w
+$0
+--
+snippet mats "matricies" w
+$0
+--
+snippet lc "linear combination" w
+combination $0
+--
+snippet pl "plane" w
+$0
+--
+snippet rnt "Rank Nullity Theorem" w
+Nullity Theorem
+--
+snippet ntlc "linear combination" w
+linear combination
+--
+snippet cxlc "convex linear combination" w
+linear combination${1:s}
+--
+snippet piv "pivot(s)" w
+$0
+--
+snippet lin "linear" w
+$0
+--
+snippet li "linear independent" w
+independent $0
+--
+snippet lyi "linearly independent" w
+independent $0
+--
+snippet lyd "linearly dependent" w
+dependent $0
+--
+snippet ld "linearly dependent" w
+dependent $0
+--
+snippet sca "scalar" w
+$0
+--
+snippet eibas "eigen basis" w
+basis $0
+--
+snippet eivec "eigen vector" w
+vector${1:s} $0
+--
+snippet eival "eigen value" w
+value${1:s} $0
+--
+snippet eisp "eigen space" w
+space $0
+--
+snippet sp "space" w
+$0
+--
+snippet geomul "geometric multiplicity" w
+multiplicity $0
+--
+snippet algmul "algebraic multiplicity" w
+multiplicity $0
+--
+snippet ve "vector" w
+$0
+--
+snippet ba "basis" w
+$0
+--
+snippet nsp "null space" w
+space $0
+--
+snippet csp "column space" w
+space $0
+--
+snippet rsp "row space" w
+space $0
+--
+snippet vsp "vector space" w
+space $0
+--
+snippet proj "projection" w
+$0
+--
+snippet ker "kernel" w
+$0
+--
+snippet lt "linear transformation" w
+transformation $0
+--
+snippet trns "transformation" w
+$0
+--
+snippet tpos "transpose" w
+$0
+--
+snippet vspace "vector space" w
+space$0 $0
+--
+snippet dim "dimension" w
+$0
+--
+snippet det "determinant" w
+$0
+--
+snippet chpoly "characteristic polynomial" w
+polynomial $0
+--
+snippet im "image" w
+$0
+--
+snippet orth "orthogonal" w
+$0
+--
+snippet zv "zero vector" w
+vector $0
+--
+snippet cpnt "component" w
+$0
+--
+snippet dgzbl "diagonalizable" w
+$0
+--
+snippet dgzn "diagonalization" w
+$0
+--
+snippet utri "upper triangular" w
+triangular $0
+--
+snippet ltri "lower triangular" w
+triangular $0
+--
+snippet trir "triangular" w
+$0
+--
+snippet plp "parallelpiped" w
+$0
+--
+snippet plg "parallelogram" w
+$0
+--
+snippet indp "independent" w
+$0
+--
+snippet dep "dependent" w
+$0
+--
+snippet orie "oriented" w
+$0
+--
+snippet str "stretch(es)" w
+$0
+--
+snippet diag "diagonal" w
+$0
+--
+snippet lwr "lower" w
+$0
+--
+snippet upr "upper" w
+$0
+--
+snippet vc "Vector" iA
+\vec{$1}$0
+--
+snippet bv "Basis Vector" iA
+$1 \right]_{\mathcal{$2}}$0
+--
+snippet comp "Comp" iA
+{$2}$0
+--
+snippet proj "Projection" iA
+{$2}$0
+--
+snippet span "Span" iA
+{$1}$0
+--
+snippet range "Range" iA
+\left($1\right)$0
+--
+snippet null "Null Space" iA
+\left($1\right)$0
+--
+snippet rank "rank" iA
+\left($1\right)$0
+--
+snippet rref "Row Reduced Echelon Form" iA
+\left($1\right)$0
+--
+snippet dim "dimension" iA
+\left($1\right)$0
+--
+snippet det "determinant" iA
+\left($1\right)$0
+--
+snippet colsp "column space" iA
+\left($1\right)$0
+--
+snippet rowsp "row space" iA
+\left($1\right)$0
+--
+snippet e1 "Basis" iA
+\vec{e_1}$0
+--
+snippet e2 "Basis" iA
+\vec{e_2}$0
+--
+snippet e3 "Basis" iA
+\vec{e_3}$0
+--
+snippet "[^i]mat(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet "imat(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet "(small|[gbBpvV])?ghp(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet 3mat "3 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 4mat "4 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 5mat "4 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 3rmat "1 by 3 Row Matrix" iA
+$1 &
+--
+snippet 2mat "2 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 2rmat "1 by 2 Row Matrix" iA
+$1 &
+--
+snippet ges "Gauss Elimination Step" iA
+gmat$1x$2
+--
+snippet rop "Row Operation" iA
+\mapsto $2R_{$1}
+--
+snippet rops "Start Row Operation" iA
+\rowops
+--
+snippet rad "Add rows" iA
+\add[$1]{$2}{$3}$0
+--
+snippet rmul "Multiply row" iA
+$3}$0
+--
+snippet rswap "Swap rows" iA
+\swap{$1}{$2}$0
+--
+snippet ynn "yn" iA
+y_{n}$0
+--
+snippet xii "xi" iA
+x_{i}$0
+--
+snippet yii "yi" iA
+y_{i}$0
+--
+snippet xjj "xj" iA
+x_{j}$0
+--
+snippet yjj "yj" iA
+y_{j}$0
+--
+snippet xp1 "x" iA
+x_{n+1}$0
+--
+snippet n0 "x" iA
+n_{0}$0
+--
+snippet xmm "x" iA
+x_{m}$0
+--
+snippet ss "subscript" iA
+_{$1}$0
+--
+snippet sbp "sub-super script" iA
+_{$1}^{$2}$0
+--
+#snippet '([A-Za-z])\d(\d)' "auto subscript" wrA
+snip.rv =
+--
+#snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+snip.rv =
+--
+snippet srel "stackrel" iA
+\stackrel{$1}{$2}$0
+--
+snippet cal "mathcal" iA
+\mathcal{$1}$0
+--
+snippet fk "mathfrak" iA
+\mathfrak{$1}$0
+--
+snippet bb "mathbb" iA
+\mathbb{$1}$0
+--
+snippet tit "italicized text ;)" iA
+\mathit{$1}$0
+--
+snippet bf "text bf" iA
+\textbf{$1}$0
+--
+snippet txt "text" iA
+\text{$1}$0
+--
+snippet sxt "spaced text" iA
+$1 }$0
+--
+snippet rhs "right hand side" w
+hand side
+--
+snippet lhs "left hand side" w
+hand side
+--
+snippet edbo "expression with dots under some binary operation" iA
+$2 $3
+--
+snippet sedbo "subscripted expression with dots under some binary operation" iA
+$2 $1_2
+--
+snippet cli "comma list" iA
+$2, \ldots,
+--
+snippet sli "subscript list" iA
+$1_{2}, \ldots,
+--
+snippet dli "double subscript list" iA
+${3:operation/comma} $1_{2}$2_{2}$3
+--
+snippet tli "triple subscripted" iA
+${4:operation/comma} $1_{2}$2_{2}$2_{3}
+--
+snippet fvars "some finite number of variables" iA
+$1_{2}, \dots
+--
+snippet dvar "some finite number of variables" iA
+$3 $1_{2}$2_{2}
+sympy "sympyblock
+sympy $1 sympy$0
+--
+'sympy(.*)sympy' "sympy"
+`!p
+--
+vtx "vertex"
+vertex $0
+--
+ht "height"
+height $0
+--
+clo "close(st)"
+close${1:st}
+--
+tri "triangle"
+triangle $0
+--
+vol "volume"
+volume $0
+--
+gmt "geometric"
+geometric $0
+--
+ori "origin"
+origin $0
+--
+locd "located"
+located $0
+--
+cw "clockwise"
+clockwise $0
+--
+ccw "counter
+counter clockwise $0
+--
+rot "rotation"
+rotation $0
+--
+refl "reflection"
+reflection $0
+--
+refld "reflected"
+reflected $0
+--
+rhom "rhombus"
+rhombus $0
+--
+rad "radius"
+radius $0
+--
+circ "circumference"
+circumference $0
+--
+rect "rectangle"
+rectangle $0
+--
+cir "circle"
+circle $0
+--
+ar "area"
+area $0
+--
+dist "distance"
+distance $0
+--
+ri "right"
+right $0
+--
+ang "angle"
+angle $0
+--
+quad "quadrant"
+quadrant $0
+--
+Iq "first
+first quadrant $0
+--
+IIq "second
+second quadrant $0
+--
+IIIq "third
+third quadrant $0
+--
+IVq "fourth
+fourth quadrant $0
+--
+xa "x-axis"
+$x$-axis $0
+--
+ya "y-axis"
+$y$-axis $0
+--
+seg "segment"
+segment $0
+--
+pt "point(s)"
+point${1:s} $0
+--
+sq "square"
+square $0
+--
+octa "octahedron"
+octahedron $0
+--
+cb "cube"
+cube $0
+--
+sph "sphere"
+sphere $0
+--
+hyp "hypotenuse"
+hypotenuse $0
+--
+sympy "sympyblock
+sympy $1 sympy$0
+--
+'sympy(.*)sympy' "sympy"
+`!p
+--
+vtx "vertex"
+vertex $0
+--
+ht "height"
+height $0
+--
+clo "close(st)"
+close${1:st}
+--
+tri "triangle"
+triangle $0
+--
+vol "volume"
+volume $0
+--
+gmt "geometric"
+geometric $0
+--
+ori "origin"
+origin $0
+--
+locd "located"
+located $0
+--
+cw "clockwise"
+clockwise $0
+--
+ccw "counter
+counter clockwise $0
+--
+rot "rotation"
+rotation $0
+--
+refl "reflection"
+reflection $0
+--
+refld "reflected"
+reflected $0
+--
+rhom "rhombus"
+rhombus $0
+--
+rad "radius"
+radius $0
+--
+circ "circumference"
+circumference $0
+--
+rect "rectangle"
+rectangle $0
+--
+cir "circle"
+circle $0
+--
+ar "area"
+area $0
+--
+dist "distance"
+distance $0
+--
+ri "right"
+right $0
+--
+ang "angle"
+angle $0
+--
+quad "quadrant"
+quadrant $0
+--
+Iq "first
+first quadrant $0
+--
+IIq "second
+second quadrant $0
+--
+IIIq "third
+third quadrant $0
+--
+IVq "fourth
+fourth quadrant $0
+--
+xa "x-axis"
+$x$-axis $0
+--
+ya "y-axis"
+$y$-axis $0
+--
+seg "segment"
+segment $0
+--
+pt "point(s)"
+point${1:s} $0
+--
+sq "square"
+square $0
+--
+octa "octahedron"
+octahedron $0
+--
+cb "cube"
+cube $0
+--
+sph "sphere"
+sphere $0
+--
+hyp "hypotenuse"
+hypotenuse $0
+--
+pp "add
++
+--
+pm "plus-minus"
+\pm
+--
+nn "add
+-
+--
+mm "multiply
+\cdot
+--
+xx "cross"
+\times$0
+--
+README.txt algebra
+\cdot$0
+--
+sq "\sqrt{}"
+\sqrt{${1:${VISUAL}}}$0
+--
+norm "norm"
+\left\Vert $1 \right\Vert$0
+--
+abs "absolute"
+\left| $1 \right|$0
+--
+sq "^2"
+^2$0
+--
+cb "^3"
+^3$0
+--
+tt "to
+^{$1}$0
+--
+min "minimum"
+\min\left($1, $2\right)$0
+--
+max "maximum"
+\max\left($1, $2\right)$0
+--
+invs "inverse"
+^{-1}$0
+--
+// "Fraction"
+\\frac{$1}{$2}$0
+--
+f/ "Fraction"
+\\frac{$1}{$2}$0
+--
+'((\d+)?(\\)?([A-Za-z]+)(\^((\{\d+\})|(\d)))?)/' "symbol
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+--
+'(\d+)/' "number
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+--
+'^.*\)/' "()
+`!p
+--
+oper "operator"
+operator $0
+--
+pl "plus"
+plus $0
+--
+tsm "times"
+times $0
+--
+mul "multiplication"
+multipl${1:ication} $0
+--
+muld "multiplied"
+multiplied $0
+--
+add "addition"
+addition $0
+--
+subtr "subtraction"
+subtract${1:ion} $0
+--
+min "minimum"
+minimum $0
+--
+max "maximum"
+maximum $0
+--
+log "logic(al)"
+${1:l}ogic${2:al} $0
+--
+thm "theorem"
+${1:t}heorem $0
+--
+imp "implies"
+implies
+--
+val "valid"
+valid $0
+--
+assi "assign(ment)"
+assign${1:ment} $0
+--
+axi "axiom(s)"
+axiom${1:s} $0
+--
+propo "proposition"
+proposition${1:al}
+--
+taut "tautology"
+tautology $0
+--
+quan "quantifier"
+quantifier
+--
+thf "therefore"
+${1:t}herefore $0
+--
+hn "hence"
+${1:h}ence $0
+--
+suff "sufficient"
+sufficient $0
+--
+inc "incorrect"
+incorrect $0
+--
+imp "implication"
+implication $0
+--
+bimp "bi-implication"
+bi-implication $0
+--
+tr "true"
+true $0
+--
+fl "false"
+false $0
+--
+lem "lemma(s)"
+lemma${1:s} $0
+--
+contrap "contrapositive"
+contrapositive $0
+--
+a4c "assume
+assume for contradiction that $0
+--
+cont "contradiction"
+contradiction $0
+--
+hyp "hypothesis"
+hypothesis $0
+--
+infe "inference"
+inference $0
+--
+roi "rule
+rule of inference $0
+--
+iff "if
+if and only if $0
+--
+IH "Induction
+Induction Hypothesis $0
+--
+prin "principle"
+principle $0
+--
+Bimp "bi-conditional"
+\Leftrightarrow$0
+--
+bimp "bi-conditional"
+\leftrightarrow
+--
+tst "turnstile"
+\vdash$0
+--
+imp "implies"
+\Rightarrow
+--
+limp "implies"
+\Leftarrow
+--
+&& "AND"
+\land$0
+--
+not "NOT"
+\neg$0
+--
+xor "XOR"
+\oplus$0
+--
+VV "OR"
+\lor$0
+--
+mdl "models"
+\models$0
+--
+=== "is"
+:\equiv$0
+--
+fa "forall"
+\forall$0
+--
+eqv "congruent/equiv"
+\equiv$0
+--
+te "there
+\exists $1
+--
+ee "equality"
+=$0
+--
+neq "not
+\neq$0
+--
+ae "approx
+\approx$0
+--
+iff "iff"
+\iff$0
+--
+~ "similar"
+\sim$0
+--
+ss "subset"
+subset $0
+--
+part "partition"
+partition $0
+--
+rat "rational"
+rational $0
+--
+nat "natural"
+natural $0
+--
+natn "natural
+natural numbers $0
+--
+Rea "the
+the Real Numbers $0
+--
+Com "Real
+complex numbers $0
+--
+int "integer(s)"
+integer${1:s} $0
+--
+ctn "contain"
+contain $0
+--
+uni "union"
+union $0
+--
+len "length"
+length${1:s} $0
+--
+ele "element(s)"
+element${1:s} $0
+--
+CC "Complex
+\mathbb{C}$0
+--
+RR "real"
+\mathbb{R}$0
+--
+QQ "Q"
+\mathbb{Q}$0
+--
+NN "N"
+\mathbb{N}$0
+--
+ZZ "Z"
+\mathbb{Z}$0
+--
+\\\ "setminus"
+\setminus$0
+--
+pwr "Power
+\mathcal{P}($1)$0
+--
+cc "subset"
+\subseteq$0
+--
+bs "backwards
+\supseteq$0
+--
+c= "subset
+\subseteq$0
+--
+neo "not
+\not\in$0
+--
+eo "in
+\in$0
+--
+^^ "cap"
+\cap$0
+--
+BU "Big
+\bigcup_{${1:i}=${2:0}}^{${3:n}} ${4:${VISUAL}}$0
+--
+UU "cup"
+\cup$0
+--
+OO "emptyset"
+\emptyset$0
+--
+set "set"
+\\left\\{ $1 \\right\\}$0
+--
+pi "pi"
+\pi$0
+--
+cn "Complex
+${1:\alpha} + ${2:\beta} i$0
+--
+Big-Oh "Big
+\exists c, n_{0} \in \mathbb{R^+} \text{ s.t. } \forall n \in \mathbb{N}, n \ge n_{0} \implies $1 \le c \cdot $2
+--
+bO "Big
+\mathcal{O}($1)$0
+--
+BOM "Big
+\Omega($1)$0
+--
+algo "algorithm"
+algorithm $0
+--
+bin "binary"
+binary $0
+--
+deci "decimal"
+decimal $0
+--
+ineq "inequality"
+inequality $0
+--
+ge "greater
+greater than or equal to $0
+--
+le "less
+less than or equal to $0
+--
+le "leq"
+\le$0
+--
+ge "geq"
+\ge$0
+--
+obrack "overbracket"
+\overbracket{$1}^{$2}$0
+--
+ubrack "underbracket"
+\underbracket{$1}_{$2}$0
+--
+() "left(
+#\left( ${1:${VISUAL}} \right)$0
+--
+[] "left[
+#\left[ ${1:${VISUAL}} \right]$0
+--
+lrp "left(
+\left( ${1:${VISUAL}} \right)$0
+--
+lr| "left|
+\left| ${1:${VISUAL}} \right|$0
+--
+lr{ "left\{
+\left\\{ ${1:${VISUAL}} \right\\}$0
+--
+lrb "left\{
+\left\\{ ${1:${VISUAL}} \right\\}$0
+--
+lrs "left[
+\left[ ${1:${VISUAL}} \right]$0
+--
+lra "leftangle
+\left<${1:${VISUAL}} \right>$0
+--
+bar "bar"
+#\bar{$1}$0
+--
+nabl "nabla"
+\nabla$0
+--
+star "star"
+\star$0
+--
+chi "chi"
+\chi
+--
+psi "psi"
+\psi
+--
+Psi "Psi"
+\Psi
+--
+phi "phi"
+\phi
+--
+Phi "Phi"
+\Phi
+--
+alp "alpha"
+\alpha$0
+--
+bet "beta"
+\beta$0
+--
+gam "gamma"
+\gamma$0
+--
+Gam "Gamma"
+\Gamma$0
+--
+del "delta"
+\delta$0
+--
+Del "delta"
+\Delta$0
+--
+the "theta"
+\theta$0
+--
+The "theta"
+\Theta$0
+--
+ep "var
+\varepsilon$0
+--
+sig "sigma"
+\sigma$0
+--
+Sig "sigma"
+\Sigma$0
+--
+lam "lambda"
+\lambda$0
+--
+Lam "lambda"
+\Lambda$0
+--
+mu "mu"
+\mu$0
+--
+box "box
+\boxed{$1}$0
+--
+tag "tag"
+\tag{$1}$0
+--
+dtag "tag"
+\label{eq:$1} \tag{$2}$0
+--
+bar "overline"
+\overline{$1}$0
+--
+nt "not"
+\not
+--
+uline "underline"
+\underline{$1}$0
+--
+dag "dag"
+\dag{`date +'%A %0d %B' | sed 's/.*/\u&/'`}
+--
+'(?<!\\)arcsin' "sin"
+\arcsin$1{}$0
+--
+'(?<!arc)(?<!\\)sin' "sin"
+\sin $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arccos' "cos"
+\arccos $1 \left( ${2:\theta} \right)$0
+--
+'(?<!arc)(?<!\\)cos' "cos"
+\cos $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arctan' "tan"
+\arctan $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!arc)(?<!\\)tan'
+# \tan
+--
+'(?<!\\)arccot' "cot"
+\arccot $1 \left( ${2:\theta} \right)$0
+--
+'(?<!arc)(?<!\\)cot' "cot"
+\cot $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arccsc' "csc"
+\arccsc $1 \left( ${2:\theta} \right)$0
+--
+'(?<!arc)(?<!\\)csc' "csc"
+\csc $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arcsec' "sec"
+\arcsec $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!arc)(?<!\\)sec'
+# \sec
+--
+bthm "binomial
+\sum_{$1=0}^{$2} {$2 \choose $1} $3^{$2-$1} $4^{$1}
+--
+choo "n
+\binom{${1:n}}{${2:k}}$0
+--
+nCk "n
+{{}^{${1:n}}\!C_{${2:k}}}
+--
+nPk "n
+{{}^{${1:n}}\!P_{${2:k}}}
+--
+cou "counts"
+count${1:s} $0
+--
+comb "combination"
+combination $0
+--
+perm "permutation"
+permutation $0
+--
+plot "Plot"
+\begin{figure}[$1]
+--
+nn "Tikz
+\node[$5] (${1/[^0-9a-zA-Z]//g}${2}) ${3:at (${4:0,0}) }{$${1}$};
+--
+snippet dr
+# \draw[${1}] (${2:0, 0}) -- $4(${3:0,0});
+--
+na "Tikz
+node[above`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nb "Tikz
+node[below`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nr "Tikz
+node[right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nl "Tikz
+node[left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nar "Tikz
+node[above right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nal "Tikz
+node[above left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nbr "Tikz
+node[below right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nbl "Tikz
+node[below left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+frame "Tikz
+\draw[help lines, <->] (-$1, 0) -- ($1, 0);
+--
+force "Tikz
+\draw[force] (${1:0, 0}) -- $3 ++(${2:0, 0});
+--
+tikz "Tikz"
+\begin{figure}[htb]
+--
+co "Tikz
+coordinate ($1)$0
+--
+pm "Punctuation
+$${1:${VISUAL}}$`!p
+--
+mm "Math"
+$$1$ $0
+--
+bb "Brilliant
+\(${1:${VISUAL}}\)`!p
+--
+pz "piazza
+$$${1:${VISUAL}}$$`!p
+--
+dm "Math"
+\[
+--
+commu "commutivity"
+commutivity $0
+--
+assoc "associativity"
+associativity $0
+--
+distp "distributive
+distributive property $0
+--
+alg "algebra(ic)"
+algebra${1:ic} $0
+--
+ctq "complete
+complete the square $0
+--
+prod "product"
+\prod_{$1}^{$2}
+--
+FF "Field"
+\mathbb{F}$0
+--
+tri "n-th
+\sum_{${1:i}=1}^{${2:n}} $1 $0
+--
+sum "sum"
+\sum_{${1:i}=${2:0}}^{${3:n}} ${4:${VISUAL}}$0
+--
+sn "The
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet wsn "Word Snippet Snippet"
+snippet ${1:Trigger} "${2:Word}" w
+\$0
+--
+snippet tsn "Text Snippet Snippet"
+${1:Trigger} "${2:Description}"
+${0}
+--
+msn "Math
+context "math()"
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet ass "assuming" w
+$0
+--
+snippet ord "ordered" w
+$0
+--
+snippet incr "increas(ing)" w
+$0
+--
+snippet prod "product" w
+$0
+--
+snippet ty "type" w
+$0
+--
+snippet polyn "polynomial" w
+$0
+--
+snippet coe "coefficients" w
+$0
+--
+snippet stru "structure" w
+$0
+--
+snippet tup "tuple" w
+$0
+--
+snippet dig "digits" w
+$0
+--
+snippet form "formula" w
+$0
+--
+snippet in "infinity" w
+$0
+--
+snippet coor "coordinate" w
+$0
+--
+snippet eqn "equation" w
+$0
+--
+snippet lang "language" w
+language
+--
+snippet nota "notation" w
+$0
+--
+snippet mt "math" w
+$0
+--
+snippet sys "system" w
+$0
+--
+snippet Supi "supposing" w
+$0
+--
+snippet calc "calculate" w
+$0
+--
+snippet aprx "approx(imate)" w
+$0
+--
+snippet comm "commence" w
+$0
+--
+snippet comp "compare" w
+$0
+--
+snippet mini "minimize" w
+$0
+--
+snippet maxi "maximize" w
+$0
+--
+snippet subs "substituting" w
+$0
+--
+snippet substi "substituting" w
+$0
+--
+snippet ... "\ldots" iA
+\ldots$0
+--
+snippet v.. "\vdots" iA
+\vdots$0
+--
+snippet dots "Smart Dots" iA
+binary, multiplication}$0
+--
+snippet ~> "squiggley arrow" A
+\rightsquigarrow$0
+--
+snippet xra "arrow with text" A
+\xrightarrow${1:[$2]}{$3}$0
+--
+snippet cvgs "converges" w
+$0
+--
+snippet cts "continuous" w
+$0
+--
+snippet nbd "neighbourhood" w
+$0
+--
+snippet der "derivative" w
+$0
+--
+snippet sup "supremum" w
+$0
+--
+snippet inf "infimum" w
+$0
+--
+snippet lim "limit" w
+$0
+--
+snippet dint "integral" w
+${3:${VISUAL}}\: d${4:x}$0
+--
+snippet int "integral" iA
+${1:${VISUAL}}\: d${2:x}$0
+--
+snippet taylor "taylor" w
+${4:c_$1} (x-a)^$1$0
+--
+snippet lim "limit" w
+\lim_{${1:n}\to${2:\infty}}$0
+--
+snippet ddx "d/dx" wA
+\frac{d${1:}}{dx}$0
+--
+snippet part "d/dx" w
+${1:}}{\partial ${2:x}}$0
+--
+snippet oo "\infty" iA
+\infty$0
+--
+snippet >> ">>" iA
+\gg$0
+--
+snippet << "<<" iA
+\ll$0
+--
+snippet vrt "vertices" w
+$0
+--
+snippet digra "graph" w
+graph $0
+--
+snippet gra "graph" w
+$0
+--
+snippet redg "right edge" iA
+\mathrel{\bullet \!\!\!
+--
+snippet ledg "left edge" iA
+\mathrel{\leftarrow \!\!\!
+--
+snippet edg "edge" A
+\mathrel{\bullet \!
+--
+snippet surj "surjective" iA
+y \in
+--
+snippet inj "injective" iA
+x_1, x_2
+--
+snippet rel "relation" w
+$0
+--
+snippet rflx "reflexive" w
+$0
+--
+snippet sym "symmetric" w
+$0
+--
+snippet ttv "transitive" w
+$0
+--
+snippet eqv "equivalence" Options
+$0
+--
+snippet dom "domain" w
+$0
+--
+snippet cdom "codomain" w
+$0
+--
+snippet ran "range" w
+$0
+--
+snippet fun "function" w
+$0
+--
+snippet invs "inverse" w
+$0
+--
+snippet inj "injective" w
+$0
+--
+snippet surj "surjective" w
+$0
+--
+snippet bij "bijective" w
+$0
+--
+snippet oto "one-to-one" w
+$0
+--
+snippet mp "map(ped)" w
+$0
+--
+snippet udr "under" w
+$0
+--
+snippet cmpo "composition" w
+$0
+--
+snippet log "logarithm" w
+$0
+--
+snippet predi "predicate" iA
+\`\` $3
+--
+snippet ceil "ceil" iA
+$1 \right\rceil$0
+--
+snippet bceil "ceil" iA
+$1 \bigr\rceil$0
+--
+snippet floor "floor" iA
+$1 \right\rfloor$0
+--
+snippet log "logarthm" w
+\log_{${1:n}}($2)$0
+--
+snippet fun "function" iA
+: $2
+--
+snippet fx "function at x" iA
+${1:f}\left(${2:x}\right)$0
+--
+snippet fog "function composition" i
+\circ ${2:g}$0
+--
+snippet mpt "mapsto" iA
+\mapsto$0
+--
+snippet to "to" iA
+\to$0
+--
+snippet '(?<!\\)ln' "ln" rwA
+\ln($1)$0
+--
+snippet grp "group" w
+$0
+--
+snippet abel "abelian" w
+$0
+--
+snippet cmta "commutative" w
+$0
+--
+snippet cmuta "commutative" w
+$0
+--
+snippet deg "degree" w
+$0
+--
+snippet sol "solution(s)" w
+$0
+--
+snippet zo "zero(s)" w
+$0
+--
+snippet prf "Proof" b
+\begin{proof}
+--
+snippet prfbind "Proof by induction" b
+\begin{proof}
+--
+snippet arg "argument" w
+$0
+--
+snippet ftsoc "for the sake of contradiction" w
+the sake
+--
+snippet seq "sequence" w
+$0
+--
+snippet den "denoted" w
+$0
+--
+snippet cld "called" w
+$0
+--
+snippet clr "color" w
+$0
+--
+snippet wst "we say that" w
+say that
+--
+snippet neq "not equal" w
+equal $0
+--
+snippet tech "technique" w
+$0
+--
+snippet sel "selected" w
+$0
+--
+snippet fxd "fixed" w
+fixed
+--
+snippet opt "options" w
+options
+--
+snippet aft "after" w
+after
+--
+snippet vac "vacuously" w
+vacuously
+--
+snippet ih "inductive hypothesis" w
+hypothesis
+--
+snippet evt "everything" w
+everything
+--
+snippet win "wherein" w
+wherein
+--
+snippet cl "clause" w
+clause
+--
+snippet clo "closed" w
+closed
+--
+snippet fina "finally" w
+finally
+--
+snippet wtp "want to prove" w
+to prove
+--
+snippet jst "justified" w
+justified
+--
+snippet dedu "deduction" w
+deduction
+--
+snippet obt "obtain" w
+obtain${1:s}
+--
+snippet ccrt "concretely" w
+concretely
+--
+snippet cpx "complexity" w
+complex${1:ity}
+--
+snippet exa "exactly" w
+exactly
+--
+snippet fund "fundamental" w
+fundamental
+--
+snippet csq "consequence" w
+consequence
+--
+snippet ind "induction" w
+induction
+--
+snippet ins "inspection" w
+inspection
+--
+snippet ojv "objective" w
+objective
+--
+snippet aw "as well" w
+well
+--
+snippet ical "identical" w
+identical
+--
+snippet om "omit" w
+omit
+--
+snippet con "construct(ion)" w
+construct${1:ion}
+--
+snippet arb "arbitrary" w
+arbitrary
+--
+snippet wrt "with respect to" w
+respect to
+--
+snippet can "canonical" w
+canonical
+--
+snippet sm "same" w
+same
+--
+snippet bal "but also" w
+also
+--
+snippet und "understand" w
+understand
+--
+snippet sta "statement" w
+statement
+--
+snippet op "operation(s)" w
+operation${1:s}
+--
+snippet perf "perform" w
+perform
+--
+snippet q "question" w
+question
+--
+snippet wri "written" w
+written
+--
+snippet tir "their" w
+their
+--
+snippet dn "do not" w
+not
+--
+snippet dne "does not exist" w
+not exist
+--
+snippet wch "which" w
+which
+--
+snippet clr "clearly" w
+clearly
+--
+snippet ver "verified" w
+verified
+--
+snippet hvnt "have not" w
+not
+--
+snippet smp "simply" w
+simply
+--
+snippet bef "before" w
+before
+--
+snippet cor "correct" w
+correct
+--
+snippet simp "simplify(ing)" w
+simplify${1:ing}
+--
+snippet cpt "compute" w
+comput${1:ations}
+--
+snippet sup "suppose" w
+${1:s}uppose
+--
+snippet Sup "Suppose" w
+Suppose
+--
+snippet subst "substitute" w
+substitut${1:able}
+--
+snippet nm "namely" w
+namely
+--
+snippet occ "occurs" w
+occurs
+--
+snippet anz "analyze" w
+analyze
+--
+snippet exp "expand" w
+expand${1:ing}
+--
+snippet idn "identity" w
+identity
+--
+snippet resp "respectively" w
+respectively
+--
+snippet disc "discussed" w
+discussed
+--
+snippet desc "describe" w
+describe
+--
+snippet wn "we note" w
+note
+--
+snippet wc "(W/w)e commence" w
+commence
+--
+snippet alt "alternate" w
+alternat${1:ively}
+--
+snippet yld "yield(s)" w
+yield${1:s}
+--
+snippet wy "which yields" w
+yields
+--
+snippet fst "first" w
+first
+--
+snippet slv "solve" w
+solve
+--
+snippet prev "previously" w
+previously
+--
+snippet sat "satisfy" w
+satisfy
+--
+snippet val "value(s)" w
+value${1:s}
+--
+snippet poss "possible" w
+possible
+--
+snippet fd "find(ing)" w
+find${1:ing}
+--
+snippet giv "given" w
+given
+--
+snippet mvr "moreover" w
+${1:m}oreover
+--
+snippet corr "corresponding" w
+corresponding
+--
+snippet app "appl(ying)" w
+appl${1:ying}
+--
+snippet fac "factor" w
+factor
+--
+snippet dir "direction" w
+direction
+--
+snippet on "only" w
+only
+--
+snippet trv "trivial" w
+trivial
+--
+snippet ntrv "trivial" w
+non-trivial
+--
+snippet invo "invokes" w
+invoke${1:s}
+--
+snippet indu "induce" w
+induce${1:s}
+--
+snippet gen "generate" w
+generate
+--
+snippet unq "unique" w
+unique
+--
+snippet mtd "method" w
+method
+--
+snippet gnt "guarenteed" w
+guarenteed
+--
+snippet elem "elementary" w
+elementary
+--
+snippet prcs "process" w
+process
+--
+snippet pro "procedure" w
+procedure
+--
+snippet eval "eval" w
+evalulate
+--
+snippet equa "equation" w
+equation
+--
+snippet eq "equal" w
+equal
+--
+snippet iden "identity" w
+identity
+--
+snippet lkw "likewise" w
+likewise
+--
+snippet cnt "cannot" w
+cannot
+--
+snippet imp "impossible" w
+impossible
+--
+snippet exc "exceed" w
+exceed
+--
+snippet proc "proceed" w
+proceed
+--
+snippet no "number" w
+number${1:s}
+--
+snippet cons "consider" w
+consider
+--
+snippet cnst "consists" w
+consists
+--
+snippet ind "indeed" w
+indeed
+--
+snippet rec "recall" w
+${1:r}ecall
+--
+snippet recog "recognize" w
+recognize
+--
+snippet dif "different" w
+different
+--
+snippet orig "original" w
+original
+--
+snippet std "standard" w
+standard
+--
+snippet sim "similar(ly)" w
+similar${1:ly}
+--
+snippet simlt "simultaneously" w
+simultaneously
+--
+snippet rep "represent" w
+represent
+--
+snippet eqv "equivalently" w
+${1:e}quivalent${2:ly}
+--
+snippet agr "agree" w
+agree
+--
+snippet inv "invert" w
+invert${1:ible}
+--
+snippet obs "observation" w
+${1:o}bserv${2:ation}
+--
+snippet wo "we observe" w
+observe
+--
+snippet conv "convert(s)" w
+convert${1:s}
+--
+snippet prop "propert(ies/y)" w
+propert${1:ies}
+--
+snippet th "that" w
+that
+--
+snippet tn "then" w
+then
+--
+snippet red "reduced" w
+reduce${1:d}
+--
+snippet areq "as required" w
+required.
+--
+snippet aned "as needed" w
+needed.
+--
+snippet prec "precisely" w
+precisely
+--
+snippet req "require" w
+require
+--
+snippet ti "that is" w
+is
+--
+snippet wt "what" w
+what
+--
+snippet dt "determine(d)" w
+determine${1:d}
+--
+snippet sn "since" w
+${1:s}ince
+--
+snippet ts "thus" w
+${1:t}hus
+--
+snippet twh "thus we have" w
+we have
+--
+snippet stwh "so then we have" w
+then we
+--
+snippet wah "we also have" w
+also have
+--
+snippet wa "we also" w
+also
+--
+snippet swk "so we know" w
+we know
+--
+snippet ws "we say" w
+say
+--
+snippet swh "so we have" w
+we have
+--
+snippet aswht "and so we have that" w
+so we
+--
+snippet ath "and that" w
+that
+--
+snippet ww "(W/w)e will" w
+will
+--
+snippet Th "The" w
+The
+--
+snippet ass "assum(e/ing)" w
+${1:a}ssum${2:ing}
+--
+snippet wh "we have" w
+have
+--
+snippet wk "we know" w
+know
+--
+snippet twk "thus we know" w
+we know
+--
+snippet ho "hold(s)" w
+hold${1:s}
+--
+snippet ia "is a" w
+a
+--
+snippet ina "is not a" w
+not a
+--
+snippet Ts "To show" w
+show
+--
+snippet whts "we have to show" w
+have to
+--
+snippet wwts "we want to show" w
+want to
+--
+snippet wws "we will show" w
+will show
+--
+snippet wms "we must show" w
+must show
+--
+snippet oms "one must show" w
+must show
+--
+snippet whs "we have shown" w
+have shown
+--
+snippet wwn "we will now" w
+will now
+--
+snippet wwp "we will prove" w
+will prove
+--
+snippet ift "it follows that" w
+follows that
+--
+snippet fol "following" w
+follow${1:ing}
+--
+snippet st "such that" w
+that
+--
+snippet sot "so that" w
+that
+--
+snippet sotn "so then" w
+then
+--
+snippet rc "recall" w
+recall
+--
+snippet bc "because" w
+because
+--
+snippet bcm "become(s)" w
+become${1:s}
+--
+snippet fa "for all" w
+all
+--
+snippet fey "for every" w
+every
+--
+snippet fe "for example" w
+example
+--
+snippet fay "for any" w
+any
+--
+snippet fs "for some" w
+some
+--
+snippet te "there exists" w
+exists
+--
+snippet ex "exist" w
+exist${1:s}
+--
+snippet nex "not exist" w
+exist${1:s}
+--
+snippet twc "(T/t)hus we conclude" w
+we conclude
+--
+snippet wkt "we know that" w
+know that
+--
+snippet var "variable" w
+variable${1:s}
+--
+snippet tfae "the following are equivalent" w
+following are
+--
+snippet wlog "without loss of generality" w
+loss of
+--
+snippet chg "change" w
+change${1:s}
+--
+snippet prv "prove" w
+${1:p}rove
+--
+snippet rmk "remark" w
+remark
+--
+snippet eqty "equality" w
+equality
+--
+snippet dist "distinct" w
+distinct
+--
+snippet arv "arrive" w
+arrive
+--
+snippet lat "latter" w
+latter
+--
+snippet rem "remember" w
+remember
+--
+snippet defd "defined" w
+defined
+--
+snippet bde "by definition" w
+definition
+--
+snippet def "definition" w
+definition
+--
+snippet tog "together" w
+together
+--
+snippet tot "total" w
+total
+--
+snippet parti "particular" w
+particular
+--
+snippet ft "fact" w
+fact
+--
+snippet abv "above" w
+above
+--
+snippet seq "sequence" w
+\\{ a
+--
+snippet zz "zero" w
+zero
+--
+snippet cong "congruent" w
+congruent
+--
+snippet rmd "remainder" w
+$0
+--
+snippet mod "modulo" w
+$0
+--
+snippet mulpl "multiple(s)" w
+$0
+--
+snippet div "division" w
+$0
+--
+snippet divd "divide" w
+$0
+--
+snippet divi "divisible" w
+$0
+--
+snippet zz "zero" iA
+0
+--
+snippet gcd "greatest common divisor" iA
+\gcd($1)$0
+--
+snippet % "modulo" iA
+~\%~
+--
+snippet mod "modulo" iA
+\Mod{$1}$0
+--
+snippet cong "a is congruent to b mod m" iA
+\equiv $2
+--
+snippet || "divides" iA
+\mid$0
+--
+snippet n| "does not divide" iA
+\nmid$0
+--
+snippet t. "therefore" iA
+\therefore$0
+--
+snippet pos "positive" w
+$0
+--
+snippet neg "negative" w
+$0
+--
+snippet fin "finite" w
+$0
+--
+snippet nz "non-zero" w
+$0
+--
+snippet inf "infinite" w
+$0
+--
+snippet abs "absolute value" w
+value $0
+--
+snippet enu "enumerate" bA
+\begin{enumerate}
+--
+snippet itz "itemize" bA
+\begin{itemize}
+--
+snippet README.txt algebra calculus combinatorics complex computer_science constants construct_math_snippets.sh equation extern_prog generic geometry graphs group_theory inequalities latex_environments latex_formatting linear_algebra logic math.snippets math.snippets.header math_snippet_helpers.py number_theory operators output.txt polynomials proof relations sample_vimrc sequences sets snippet_finder.sh snippets.snippets symbols symlinker test.sh tex tex.snippets trigonometry "bullet point in list" A
+$0
+--
+snippet ali "Align" bA
+\begin{align*}
+--
+snippet tali "Align" bA
+\begin{align*}
+--
+snippet gather "Gather" bA
+\begin{gather*}
+--
+snippet ar "Array" b
+\begin{array*}{${1:rl}}
+--
+snippet eq "Equation" b
+\begin{equation}
+--
+snippet eqnn "Equation without number" b
+\begin{equation*}
+--
+snippet al "Align" b
+\begin{align*}
+--
+snippet col "column(s)" w
+$0
+--
+snippet rred "row reduction" w
+reduction $0
+--
+snippet rref "reduced row echelon form" w
+row echelon
+--
+snippet mat "matrix" w
+$0
+--
+snippet mats "matricies" w
+$0
+--
+snippet lc "linear combination" w
+combination $0
+--
+snippet pl "plane" w
+$0
+--
+snippet rnt "Rank Nullity Theorem" w
+Nullity Theorem
+--
+snippet ntlc "linear combination" w
+linear combination
+--
+snippet cxlc "convex linear combination" w
+linear combination${1:s}
+--
+snippet piv "pivot(s)" w
+$0
+--
+snippet lin "linear" w
+$0
+--
+snippet li "linear independent" w
+independent $0
+--
+snippet lyi "linearly independent" w
+independent $0
+--
+snippet lyd "linearly dependent" w
+dependent $0
+--
+snippet ld "linearly dependent" w
+dependent $0
+--
+snippet sca "scalar" w
+$0
+--
+snippet eibas "eigen basis" w
+basis $0
+--
+snippet eivec "eigen vector" w
+vector${1:s} $0
+--
+snippet eival "eigen value" w
+value${1:s} $0
+--
+snippet eisp "eigen space" w
+space $0
+--
+snippet sp "space" w
+$0
+--
+snippet geomul "geometric multiplicity" w
+multiplicity $0
+--
+snippet algmul "algebraic multiplicity" w
+multiplicity $0
+--
+snippet ve "vector" w
+$0
+--
+snippet ba "basis" w
+$0
+--
+snippet nsp "null space" w
+space $0
+--
+snippet csp "column space" w
+space $0
+--
+snippet rsp "row space" w
+space $0
+--
+snippet vsp "vector space" w
+space $0
+--
+snippet proj "projection" w
+$0
+--
+snippet ker "kernel" w
+$0
+--
+snippet lt "linear transformation" w
+transformation $0
+--
+snippet trns "transformation" w
+$0
+--
+snippet tpos "transpose" w
+$0
+--
+snippet vspace "vector space" w
+space$0 $0
+--
+snippet dim "dimension" w
+$0
+--
+snippet det "determinant" w
+$0
+--
+snippet chpoly "characteristic polynomial" w
+polynomial $0
+--
+snippet im "image" w
+$0
+--
+snippet orth "orthogonal" w
+$0
+--
+snippet zv "zero vector" w
+vector $0
+--
+snippet cpnt "component" w
+$0
+--
+snippet dgzbl "diagonalizable" w
+$0
+--
+snippet dgzn "diagonalization" w
+$0
+--
+snippet utri "upper triangular" w
+triangular $0
+--
+snippet ltri "lower triangular" w
+triangular $0
+--
+snippet trir "triangular" w
+$0
+--
+snippet plp "parallelpiped" w
+$0
+--
+snippet plg "parallelogram" w
+$0
+--
+snippet indp "independent" w
+$0
+--
+snippet dep "dependent" w
+$0
+--
+snippet orie "oriented" w
+$0
+--
+snippet str "stretch(es)" w
+$0
+--
+snippet diag "diagonal" w
+$0
+--
+snippet lwr "lower" w
+$0
+--
+snippet upr "upper" w
+$0
+--
+snippet vc "Vector" iA
+\vec{$1}$0
+--
+snippet bv "Basis Vector" iA
+$1 \right]_{\mathcal{$2}}$0
+--
+snippet comp "Comp" iA
+{$2}$0
+--
+snippet proj "Projection" iA
+{$2}$0
+--
+snippet span "Span" iA
+{$1}$0
+--
+snippet range "Range" iA
+\left($1\right)$0
+--
+snippet null "Null Space" iA
+\left($1\right)$0
+--
+snippet rank "rank" iA
+\left($1\right)$0
+--
+snippet rref "Row Reduced Echelon Form" iA
+\left($1\right)$0
+--
+snippet dim "dimension" iA
+\left($1\right)$0
+--
+snippet det "determinant" iA
+\left($1\right)$0
+--
+snippet colsp "column space" iA
+\left($1\right)$0
+--
+snippet rowsp "row space" iA
+\left($1\right)$0
+--
+snippet e1 "Basis" iA
+\vec{e_1}$0
+--
+snippet e2 "Basis" iA
+\vec{e_2}$0
+--
+snippet e3 "Basis" iA
+\vec{e_3}$0
+--
+snippet "[^i]mat(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet "imat(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet "(small|[gbBpvV])?ghp(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix of *rows* by *columns*" ir
+endsnippet
+--
+snippet 3mat "3 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 4mat "4 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 5mat "4 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 3rmat "1 by 3 Row Matrix" iA
+$1 &
+--
+snippet 2mat "2 by 1 Matrix" iA
+$1 \\\\
+--
+snippet 2rmat "1 by 2 Row Matrix" iA
+$1 &
+--
+snippet ges "Gauss Elimination Step" iA
+gmat$1x$2
+--
+snippet rop "Row Operation" iA
+\mapsto $2R_{$1}
+--
+snippet rops "Start Row Operation" iA
+\rowops
+--
+snippet rad "Add rows" iA
+\add[$1]{$2}{$3}$0
+--
+snippet rmul "Multiply row" iA
+$3}$0
+--
+snippet rswap "Swap rows" iA
+\swap{$1}{$2}$0
+--
+snippet ynn "yn" iA
+y_{n}$0
+--
+snippet xii "xi" iA
+x_{i}$0
+--
+snippet yii "yi" iA
+y_{i}$0
+--
+snippet xjj "xj" iA
+x_{j}$0
+--
+snippet yjj "yj" iA
+y_{j}$0
+--
+snippet xp1 "x" iA
+x_{n+1}$0
+--
+snippet n0 "x" iA
+n_{0}$0
+--
+snippet xmm "x" iA
+x_{m}$0
+--
+snippet ss "subscript" iA
+_{$1}$0
+--
+snippet sbp "sub-super script" iA
+_{$1}^{$2}$0
+--
+#snippet '([A-Za-z])\d(\d)' "auto subscript" wrA
+snip.rv =
+--
+#snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+snip.rv =
+--
+snippet srel "stackrel" iA
+\stackrel{$1}{$2}$0
+--
+snippet cal "mathcal" iA
+\mathcal{$1}$0
+--
+snippet fk "mathfrak" iA
+\mathfrak{$1}$0
+--
+snippet bb "mathbb" iA
+\mathbb{$1}$0
+--
+snippet tit "italicized text ;)" iA
+\mathit{$1}$0
+--
+snippet bf "text bf" iA
+\textbf{$1}$0
+--
+snippet txt "text" iA
+\text{$1}$0
+--
+snippet sxt "spaced text" iA
+$1 }$0
+--
+snippet rhs "right hand side" w
+hand side
+--
+snippet lhs "left hand side" w
+hand side
+--
+snippet edbo "expression with dots under some binary operation" iA
+$2 $3
+--
+snippet sedbo "subscripted expression with dots under some binary operation" iA
+$2 $1_2
+--
+snippet cli "comma list" iA
+$2, \ldots,
+--
+snippet sli "subscript list" iA
+$1_{2}, \ldots,
+--
+snippet dli "double subscript list" iA
+${3:operation/comma} $1_{2}$2_{2}$3
+--
+snippet tli "triple subscripted" iA
+${4:operation/comma} $1_{2}$2_{2}$2_{3}
+--
+snippet fvars "some finite number of variables" iA
+$1_{2}, \dots
+--
+snippet dvar "some finite number of variables" iA
+$3 $1_{2}$2_{2}
+--
+snippet '(?<!arc)(?<!\\)tan'
+\tan
+--
+snippet '(?<!arc)(?<!\\)sec'
+\sec
+--
+snippet dr
+\draw[${1}] (${2:0,
+--
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet wsn "Word Snippet Snippet"
+${1:Trigger} "${2:Word}"
+\$0
+--
+tsn "Text
+${1:Trigger} "${2:Description}"
+--
+${1:Trigger} "${2:Description}"
+${0}
+--
+ass "assuming"
+$0
+--
+ord "ordered"
+$0
+--
+incr "increas(ing)"
+$0
+--
+prod "product"
+$0
+--
+ty "type"
+$0
+--
+polyn "polynomial"
+$0
+--
+coe "coefficients"
+$0
+--
+stru "structure"
+$0
+--
+tup "tuple"
+$0
+--
+dig "digits"
+$0
+--
+form "formula"
+$0
+--
+in "infinity"
+$0
+--
+coor "coordinate"
+$0
+--
+eqn "equation"
+$0
+--
+lang "language"
+language
+--
+nota "notation"
+$0
+--
+mt "math"
+$0
+--
+sys "system"
+$0
+--
+Supi "supposing"
+$0
+--
+calc "calculate"
+$0
+--
+aprx "approx(imate)"
+$0
+--
+comm "commence"
+$0
+--
+comp "compare"
+$0
+--
+mini "minimize"
+$0
+--
+maxi "maximize"
+$0
+--
+subs "substituting"
+$0
+--
+substi "substituting"
+$0
+--
+... "\ldots"
+\ldots$0
+--
+v.. "\vdots"
+\vdots$0
+--
+dots "Smart
+binary, multiplication}$0
+--
+~> "squiggley
+\rightsquigarrow$0
+--
+xra "arrow
+\xrightarrow${1:[$2]}{$3}$0
+--
+cvgs "converges"
+$0
+--
+cts "continuous"
+$0
+--
+nbd "neighbourhood"
+$0
+--
+der "derivative"
+$0
+--
+sup "supremum"
+$0
+--
+inf "infimum"
+$0
+--
+lim "limit"
+$0
+--
+dint "integral"
+${3:${VISUAL}}\: d${4:x}$0
+--
+int "integral"
+${1:${VISUAL}}\: d${2:x}$0
+--
+taylor "taylor"
+${4:c_$1} (x-a)^$1$0
+--
+lim "limit"
+\lim_{${1:n}\to${2:\infty}}$0
+--
+ddx "d/dx"
+\frac{d${1:}}{dx}$0
+--
+part "d/dx"
+${1:}}{\partial ${2:x}}$0
+--
+oo "\infty"
+\infty$0
+--
+>> ">>"
+\gg$0
+--
+<< "<<"
+\ll$0
+--
+vrt "vertices"
+$0
+--
+digra "graph"
+graph $0
+--
+gra "graph"
+$0
+--
+redg "right
+\mathrel{\bullet \!\!\!
+--
+ledg "left
+\mathrel{\leftarrow \!\!\!
+--
+edg "edge"
+\mathrel{\bullet \!
+--
+surj "surjective"
+y \in
+--
+inj "injective"
+x_1, x_2
+--
+rel "relation"
+$0
+--
+rflx "reflexive"
+$0
+--
+sym "symmetric"
+$0
+--
+ttv "transitive"
+$0
+--
+eqv "equivalence"
+$0
+--
+dom "domain"
+$0
+--
+cdom "codomain"
+$0
+--
+ran "range"
+$0
+--
+fun "function"
+$0
+--
+invs "inverse"
+$0
+--
+inj "injective"
+$0
+--
+surj "surjective"
+$0
+--
+bij "bijective"
+$0
+--
+oto "one-to-one"
+$0
+--
+mp "map(ped)"
+$0
+--
+udr "under"
+$0
+--
+cmpo "composition"
+$0
+--
+log "logarithm"
+$0
+--
+predi "predicate"
+\`\` $3
+--
+ceil "ceil"
+$1 \right\rceil$0
+--
+bceil "ceil"
+$1 \bigr\rceil$0
+--
+floor "floor"
+$1 \right\rfloor$0
+--
+log "logarthm"
+\log_{${1:n}}($2)$0
+--
+fun "function"
+: $2
+--
+fx "function
+${1:f}\left(${2:x}\right)$0
+--
+fog "function
+\circ ${2:g}$0
+--
+mpt "mapsto"
+\mapsto$0
+--
+to "to"
+\to$0
+--
+'(?<!\\)ln' "ln"
+\ln($1)$0
+--
+grp "group"
+$0
+--
+abel "abelian"
+$0
+--
+cmta "commutative"
+$0
+--
+cmuta "commutative"
+$0
+--
+deg "degree"
+$0
+--
+sol "solution(s)"
+$0
+--
+zo "zero(s)"
+$0
+--
+prf "Proof"
+\begin{proof}
+--
+prfbind "Proof
+\begin{proof}
+--
+arg "argument"
+$0
+--
+ftsoc "for
+the sake
+--
+seq "sequence"
+$0
+--
+den "denoted"
+$0
+--
+cld "called"
+$0
+--
+clr "color"
+$0
+--
+wst "we
+say that
+--
+neq "not
+equal $0
+--
+tech "technique"
+$0
+--
+sel "selected"
+$0
+--
+fxd "fixed"
+fixed
+--
+opt "options"
+options
+--
+aft "after"
+after
+--
+vac "vacuously"
+vacuously
+--
+ih "inductive
+hypothesis
+--
+evt "everything"
+everything
+--
+win "wherein"
+wherein
+--
+cl "clause"
+clause
+--
+clo "closed"
+closed
+--
+fina "finally"
+finally
+--
+wtp "want
+to prove
+--
+jst "justified"
+justified
+--
+dedu "deduction"
+deduction
+--
+obt "obtain"
+obtain${1:s}
+--
+ccrt "concretely"
+concretely
+--
+cpx "complexity"
+complex${1:ity}
+--
+exa "exactly"
+exactly
+--
+fund "fundamental"
+fundamental
+--
+csq "consequence"
+consequence
+--
+ind "induction"
+induction
+--
+ins "inspection"
+inspection
+--
+ojv "objective"
+objective
+--
+aw "as
+well
+--
+ical "identical"
+identical
+--
+om "omit"
+omit
+--
+con "construct(ion)"
+construct${1:ion}
+--
+arb "arbitrary"
+arbitrary
+--
+wrt "with
+respect to
+--
+can "canonical"
+canonical
+--
+sm "same"
+same
+--
+bal "but
+also
+--
+und "understand"
+understand
+--
+sta "statement"
+statement
+--
+op "operation(s)"
+operation${1:s}
+--
+perf "perform"
+perform
+--
+q "question"
+question
+--
+wri "written"
+written
+--
+tir "their"
+their
+--
+dn "do
+not
+--
+dne "does
+not exist
+--
+wch "which"
+which
+--
+clr "clearly"
+clearly
+--
+ver "verified"
+verified
+--
+hvnt "have
+not
+--
+smp "simply"
+simply
+--
+bef "before"
+before
+--
+cor "correct"
+correct
+--
+simp "simplify(ing)"
+simplify${1:ing}
+--
+cpt "compute"
+comput${1:ations}
+--
+sup "suppose"
+${1:s}uppose
+--
+Sup "Suppose"
+Suppose
+--
+subst "substitute"
+substitut${1:able}
+--
+nm "namely"
+namely
+--
+occ "occurs"
+occurs
+--
+anz "analyze"
+analyze
+--
+exp "expand"
+expand${1:ing}
+--
+idn "identity"
+identity
+--
+resp "respectively"
+respectively
+--
+disc "discussed"
+discussed
+--
+desc "describe"
+describe
+--
+wn "we
+note
+--
+wc "(W/w)e
+commence
+--
+alt "alternate"
+alternat${1:ively}
+--
+yld "yield(s)"
+yield${1:s}
+--
+wy "which
+yields
+--
+fst "first"
+first
+--
+slv "solve"
+solve
+--
+prev "previously"
+previously
+--
+sat "satisfy"
+satisfy
+--
+val "value(s)"
+value${1:s}
+--
+poss "possible"
+possible
+--
+fd "find(ing)"
+find${1:ing}
+--
+giv "given"
+given
+--
+mvr "moreover"
+${1:m}oreover
+--
+corr "corresponding"
+corresponding
+--
+app "appl(ying)"
+appl${1:ying}
+--
+fac "factor"
+factor
+--
+dir "direction"
+direction
+--
+on "only"
+only
+--
+trv "trivial"
+trivial
+--
+ntrv "trivial"
+non-trivial
+--
+invo "invokes"
+invoke${1:s}
+--
+indu "induce"
+induce${1:s}
+--
+gen "generate"
+generate
+--
+unq "unique"
+unique
+--
+mtd "method"
+method
+--
+gnt "guarenteed"
+guarenteed
+--
+elem "elementary"
+elementary
+--
+prcs "process"
+process
+--
+pro "procedure"
+procedure
+--
+eval "eval"
+evalulate
+--
+equa "equation"
+equation
+--
+eq "equal"
+equal
+--
+iden "identity"
+identity
+--
+lkw "likewise"
+likewise
+--
+cnt "cannot"
+cannot
+--
+imp "impossible"
+impossible
+--
+exc "exceed"
+exceed
+--
+proc "proceed"
+proceed
+--
+no "number"
+number${1:s}
+--
+cons "consider"
+consider
+--
+cnst "consists"
+consists
+--
+ind "indeed"
+indeed
+--
+rec "recall"
+${1:r}ecall
+--
+recog "recognize"
+recognize
+--
+dif "different"
+different
+--
+orig "original"
+original
+--
+std "standard"
+standard
+--
+sim "similar(ly)"
+similar${1:ly}
+--
+simlt "simultaneously"
+simultaneously
+--
+rep "represent"
+represent
+--
+eqv "equivalently"
+${1:e}quivalent${2:ly}
+--
+agr "agree"
+agree
+--
+inv "invert"
+invert${1:ible}
+--
+obs "observation"
+${1:o}bserv${2:ation}
+--
+wo "we
+observe
+--
+conv "convert(s)"
+convert${1:s}
+--
+prop "propert(ies/y)"
+propert${1:ies}
+--
+th "that"
+that
+--
+tn "then"
+then
+--
+red "reduced"
+reduce${1:d}
+--
+areq "as
+required.
+--
+aned "as
+needed.
+--
+prec "precisely"
+precisely
+--
+req "require"
+require
+--
+ti "that
+is
+--
+wt "what"
+what
+--
+dt "determine(d)"
+determine${1:d}
+--
+sn "since"
+${1:s}ince
+--
+ts "thus"
+${1:t}hus
+--
+twh "thus
+we have
+--
+stwh "so
+then we
+--
+wah "we
+also have
+--
+wa "we
+also
+--
+swk "so
+we know
+--
+ws "we
+say
+--
+swh "so
+we have
+--
+aswht "and
+so we
+--
+ath "and
+that
+--
+ww "(W/w)e
+will
+--
+Th "The"
+The
+--
+ass "assum(e/ing)"
+${1:a}ssum${2:ing}
+--
+wh "we
+have
+--
+wk "we
+know
+--
+twk "thus
+we know
+--
+ho "hold(s)"
+hold${1:s}
+--
+ia "is
+a
+--
+ina "is
+not a
+--
+Ts "To
+show
+--
+whts "we
+have to
+--
+wwts "we
+want to
+--
+wws "we
+will show
+--
+wms "we
+must show
+--
+oms "one
+must show
+--
+whs "we
+have shown
+--
+wwn "we
+will now
+--
+wwp "we
+will prove
+--
+ift "it
+follows that
+--
+fol "following"
+follow${1:ing}
+--
+st "such
+that
+--
+sot "so
+that
+--
+sotn "so
+then
+--
+rc "recall"
+recall
+--
+bc "because"
+because
+--
+bcm "become(s)"
+become${1:s}
+--
+fa "for
+all
+--
+fey "for
+every
+--
+fe "for
+example
+--
+fay "for
+any
+--
+fs "for
+some
+--
+te "there
+exists
+--
+ex "exist"
+exist${1:s}
+--
+nex "not
+exist${1:s}
+--
+twc "(T/t)hus
+we conclude
+--
+wkt "we
+know that
+--
+var "variable"
+variable${1:s}
+--
+tfae "the
+following are
+--
+wlog "without
+loss of
+--
+chg "change"
+change${1:s}
+--
+prv "prove"
+${1:p}rove
+--
+rmk "remark"
+remark
+--
+eqty "equality"
+equality
+--
+dist "distinct"
+distinct
+--
+arv "arrive"
+arrive
+--
+lat "latter"
+latter
+--
+rem "remember"
+remember
+--
+defd "defined"
+defined
+--
+bde "by
+definition
+--
+def "definition"
+definition
+--
+tog "together"
+together
+--
+tot "total"
+total
+--
+parti "particular"
+particular
+--
+ft "fact"
+fact
+--
+abv "above"
+above
+--
+seq "sequence"
+\\{ a
+--
+zz "zero"
+zero
+--
+cong "congruent"
+congruent
+--
+rmd "remainder"
+$0
+--
+mod "modulo"
+$0
+--
+mulpl "multiple(s)"
+$0
+--
+div "division"
+$0
+--
+divd "divide"
+$0
+--
+divi "divisible"
+$0
+--
+zz "zero"
+0
+--
+gcd "greatest
+\gcd($1)$0
+--
+% "modulo"
+~\%~
+--
+mod "modulo"
+\Mod{$1}$0
+--
+cong "a
+\equiv $2
+--
+|| "divides"
+\mid$0
+--
+n| "does
+\nmid$0
+--
+t. "therefore"
+\therefore$0
+--
+pos "positive"
+$0
+--
+neg "negative"
+$0
+--
+fin "finite"
+$0
+--
+nz "non-zero"
+$0
+--
+inf "infinite"
+$0
+--
+abs "absolute
+value $0
+--
+enu "enumerate"
+\begin{enumerate}
+--
+itz "itemize"
+\begin{itemize}
+--
+README.txt algebra
+$0
+--
+ali "Align"
+\begin{align*}
+--
+tali "Align"
+\begin{align*}
+--
+gather "Gather"
+\begin{gather*}
+--
+ar "Array"
+\begin{array*}{${1:rl}}
+--
+eq "Equation"
+\begin{equation}
+--
+eqnn "Equation
+\begin{equation*}
+--
+al "Align"
+\begin{align*}
+--
+col "column(s)"
+$0
+--
+rred "row
+reduction $0
+--
+rref "reduced
+row echelon
+--
+mat "matrix"
+$0
+--
+mats "matricies"
+$0
+--
+lc "linear
+combination $0
+--
+pl "plane"
+$0
+--
+rnt "Rank
+Nullity Theorem
+--
+ntlc "linear
+linear combination
+--
+cxlc "convex
+linear combination${1:s}
+--
+piv "pivot(s)"
+$0
+--
+lin "linear"
+$0
+--
+li "linear
+independent $0
+--
+lyi "linearly
+independent $0
+--
+lyd "linearly
+dependent $0
+--
+ld "linearly
+dependent $0
+--
+sca "scalar"
+$0
+--
+eibas "eigen
+basis $0
+--
+eivec "eigen
+vector${1:s} $0
+--
+eival "eigen
+value${1:s} $0
+--
+eisp "eigen
+space $0
+--
+sp "space"
+$0
+--
+geomul "geometric
+multiplicity $0
+--
+algmul "algebraic
+multiplicity $0
+--
+ve "vector"
+$0
+--
+ba "basis"
+$0
+--
+nsp "null
+space $0
+--
+csp "column
+space $0
+--
+rsp "row
+space $0
+--
+vsp "vector
+space $0
+--
+proj "projection"
+$0
+--
+ker "kernel"
+$0
+--
+lt "linear
+transformation $0
+--
+trns "transformation"
+$0
+--
+tpos "transpose"
+$0
+--
+vspace "vector
+space$0 $0
+--
+dim "dimension"
+$0
+--
+det "determinant"
+$0
+--
+chpoly "characteristic
+polynomial $0
+--
+im "image"
+$0
+--
+orth "orthogonal"
+$0
+--
+zv "zero
+vector $0
+--
+cpnt "component"
+$0
+--
+dgzbl "diagonalizable"
+$0
+--
+dgzn "diagonalization"
+$0
+--
+utri "upper
+triangular $0
+--
+ltri "lower
+triangular $0
+--
+trir "triangular"
+$0
+--
+plp "parallelpiped"
+$0
+--
+plg "parallelogram"
+$0
+--
+indp "independent"
+$0
+--
+dep "dependent"
+$0
+--
+orie "oriented"
+$0
+--
+str "stretch(es)"
+$0
+--
+diag "diagonal"
+$0
+--
+lwr "lower"
+$0
+--
+upr "upper"
+$0
+--
+vc "Vector"
+\vec{$1}$0
+--
+bv "Basis
+$1 \right]_{\mathcal{$2}}$0
+--
+comp "Comp"
+{$2}$0
+--
+proj "Projection"
+{$2}$0
+--
+span "Span"
+{$1}$0
+--
+range "Range"
+\left($1\right)$0
+--
+null "Null
+\left($1\right)$0
+--
+rank "rank"
+\left($1\right)$0
+--
+rref "Row
+\left($1\right)$0
+--
+dim "dimension"
+\left($1\right)$0
+--
+det "determinant"
+\left($1\right)$0
+--
+colsp "column
+\left($1\right)$0
+--
+rowsp "row
+\left($1\right)$0
+--
+e1 "Basis"
+\vec{e_1}$0
+--
+e2 "Basis"
+\vec{e_2}$0
+--
+e3 "Basis"
+\vec{e_3}$0
+--
+"[^i]mat(rix)?(\d+)x(\d+)" "Generate
+endsnippet
+--
+"imat(rix)?(\d+)x(\d+)" "Generate
+endsnippet
+--
+"(small|[gbBpvV])?ghp(rix)?(\d+)x(\d+)" "Generate
+endsnippet
+--
+3mat "3
+$1 \\\\
+--
+4mat "4
+$1 \\\\
+--
+5mat "4
+$1 \\\\
+--
+3rmat "1
+$1 &
+--
+2mat "2
+$1 \\\\
+--
+2rmat "1
+$1 &
+--
+ges "Gauss
+gmat$1x$2
+--
+rop "Row
+\mapsto $2R_{$1}
+--
+rops "Start
+\rowops
+--
+rad "Add
+\add[$1]{$2}{$3}$0
+--
+rmul "Multiply
+$3}$0
+--
+rswap "Swap
+\swap{$1}{$2}$0
+--
+ynn "yn"
+y_{n}$0
+--
+xii "xi"
+x_{i}$0
+--
+yii "yi"
+y_{i}$0
+--
+xjj "xj"
+x_{j}$0
+--
+yjj "yj"
+y_{j}$0
+--
+xp1 "x"
+x_{n+1}$0
+--
+n0 "x"
+n_{0}$0
+--
+xmm "x"
+x_{m}$0
+--
+ss "subscript"
+_{$1}$0
+--
+sbp "sub-super
+_{$1}^{$2}$0
+--
+'([A-Za-z])\d(\d)' "auto
+snip.rv =
+--
+'([A-Za-z])_(\d\d)' "auto
+snip.rv =
+--
+srel "stackrel"
+\stackrel{$1}{$2}$0
+--
+cal "mathcal"
+\mathcal{$1}$0
+--
+fk "mathfrak"
+\mathfrak{$1}$0
+--
+bb "mathbb"
+\mathbb{$1}$0
+--
+tit "italicized
+\mathit{$1}$0
+--
+bf "text
+\textbf{$1}$0
+--
+txt "text"
+\text{$1}$0
+--
+sxt "spaced
+$1 }$0
+--
+rhs "right
+hand side
+--
+lhs "left
+hand side
+--
+edbo "expression
+$2 $3
+--
+sedbo "subscripted
+$2 $1_2
+--
+cli "comma
+$2, \ldots,
+--
+sli "subscript
+$1_{2}, \ldots,
+--
+dli "double
+${3:operation/comma} $1_{2}$2_{2}$3
+--
+tli "triple
+${4:operation/comma} $1_{2}$2_{2}$2_{3}
+--
+fvars "some
+$1_{2}, \dots
+--
+dvar "some
+$3 $1_{2}$2_{2}
+--
+pp "add
++
+--
+pm "plus-minus"
+\pm
+--
+nn "add
+-
+--
+mm "multiply
+\cdot
+--
+xx "cross"
+\times$0
+--
+README.txt algebra
+\cdot$0
+--
+sq "\sqrt{}"
+\sqrt{${1:${VISUAL}}}$0
+--
+norm "norm"
+$1 \right\Vert$0
+--
+abs "absolute"
+$1 \right|$0
+--
+sq "^2"
+^2$0
+--
+cb "^3"
+^3$0
+--
+tt "to
+^{$1}$0
+--
+min "minimum"
+$2\right)$0
+--
+max "maximum"
+$2\right)$0
+--
+invs "inverse"
+^{-1}$0
+--
+// "Fraction"
+\\frac{$1}{$2}$0
+--
+f/ "Fraction"
+\\frac{$1}{$2}$0
+--
+'((\d+)?(\\)?([A-Za-z]+)(\^((\{\d+\})|(\d)))?)/' "symbol
+snip.rv =
+--
+'(\d+)/' "number
+snip.rv =
+--
+'^.*\)/' "()
+`!p
+--
+oper "operator"
+$0
+--
+pl "plus"
+$0
+--
+tsm "times"
+$0
+--
+mul "multiplication"
+$0
+--
+muld "multiplied"
+$0
+--
+add "addition"
+$0
+--
+subtr "subtraction"
+$0
+--
+min "minimum"
+$0
+--
+max "maximum"
+$0
+--
+log "logic(al)"
+$0
+--
+thm "theorem"
+$0
+--
+imp "implies"
+implies
+--
+val "valid"
+$0
+--
+assi "assign(ment)"
+$0
+--
+axi "axiom(s)"
+$0
+--
+propo "proposition"
+proposition${1:al}
+--
+taut "tautology"
+$0
+--
+quan "quantifier"
+quantifier
+--
+thf "therefore"
+$0
+--
+hn "hence"
+$0
+--
+suff "sufficient"
+$0
+--
+inc "incorrect"
+$0
+--
+imp "implication"
+$0
+--
+bimp "bi-implication"
+$0
+--
+tr "true"
+$0
+--
+fl "false"
+$0
+--
+lem "lemma(s)"
+$0
+--
+contrap "contrapositive"
+$0
+--
+a4c "assume
+for contradiction
+--
+cont "contradiction"
+$0
+--
+hyp "hypothesis"
+$0
+--
+infe "inference"
+$0
+--
+roi "rule
+of inference
+--
+iff "if
+and only
+--
+IH "Induction
+Hypothesis $0
+--
+prin "principle"
+$0
+--
+Bimp "bi-conditional"
+\Leftrightarrow$0
+--
+bimp "bi-conditional"
+\leftrightarrow
+--
+tst "turnstile"
+\vdash$0
+--
+imp "implies"
+\Rightarrow
+--
+limp "implies"
+\Leftarrow
+--
+&& "AND"
+\land$0
+--
+not "NOT"
+\neg$0
+--
+xor "XOR"
+\oplus$0
+--
+VV "OR"
+\lor$0
+--
+mdl "models"
+\models$0
+--
+=== "is"
+:\equiv$0
+--
+fa "forall"
+\forall$0
+--
+eqv "congruent/equiv"
+\equiv$0
+--
+te "there
+$1
+--
+ee "equality"
+=$0
+--
+neq "not
+\neq$0
+--
+ae "approx
+\approx$0
+--
+iff "iff"
+\iff$0
+--
+~ "similar"
+\sim$0
+--
+ss "subset"
+$0
+--
+part "partition"
+$0
+--
+rat "rational"
+$0
+--
+nat "natural"
+$0
+--
+natn "natural
+numbers $0
+--
+Rea "the
+Real Numbers
+--
+Com "Real
+numbers $0
+--
+int "integer(s)"
+$0
+--
+ctn "contain"
+$0
+--
+uni "union"
+$0
+--
+len "length"
+$0
+--
+ele "element(s)"
+$0
+--
+CC "Complex
+\mathbb{C}$0
+--
+RR "real"
+\mathbb{R}$0
+--
+QQ "Q"
+\mathbb{Q}$0
+--
+NN "N"
+\mathbb{N}$0
+--
+ZZ "Z"
+\mathbb{Z}$0
+--
+\\\ "setminus"
+\setminus$0
+--
+pwr "Power
+\mathcal{P}($1)$0
+--
+cc "subset"
+\subseteq$0
+--
+bs "backwards
+\supseteq$0
+--
+c= "subset
+\subseteq$0
+--
+neo "not
+\not\in$0
+--
+eo "in
+\in$0
+--
+^^ "cap"
+\cap$0
+--
+BU "Big
+${4:${VISUAL}}$0
+--
+UU "cup"
+\cup$0
+--
+OO "emptyset"
+\emptyset$0
+--
+set "set"
+$1 \\right\\}$0
+--
+pi "pi"
+\pi$0
+--
+cn "Complex
++ ${2:\beta}
+--
+Big-Oh "Big
+c, n_{0}
+--
+bO "Big
+\mathcal{O}($1)$0
+--
+BOM "Big
+\Omega($1)$0
+--
+algo "algorithm"
+$0
+--
+bin "binary"
+$0
+--
+deci "decimal"
+$0
+--
+ineq "inequality"
+$0
+--
+ge "greater
+than or
+--
+le "less
+than or
+--
+le "leq"
+\le$0
+--
+ge "geq"
+\ge$0
+--
+obrack "overbracket"
+\overbracket{$1}^{$2}$0
+--
+ubrack "underbracket"
+\underbracket{$1}_{$2}$0
+--
+() "left(
+${1:${VISUAL}} \right)$0
+--
+[] "left[
+${1:${VISUAL}} \right]$0
+--
+lrp "left(
+${1:${VISUAL}} \right)$0
+--
+lr| "left|
+${1:${VISUAL}} \right|$0
+--
+lr{ "left\{
+${1:${VISUAL}} \right\\}$0
+--
+lrb "left\{
+${1:${VISUAL}} \right\\}$0
+--
+lrs "left[
+${1:${VISUAL}} \right]$0
+--
+lra "leftangle
+\right>$0
+--
+bar "bar"
+#\bar{$1}$0
+--
+nabl "nabla"
+\nabla$0
+--
+star "star"
+\star$0
+--
+chi "chi"
+\chi
+--
+psi "psi"
+\psi
+--
+Psi "Psi"
+\Psi
+--
+phi "phi"
+\phi
+--
+Phi "Phi"
+\Phi
+--
+alp "alpha"
+\alpha$0
+--
+bet "beta"
+\beta$0
+--
+gam "gamma"
+\gamma$0
+--
+Gam "Gamma"
+\Gamma$0
+--
+del "delta"
+\delta$0
+--
+Del "delta"
+\Delta$0
+--
+the "theta"
+\theta$0
+--
+The "theta"
+\Theta$0
+--
+ep "var
+\varepsilon$0
+--
+sig "sigma"
+\sigma$0
+--
+Sig "sigma"
+\Sigma$0
+--
+lam "lambda"
+\lambda$0
+--
+Lam "lambda"
+\Lambda$0
+--
+mu "mu"
+\mu$0
+--
+box "box
+\boxed{$1}$0
+--
+tag "tag"
+\tag{$1}$0
+--
+dtag "tag"
+\tag{$2}$0
+--
+bar "overline"
+\overline{$1}$0
+--
+nt "not"
+\not
+--
+uline "underline"
+\underline{$1}$0
+--
+dag "dag"
++'%A %0d
+--
+'(?<!\\)arcsin' "sin"
+\arcsin$1{}$0
+--
+'(?<!arc)(?<!\\)sin' "sin"
+$1 \left(
+--
+'(?<!\\)arccos' "cos"
+$1 \left(
+--
+'(?<!arc)(?<!\\)cos' "cos"
+$1 \left(
+--
+'(?<!\\)arctan' "tan"
+$1 \left(
+--
+snippet '(?<!arc)(?<!\\)tan'
+\tan
+--
+'(?<!\\)arccot' "cot"
+$1 \left(
+--
+'(?<!arc)(?<!\\)cot' "cot"
+$1 \left(
+--
+'(?<!\\)arccsc' "csc"
+$1 \left(
+--
+'(?<!arc)(?<!\\)csc' "csc"
+$1 \left(
+--
+'(?<!\\)arcsec' "sec"
+$1 \left(
+--
+snippet '(?<!arc)(?<!\\)sec'
+\sec
+--
+bthm "binomial
+{$2 \choose
+--
+choo "n
+\binom{${1:n}}{${2:k}}$0
+--
+nCk "n
+{{}^{${1:n}}\!C_{${2:k}}}
+--
+nPk "n
+{{}^{${1:n}}\!P_{${2:k}}}
+--
+cou "counts"
+$0
+--
+comb "combination"
+$0
+--
+perm "permutation"
+$0
+--
+plot "Plot"
+\begin{figure}[$1]
+--
+nn "Tikz
+(${1/[^0-9a-zA-Z]//g}${2}) ${3:at
+--
+snippet dr
+\draw[${1}] (${2:0,
+--
+na "Tikz
+snip.rv=', '
+--
+nb "Tikz
+snip.rv=', '
+--
+nr "Tikz
+snip.rv=', '
+--
+nl "Tikz
+snip.rv=', '
+--
+nar "Tikz
+right`!p snip.rv=',
+--
+nal "Tikz
+left`!p snip.rv=',
+--
+nbr "Tikz
+right`!p snip.rv=',
+--
+nbl "Tikz
+left`!p snip.rv=',
+--
+frame "Tikz
+lines, <->]
+--
+force "Tikz
+(${1:0, 0})
+--
+tikz "Tikz"
+\begin{figure}[htb]
+--
+co "Tikz
+($1)$0
+--
+pm "Punctuation
+$${1:${VISUAL}}$`!p
+--
+mm "Math"
+$0
+--
+bb "Brilliant
+\(${1:${VISUAL}}\)`!p
+--
+pz "piazza
+$$${1:${VISUAL}}$$`!p
+--
+dm "Math"
+\[
+--
+commu "commutivity"
+$0
+--
+assoc "associativity"
+$0
+--
+distp "distributive
+property $0
+--
+alg "algebra(ic)"
+$0
+--
+ctq "complete
+the square
+--
+prod "product"
+\prod_{$1}^{$2}
+--
+FF "Field"
+\mathbb{F}$0
+--
+tri "n-th
+$1 $0
+--
+sum "sum"
+${4:${VISUAL}}$0
+--
+sn "The
+${1:Trigger} "${2:Description}"
+--
+${1:Trigger} "${2:Word}"
+$2 \$0
+--
+tsn "Text
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet msn "Math Snippet Snippet"
+"math()"
+${1:Trigger} "${2:Description}"
+${0}
+--
+ass "assuming"
+assuming $0
+--
+ord "ordered"
+ordered $0
+--
+incr "increas(ing)"
+increas${1:ing} $0
+--
+prod "product"
+product $0
+--
+ty "type"
+type $0
+--
+polyn "polynomial"
+polynomial $0
+--
+coe "coefficients"
+coefficients $0
+--
+stru "structure"
+structure $0
+--
+tup "tuple"
+tuple $0
+--
+dig "digits"
+digits $0
+--
+form "formula"
+formula $0
+--
+in "infinity"
+infinity $0
+--
+coor "coordinate"
+coordinate${1:s} $0
+--
+eqn "equation"
+equation $0
+--
+lang "language"
+language
+--
+nota "notation"
+notation $0
+--
+mt "math"
+math${1:matical} $0
+--
+sys "system"
+system $0
+--
+Supi "supposing"
+supposing $0
+--
+calc "calculate"
+calculate $0
+--
+aprx "approx(imate)"
+approx${1:imate} $0
+--
+comm "commence"
+commence $0
+--
+comp "compare"
+compar${1:ing} $0
+--
+mini "minimize"
+minmize $0
+--
+maxi "maximize"
+maximize $0
+--
+subs "substituting"
+substitut${1:ing} $0
+--
+substi "substituting"
+substitutable $0
+--
+... "\ldots"
+\ldots$0
+--
+v.. "\vdots"
+\vdots$0
+--
+dots "Smart
+\dots${1:commas, binary, multiplication}$0
+--
+~> "squiggley
+\rightsquigarrow$0
+--
+xra "arrow
+\xrightarrow${1:[$2]}{$3}$0
+--
+cvgs "converges"
+converges $0
+--
+cts "continuous"
+continuous $0
+--
+nbd "neighbourhood"
+neighbourhood $0
+--
+der "derivative"
+derivative $0
+--
+sup "supremum"
+supremum $0
+--
+inf "infimum"
+infimum $0
+--
+lim "limit"
+limit $0
+--
+dint "integral"
+\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}\: d${4:x}$0
+--
+int "integral"
+\int ${1:${VISUAL}}\: d${2:x}$0
+--
+taylor "taylor"
+\sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1$0
+--
+lim "limit"
+\lim_{${1:n}\to${2:\infty}}$0
+--
+ddx "d/dx"
+\frac{d${1:}}{dx}$0
+--
+part "d/dx"
+\frac{\partial ${1:}}{\partial ${2:x}}$0
+--
+oo "\infty"
+\infty$0
+--
+>> ">>"
+\gg$0
+--
+<< "<<"
+\ll$0
+--
+vrt "vertices"
+vertices $0
+--
+digra "graph"
+directed graph $0
+--
+gra "graph"
+graph $0
+--
+redg "right
+$1 \mathrel{\bullet \!\!\! \rightarrow} $2
+--
+ledg "left
+$1 \mathrel{\leftarrow \!\!\! \bullet} $2
+--
+edg "edge"
+$1 \mathrel{\bullet \! {-} \! \bullet} $2
+--
+surj "surjective"
+\forall y \in ${1:CD}, \exists x \in ${2:D} \text{ s.t. } y = ${3:f}(x)$0
+--
+inj "injective"
+\forall x_1, x_2 \in ${1:D}, ${2:f}(x_1) = ${3:f}(x_2) \implies x_1 = x_2$0
+--
+rel "relation"
+relation $0
+--
+rflx "reflexive"
+reflexive $0
+--
+sym "symmetric"
+symmetric $0
+--
+ttv "transitive"
+transitive $0
+--
+eqv "equivalence"
+equivalence $0
+--
+dom "domain"
+domain $0
+--
+cdom "codomain"
+codomain $0
+--
+ran "range"
+range $0
+--
+fun "function"
+function $0
+--
+invs "inverse"
+inverse $0
+--
+inj "injective"
+injective $0
+--
+surj "surjective"
+surjective $0
+--
+bij "bijective"
+bijective $0
+--
+oto "one-to-one"
+one-to-one $0
+--
+mp "map(ped)"
+map${1:ped} $0
+--
+udr "under"
+under $0
+--
+cmpo "composition"
+composition $0
+--
+log "logarithm"
+logarithm $0
+--
+predi "predicate"
+$1($2): \`\` $3 "\text{, where } $2 \in $4$0
+--
+ceil "ceil"
+\left\lceil $1 \right\rceil$0
+--
+bceil "ceil"
+\bigl\lceil $1 \bigr\rceil$0
+--
+floor "floor"
+\left\lfloor $1 \right\rfloor$0
+--
+log "logarthm"
+\log_{${1:n}}($2)$0
+--
+fun "function"
+${1:f} : $2 \to $3
+--
+fx "function
+${1:f}\left(${2:x}\right)$0
+--
+fog "function
+${1:f} \circ ${2:g}$0
+--
+mpt "mapsto"
+\mapsto$0
+--
+to "to"
+\to$0
+--
+'(?<!\\)ln' "ln"
+\ln($1)$0
+--
+grp "group"
+group $0
+--
+abel "abelian"
+abelian $0
+--
+cmta "commutative"
+commutative $0
+--
+cmuta "commutative"
+commutative $0
+--
+deg "degree"
+degree $0
+--
+sol "solution(s)"
+solution${1:s} $0
+--
+zo "zero(s)"
+zero${1:s} $0
+--
+prf "Proof"
+\begin{proof}
+--
+prfbind "Proof
+\begin{proof}
+--
+arg "argument"
+$0
+--
+ftsoc "for
+the sake
+--
+seq "sequence"
+$0
+--
+den "denoted"
+$0
+--
+cld "called"
+$0
+--
+clr "color"
+$0
+--
+wst "we
+say that
+--
+neq "not
+equal $0
+--
+tech "technique"
+$0
+--
+sel "selected"
+$0
+--
+fxd "fixed"
+fixed
+--
+opt "options"
+options
+--
+aft "after"
+after
+--
+vac "vacuously"
+vacuously
+--
+ih "inductive
+hypothesis
+--
+evt "everything"
+everything
+--
+win "wherein"
+wherein
+--
+cl "clause"
+clause
+--
+clo "closed"
+closed
+--
+fina "finally"
+finally
+--
+wtp "want
+to prove
+--
+jst "justified"
+justified
+--
+dedu "deduction"
+deduction
+--
+obt "obtain"
+obtain${1:s}
+--
+ccrt "concretely"
+concretely
+--
+cpx "complexity"
+complex${1:ity}
+--
+exa "exactly"
+exactly
+--
+fund "fundamental"
+fundamental
+--
+csq "consequence"
+consequence
+--
+ind "induction"
+induction
+--
+ins "inspection"
+inspection
+--
+ojv "objective"
+objective
+--
+aw "as
+well
+--
+ical "identical"
+identical
+--
+om "omit"
+omit
+--
+con "construct(ion)"
+construct${1:ion}
+--
+arb "arbitrary"
+arbitrary
+--
+wrt "with
+respect to
+--
+can "canonical"
+canonical
+--
+sm "same"
+same
+--
+bal "but
+also
+--
+und "understand"
+understand
+--
+sta "statement"
+statement
+--
+op "operation(s)"
+operation${1:s}
+--
+perf "perform"
+perform
+--
+q "question"
+question
+--
+wri "written"
+written
+--
+tir "their"
+their
+--
+dn "do
+not
+--
+dne "does
+not exist
+--
+wch "which"
+which
+--
+clr "clearly"
+clearly
+--
+ver "verified"
+verified
+--
+hvnt "have
+not
+--
+smp "simply"
+simply
+--
+bef "before"
+before
+--
+cor "correct"
+correct
+--
+simp "simplify(ing)"
+simplify${1:ing}
+--
+cpt "compute"
+comput${1:ations}
+--
+sup "suppose"
+${1:s}uppose
+--
+Sup "Suppose"
+Suppose
+--
+subst "substitute"
+substitut${1:able}
+--
+nm "namely"
+namely
+--
+occ "occurs"
+occurs
+--
+anz "analyze"
+analyze
+--
+exp "expand"
+expand${1:ing}
+--
+idn "identity"
+identity
+--
+resp "respectively"
+respectively
+--
+disc "discussed"
+discussed
+--
+desc "describe"
+describe
+--
+wn "we
+note
+--
+wc "(W/w)e
+commence
+--
+alt "alternate"
+alternat${1:ively}
+--
+yld "yield(s)"
+yield${1:s}
+--
+wy "which
+yields
+--
+fst "first"
+first
+--
+slv "solve"
+solve
+--
+prev "previously"
+previously
+--
+sat "satisfy"
+satisfy
+--
+val "value(s)"
+value${1:s}
+--
+poss "possible"
+possible
+--
+fd "find(ing)"
+find${1:ing}
+--
+giv "given"
+given
+--
+mvr "moreover"
+${1:m}oreover
+--
+corr "corresponding"
+corresponding
+--
+app "appl(ying)"
+appl${1:ying}
+--
+fac "factor"
+factor
+--
+dir "direction"
+direction
+--
+on "only"
+only
+--
+trv "trivial"
+trivial
+--
+ntrv "trivial"
+non-trivial
+--
+invo "invokes"
+invoke${1:s}
+--
+indu "induce"
+induce${1:s}
+--
+gen "generate"
+generate
+--
+unq "unique"
+unique
+--
+mtd "method"
+method
+--
+gnt "guarenteed"
+guarenteed
+--
+elem "elementary"
+elementary
+--
+prcs "process"
+process
+--
+pro "procedure"
+procedure
+--
+eval "eval"
+evalulate
+--
+equa "equation"
+equation
+--
+eq "equal"
+equal
+--
+iden "identity"
+identity
+--
+lkw "likewise"
+likewise
+--
+cnt "cannot"
+cannot
+--
+imp "impossible"
+impossible
+--
+exc "exceed"
+exceed
+--
+proc "proceed"
+proceed
+--
+no "number"
+number${1:s}
+--
+cons "consider"
+consider
+--
+cnst "consists"
+consists
+--
+ind "indeed"
+indeed
+--
+rec "recall"
+${1:r}ecall
+--
+recog "recognize"
+recognize
+--
+dif "different"
+different
+--
+orig "original"
+original
+--
+std "standard"
+standard
+--
+sim "similar(ly)"
+similar${1:ly}
+--
+simlt "simultaneously"
+simultaneously
+--
+rep "represent"
+represent
+--
+eqv "equivalently"
+${1:e}quivalent${2:ly}
+--
+agr "agree"
+agree
+--
+inv "invert"
+invert${1:ible}
+--
+obs "observation"
+${1:o}bserv${2:ation}
+--
+wo "we
+observe
+--
+conv "convert(s)"
+convert${1:s}
+--
+prop "propert(ies/y)"
+propert${1:ies}
+--
+th "that"
+that
+--
+tn "then"
+then
+--
+red "reduced"
+reduce${1:d}
+--
+areq "as
+required.
+--
+aned "as
+needed.
+--
+prec "precisely"
+precisely
+--
+req "require"
+require
+--
+ti "that
+is
+--
+wt "what"
+what
+--
+dt "determine(d)"
+determine${1:d}
+--
+sn "since"
+${1:s}ince
+--
+ts "thus"
+${1:t}hus
+--
+twh "thus
+we have
+--
+stwh "so
+then we
+--
+wah "we
+also have
+--
+wa "we
+also
+--
+swk "so
+we know
+--
+ws "we
+say
+--
+swh "so
+we have
+--
+aswht "and
+so we
+--
+ath "and
+that
+--
+ww "(W/w)e
+will
+--
+Th "The"
+The
+--
+ass "assum(e/ing)"
+${1:a}ssum${2:ing}
+--
+wh "we
+have
+--
+wk "we
+know
+--
+twk "thus
+we know
+--
+ho "hold(s)"
+hold${1:s}
+--
+ia "is
+a
+--
+ina "is
+not a
+--
+Ts "To
+show
+--
+whts "we
+have to
+--
+wwts "we
+want to
+--
+wws "we
+will show
+--
+wms "we
+must show
+--
+oms "one
+must show
+--
+whs "we
+have shown
+--
+wwn "we
+will now
+--
+wwp "we
+will prove
+--
+ift "it
+follows that
+--
+fol "following"
+follow${1:ing}
+--
+st "such
+that
+--
+sot "so
+that
+--
+sotn "so
+then
+--
+rc "recall"
+recall
+--
+bc "because"
+because
+--
+bcm "become(s)"
+become${1:s}
+--
+fa "for
+all
+--
+fey "for
+every
+--
+fe "for
+example
+--
+fay "for
+any
+--
+fs "for
+some
+--
+te "there
+exists
+--
+ex "exist"
+exist${1:s}
+--
+nex "not
+exist${1:s}
+--
+twc "(T/t)hus
+we conclude
+--
+wkt "we
+know that
+--
+var "variable"
+variable${1:s}
+--
+tfae "the
+following are
+--
+wlog "without
+loss of
+--
+chg "change"
+change${1:s}
+--
+prv "prove"
+${1:p}rove
+--
+rmk "remark"
+remark
+--
+eqty "equality"
+equality
+--
+dist "distinct"
+distinct
+--
+arv "arrive"
+arrive
+--
+lat "latter"
+latter
+--
+rem "remember"
+remember
+--
+defd "defined"
+defined
+--
+bde "by
+definition
+--
+def "definition"
+definition
+--
+tog "together"
+together
+--
+tot "total"
+total
+--
+parti "particular"
+particular
+--
+ft "fact"
+fact
+--
+abv "above"
+above
+--
+seq "sequence"
+\\{ a
+--
+zz "zero"
+zero
+--
+cong "congruent"
+congruent
+--
+rmd "remainder"
+$0
+--
+mod "modulo"
+$0
+--
+mulpl "multiple(s)"
+$0
+--
+div "division"
+$0
+--
+divd "divide"
+$0
+--
+divi "divisible"
+$0
+--
+zz "zero"
+0
+--
+gcd "greatest
+\gcd($1)$0
+--
+% "modulo"
+~\%~
+--
+mod "modulo"
+\Mod{$1}$0
+--
+cong "a
+\equiv $2
+--
+|| "divides"
+\mid$0
+--
+n| "does
+\nmid$0
+--
+t. "therefore"
+\therefore$0
+--
+pos "positive"
+$0
+--
+neg "negative"
+$0
+--
+fin "finite"
+$0
+--
+nz "non-zero"
+$0
+--
+inf "infinite"
+$0
+--
+abs "absolute
+value $0
+--
+enu "enumerate"
+\begin{enumerate}
+--
+itz "itemize"
+\begin{itemize}
+--
+README.txt algebra
+$0
+--
+ali "Align"
+\begin{align*}
+--
+tali "Align"
+\begin{align*}
+--
+gather "Gather"
+\begin{gather*}
+--
+ar "Array"
+\begin{array*}{${1:rl}}
+--
+eq "Equation"
+\begin{equation}
+--
+eqnn "Equation
+\begin{equation*}
+--
+al "Align"
+\begin{align*}
+--
+-A 1
+i=0
+--
+col "column(s)"
+$0
+--
+rred "row
+reduction $0
+--
+rref "reduced
+row echelon
+--
+mat "matrix"
+$0
+--
+mats "matricies"
+$0
+--
+lc "linear
+combination $0
+--
+pl "plane"
+$0
+--
+rnt "Rank
+Nullity Theorem
+--
+ntlc "linear
+linear combination
+--
+cxlc "convex
+linear combination${1:s}
+--
+piv "pivot(s)"
+$0
+--
+lin "linear"
+$0
+--
+li "linear
+independent $0
+--
+lyi "linearly
+independent $0
+--
+lyd "linearly
+dependent $0
+--
+ld "linearly
+dependent $0
+--
+sca "scalar"
+$0
+--
+eibas "eigen
+basis $0
+--
+eivec "eigen
+vector${1:s} $0
+--
+eival "eigen
+value${1:s} $0
+--
+eisp "eigen
+space $0
+--
+sp "space"
+$0
+--
+geomul "geometric
+multiplicity $0
+--
+algmul "algebraic
+multiplicity $0
+--
+ve "vector"
+$0
+--
+ba "basis"
+$0
+--
+nsp "null
+space $0
+--
+csp "column
+space $0
+--
+rsp "row
+space $0
+--
+vsp "vector
+space $0
+--
+proj "projection"
+$0
+--
+ker "kernel"
+$0
+--
+lt "linear
+transformation $0
+--
+trns "transformation"
+$0
+--
+tpos "transpose"
+$0
+--
+vspace "vector
+space$0 $0
+--
+dim "dimension"
+$0
+--
+det "determinant"
+$0
+--
+chpoly "characteristic
+polynomial $0
+--
+im "image"
+$0
+--
+orth "orthogonal"
+$0
+--
+zv "zero
+vector $0
+--
+cpnt "component"
+$0
+--
+dgzbl "diagonalizable"
+$0
+--
+dgzn "diagonalization"
+$0
+--
+utri "upper
+triangular $0
+--
+ltri "lower
+triangular $0
+--
+trir "triangular"
+$0
+--
+plp "parallelpiped"
+$0
+--
+plg "parallelogram"
+$0
+--
+indp "independent"
+$0
+--
+dep "dependent"
+$0
+--
+orie "oriented"
+$0
+--
+str "stretch(es)"
+$0
+--
+diag "diagonal"
+$0
+--
+lwr "lower"
+$0
+--
+upr "upper"
+$0
+--
+vc "Vector"
+\vec{$1}$0
+--
+bv "Basis
+$1 \right]_{\mathcal{$2}}$0
+--
+comp "Comp"
+{$2}$0
+--
+proj "Projection"
+{$2}$0
+--
+span "Span"
+{$1}$0
+--
+range "Range"
+\left($1\right)$0
+--
+null "Null
+\left($1\right)$0
+--
+rank "rank"
+\left($1\right)$0
+--
+rref "Row
+\left($1\right)$0
+--
+dim "dimension"
+\left($1\right)$0
+--
+det "determinant"
+\left($1\right)$0
+--
+colsp "column
+\left($1\right)$0
+--
+rowsp "row
+\left($1\right)$0
+--
+e1 "Basis"
+\vec{e_1}$0
+--
+e2 "Basis"
+\vec{e_2}$0
+--
+e3 "Basis"
+\vec{e_3}$0
+--
+"[^i]mat(rix)?(\d+)x(\d+)" "Generate
+endsnippet
+--
+"imat(rix)?(\d+)x(\d+)" "Generate
+endsnippet
+--
+"(small|[gbBpvV])?ghp(rix)?(\d+)x(\d+)" "Generate
+endsnippet
+--
+3mat "3
+$1 \\\\
+--
+4mat "4
+$1 \\\\
+--
+5mat "4
+$1 \\\\
+--
+3rmat "1
+$1 &
+--
+2mat "2
+$1 \\\\
+--
+2rmat "1
+$1 &
+--
+ges "Gauss
+gmat$1x$2
+--
+rop "Row
+\mapsto $2R_{$1}
+--
+rops "Start
+\rowops
+--
+rad "Add
+\add[$1]{$2}{$3}$0
+--
+rmul "Multiply
+$3}$0
+--
+rswap "Swap
+\swap{$1}{$2}$0
+--
+ynn "yn"
+y_{n}$0
+--
+xii "xi"
+x_{i}$0
+--
+yii "yi"
+y_{i}$0
+--
+xjj "xj"
+x_{j}$0
+--
+yjj "yj"
+y_{j}$0
+--
+xp1 "x"
+x_{n+1}$0
+--
+n0 "x"
+n_{0}$0
+--
+xmm "x"
+x_{m}$0
+--
+ss "subscript"
+_{$1}$0
+--
+sbp "sub-super
+_{$1}^{$2}$0
+--
+'([A-Za-z])\d(\d)' "auto
+snip.rv =
+--
+'([A-Za-z])_(\d\d)' "auto
+snip.rv =
+--
+srel "stackrel"
+\stackrel{$1}{$2}$0
+--
+cal "mathcal"
+\mathcal{$1}$0
+--
+fk "mathfrak"
+\mathfrak{$1}$0
+--
+bb "mathbb"
+\mathbb{$1}$0
+--
+tit "italicized
+\mathit{$1}$0
+--
+bf "text
+\textbf{$1}$0
+--
+txt "text"
+\text{$1}$0
+--
+sxt "spaced
+$1 }$0
+--
+rhs "right
+hand side
+--
+lhs "left
+hand side
+--
+edbo "expression
+$2 $3
+--
+sedbo "subscripted
+$2 $1_2
+--
+cli "comma
+$2, \ldots,
+--
+sli "subscript
+$1_{2}, \ldots,
+--
+dli "double
+${3:operation/comma} $1_{2}$2_{2}$3
+--
+tli "triple
+${4:operation/comma} $1_{2}$2_{2}$2_{3}
+--
+fvars "some
+$1_{2}, \dots
+--
+dvar "some
+$3 $1_{2}$2_{2}
+--
+pp "add
++
+--
+pm "plus-minus"
+\pm
+--
+nn "add
+-
+--
+mm "multiply
+\cdot
+--
+xx "cross"
+\times$0
+--
+README.txt algebra
+\cdot$0
+--
+sq "\sqrt{}"
+\sqrt{${1:${VISUAL}}}$0
+--
+norm "norm"
+\left\Vert $1 \right\Vert$0
+--
+abs "absolute"
+\left| $1 \right|$0
+--
+sq "^2"
+^2$0
+--
+cb "^3"
+^3$0
+--
+tt "to
+^{$1}$0
+--
+min "minimum"
+\min\left($1, $2\right)$0
+--
+max "maximum"
+\max\left($1, $2\right)$0
+--
+invs "inverse"
+^{-1}$0
+--
+// "Fraction"
+\\frac{$1}{$2}$0
+--
+f/ "Fraction"
+\\frac{$1}{$2}$0
+--
+'((\d+)?(\\)?([A-Za-z]+)(\^((\{\d+\})|(\d)))?)/' "symbol
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+--
+'(\d+)/' "number
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+--
+'^.*\)/' "()
+`!p
+--
+oper "operator"
+operator $0
+--
+pl "plus"
+plus $0
+--
+tsm "times"
+times $0
+--
+mul "multiplication"
+multipl${1:ication} $0
+--
+muld "multiplied"
+multiplied $0
+--
+add "addition"
+addition $0
+--
+subtr "subtraction"
+subtract${1:ion} $0
+--
+min "minimum"
+minimum $0
+--
+max "maximum"
+maximum $0
+--
+log "logic(al)"
+${1:l}ogic${2:al} $0
+--
+thm "theorem"
+${1:t}heorem $0
+--
+imp "implies"
+implies
+--
+val "valid"
+valid $0
+--
+assi "assign(ment)"
+assign${1:ment} $0
+--
+axi "axiom(s)"
+axiom${1:s} $0
+--
+propo "proposition"
+proposition${1:al}
+--
+taut "tautology"
+tautology $0
+--
+quan "quantifier"
+quantifier
+--
+thf "therefore"
+${1:t}herefore $0
+--
+hn "hence"
+${1:h}ence $0
+--
+suff "sufficient"
+sufficient $0
+--
+inc "incorrect"
+incorrect $0
+--
+imp "implication"
+implication $0
+--
+bimp "bi-implication"
+bi-implication $0
+--
+tr "true"
+true $0
+--
+fl "false"
+false $0
+--
+lem "lemma(s)"
+lemma${1:s} $0
+--
+contrap "contrapositive"
+contrapositive $0
+--
+a4c "assume
+assume for contradiction that $0
+--
+cont "contradiction"
+contradiction $0
+--
+hyp "hypothesis"
+hypothesis $0
+--
+infe "inference"
+inference $0
+--
+roi "rule
+rule of inference $0
+--
+iff "if
+if and only if $0
+--
+IH "Induction
+Induction Hypothesis $0
+--
+prin "principle"
+principle $0
+--
+Bimp "bi-conditional"
+\Leftrightarrow$0
+--
+bimp "bi-conditional"
+\leftrightarrow
+--
+tst "turnstile"
+\vdash$0
+--
+imp "implies"
+\Rightarrow
+--
+limp "implies"
+\Leftarrow
+--
+&& "AND"
+\land$0
+--
+not "NOT"
+\neg$0
+--
+xor "XOR"
+\oplus$0
+--
+VV "OR"
+\lor$0
+--
+mdl "models"
+\models$0
+--
+=== "is"
+:\equiv$0
+--
+fa "forall"
+\forall$0
+--
+eqv "congruent/equiv"
+\equiv$0
+--
+te "there
+\exists $1
+--
+ee "equality"
+=$0
+--
+neq "not
+\neq$0
+--
+ae "approx
+\approx$0
+--
+iff "iff"
+\iff$0
+--
+~ "similar"
+\sim$0
+--
+ss "subset"
+subset $0
+--
+part "partition"
+partition $0
+--
+rat "rational"
+rational $0
+--
+nat "natural"
+natural $0
+--
+natn "natural
+natural numbers $0
+--
+Rea "the
+the Real Numbers $0
+--
+Com "Real
+complex numbers $0
+--
+int "integer(s)"
+integer${1:s} $0
+--
+ctn "contain"
+contain $0
+--
+uni "union"
+union $0
+--
+len "length"
+length${1:s} $0
+--
+ele "element(s)"
+element${1:s} $0
+--
+CC "Complex
+\mathbb{C}$0
+--
+RR "real"
+\mathbb{R}$0
+--
+QQ "Q"
+\mathbb{Q}$0
+--
+NN "N"
+\mathbb{N}$0
+--
+ZZ "Z"
+\mathbb{Z}$0
+--
+\\\ "setminus"
+\setminus$0
+--
+pwr "Power
+\mathcal{P}($1)$0
+--
+cc "subset"
+\subseteq$0
+--
+bs "backwards
+\supseteq$0
+--
+c= "subset
+\subseteq$0
+--
+neo "not
+\not\in$0
+--
+eo "in
+\in$0
+--
+^^ "cap"
+\cap$0
+--
+BU "Big
+\bigcup_{${1:i}=${2:0}}^{${3:n}} ${4:${VISUAL}}$0
+--
+UU "cup"
+\cup$0
+--
+OO "emptyset"
+\emptyset$0
+--
+set "set"
+\\left\\{ $1 \\right\\}$0
+--
+pi "pi"
+\pi$0
+--
+cn "Complex
+${1:\alpha} + ${2:\beta} i$0
+--
+Big-Oh "Big
+\exists c, n_{0} \in \mathbb{R^+} \text{ s.t. } \forall n \in \mathbb{N}, n \ge n_{0} \implies $1 \le c \cdot $2
+--
+bO "Big
+\mathcal{O}($1)$0
+--
+BOM "Big
+\Omega($1)$0
+--
+algo "algorithm"
+algorithm $0
+--
+bin "binary"
+binary $0
+--
+deci "decimal"
+decimal $0
+--
+ineq "inequality"
+inequality $0
+--
+ge "greater
+greater than or equal to $0
+--
+le "less
+less than or equal to $0
+--
+le "leq"
+\le$0
+--
+ge "geq"
+\ge$0
+--
+obrack "overbracket"
+\overbracket{$1}^{$2}$0
+--
+ubrack "underbracket"
+\underbracket{$1}_{$2}$0
+--
+() "left(
+#\left( ${1:${VISUAL}} \right)$0
+--
+[] "left[
+#\left[ ${1:${VISUAL}} \right]$0
+--
+lrp "left(
+\left( ${1:${VISUAL}} \right)$0
+--
+lr| "left|
+\left| ${1:${VISUAL}} \right|$0
+--
+lr{ "left\{
+\left\\{ ${1:${VISUAL}} \right\\}$0
+--
+lrb "left\{
+\left\\{ ${1:${VISUAL}} \right\\}$0
+--
+lrs "left[
+\left[ ${1:${VISUAL}} \right]$0
+--
+lra "leftangle
+\left<${1:${VISUAL}} \right>$0
+--
+bar "bar"
+#\bar{$1}$0
+--
+nabl "nabla"
+\nabla$0
+--
+star "star"
+\star$0
+--
+chi "chi"
+\chi
+--
+psi "psi"
+\psi
+--
+Psi "Psi"
+\Psi
+--
+phi "phi"
+\phi
+--
+Phi "Phi"
+\Phi
+--
+alp "alpha"
+\alpha$0
+--
+bet "beta"
+\beta$0
+--
+gam "gamma"
+\gamma$0
+--
+Gam "Gamma"
+\Gamma$0
+--
+del "delta"
+\delta$0
+--
+Del "delta"
+\Delta$0
+--
+the "theta"
+\theta$0
+--
+The "theta"
+\Theta$0
+--
+ep "var
+\varepsilon$0
+--
+sig "sigma"
+\sigma$0
+--
+Sig "sigma"
+\Sigma$0
+--
+lam "lambda"
+\lambda$0
+--
+Lam "lambda"
+\Lambda$0
+--
+mu "mu"
+\mu$0
+--
+box "box
+\boxed{$1}$0
+--
+tag "tag"
+\tag{$1}$0
+--
+dtag "tag"
+\label{eq:$1} \tag{$2}$0
+--
+bar "overline"
+\overline{$1}$0
+--
+nt "not"
+\not
+--
+uline "underline"
+\underline{$1}$0
+--
+dag "dag"
+\dag{`date +'%A %0d %B' | sed 's/.*/\u&/'`}
+--
+'(?<!\\)arcsin' "sin"
+\arcsin$1{}$0
+--
+'(?<!arc)(?<!\\)sin' "sin"
+\sin $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arccos' "cos"
+\arccos $1 \left( ${2:\theta} \right)$0
+--
+'(?<!arc)(?<!\\)cos' "cos"
+\cos $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arctan' "tan"
+\arctan $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!arc)(?<!\\)tan'
+# \tan
+--
+'(?<!\\)arccot' "cot"
+\arccot $1 \left( ${2:\theta} \right)$0
+--
+'(?<!arc)(?<!\\)cot' "cot"
+\cot $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arccsc' "csc"
+\arccsc $1 \left( ${2:\theta} \right)$0
+--
+'(?<!arc)(?<!\\)csc' "csc"
+\csc $1 \left( ${2:\theta} \right)$0
+--
+'(?<!\\)arcsec' "sec"
+\arcsec $1 \left( ${2:\theta} \right)$0
+--
+snippet '(?<!arc)(?<!\\)sec'
+# \sec
+--
+bthm "binomial
+\sum_{$1=0}^{$2} {$2 \choose $1} $3^{$2-$1} $4^{$1}
+--
+choo "n
+\binom{${1:n}}{${2:k}}$0
+--
+nCk "n
+{{}^{${1:n}}\!C_{${2:k}}}
+--
+nPk "n
+{{}^{${1:n}}\!P_{${2:k}}}
+--
+cou "counts"
+count${1:s} $0
+--
+comb "combination"
+combination $0
+--
+perm "permutation"
+permutation $0
+--
+plot "Plot"
+\begin{figure}[$1]
+--
+nn "Tikz
+\node[$5] (${1/[^0-9a-zA-Z]//g}${2}) ${3:at (${4:0,0}) }{$${1}$};
+--
+snippet dr
+# \draw[${1}] (${2:0, 0}) -- $4(${3:0,0});
+--
+na "Tikz
+node[above`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nb "Tikz
+node[below`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nr "Tikz
+node[right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nl "Tikz
+node[left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nar "Tikz
+node[above right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nal "Tikz
+node[above left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nbr "Tikz
+node[below right`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+nbl "Tikz
+node[below left`!p snip.rv=', ' if t[2] else ''`${2}]{$${1}$}$0
+--
+frame "Tikz
+\draw[help lines, <->] (-$1, 0) -- ($1, 0);
+--
+force "Tikz
+\draw[force] (${1:0, 0}) -- $3 ++(${2:0, 0});
+--
+tikz "Tikz"
+\begin{figure}[htb]
+--
+co "Tikz
+coordinate ($1)$0
+--
+pm "Punctuation
+$${1:${VISUAL}}$`!p
+--
+mm "Math"
+$$1$ $0
+--
+bb "Brilliant
+\(${1:${VISUAL}}\)`!p
+--
+pz "piazza
+$$${1:${VISUAL}}$$`!p
+--
+dm "Math"
+\[
+--
+commu "commutivity"
+commutivity $0
+--
+assoc "associativity"
+associativity $0
+--
+distp "distributive
+distributive property $0
+--
+alg "algebra(ic)"
+algebra${1:ic} $0
+--
+ctq "complete
+complete the square $0
+--
+prod "product"
+\prod_{$1}^{$2}
+--
+FF "Field"
+\mathbb{F}$0
+--
+tri "n-th
+\sum_{${1:i}=1}^{${2:n}} $1 $0
+--
+sum "sum"
+\sum_{${1:i}=${2:0}}^{${3:n}} ${4:${VISUAL}}$0
+--
+sn "The
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet wsn "Word Snippet Snippet"
+snippet ${1:Trigger} "${2:Word}" w
+\$0
+--
+snippet tsn "Text Snippet Snippet"
+${1:Trigger} "${2:Description}"
+${0}
+--
+msn "Math
+context "math()"
+snippet ${1:Trigger} "${2:Description}" ${3:Options}
+${0}
+--
+snippet ass "assuming" w
+$0
+--
+snippet ord "ordered" w
+$0
+--
+snippet incr "increas(ing)" w
+$0
+--
+snippet prod "product" w
+$0
+--
+snippet ty "type" w
+$0
+--
+snippet polyn "polynomial" w
+$0
+--
+snippet coe "coefficients" w
+$0
+--
+snippet stru "structure" w
+$0
+--
+snippet tup "tuple" w
+$0
+--
+snippet dig "digits" w
+$0
+--
+snippet form "formula" w
+$0
+--
+snippet in "infinity" w
+$0
+--
+snippet coor "coordinate" w
+$0
+--
+snippet eqn "equation" w
+$0
+--
+snippet lang "language" w
+language
+--
+snippet nota "notation" w
+$0
+--
+snippet mt "math" w
+$0
+--
+snippet sys "system" w
+$0
+--
+snippet Supi "supposing" w
+$0
+--
+snippet calc "calculate" w
+$0
+--
+snippet aprx "approx(imate)" w
+$0
+--
+snippet comm "commence" w
+$0
+--
+snippet comp "compare" w
+$0
+--
+snippet mini "minimize" w
+$0
+--
+snippet maxi "maximize" w
+$0
+--
+snippet subs "substituting" w
+$0
+--
+snippet substi "substituting" w
+$0
+--
+snippet ... "\ldots" iA
+\ldots$0
+--
+snippet v.. "\vdots" iA
+\vdots$0
+--
+snippet dots "Smart Dots" iA
+binary, multiplication}$0
+--
+snippet ~> "squiggley arrow" A
+\rightsquigarrow$0
+--
+snippet xra "arrow with text" A
+\xrightarrow${1:[$2]}{$3}$0
+--
+snippet cvgs "converges" w
+$0
+--
+snippet cts "continuous" w
+$0
+--
+snippet nbd "neighbourhood" w
+$0
+--
+snippet der "derivative" w
+$0
+--
+snippet sup "supremum" w
+$0
+--
+snippet inf "infimum" w
+$0
+--
+snippet lim "limit" w
+$0
+--
+snippet dint "integral" w
+${3:${VISUAL}}\: d${4:x}$0
+--
+snippet int "integral" iA
+${1:${VISUAL}}\: d${2:x}$0
+--
+snippet taylor "taylor" w
+${4:c_$1} (x-a)^$1$0
+--
+snippet lim "limit" w
+\lim_{${1:n}\to${2:\infty}}$0
+--
+snippet ddx "d/dx" wA
+\frac{d${1:}}{dx}$0
+--
+snippet part "d/dx" w
+${1:}}{\partial ${2:x}}$0
+--
+snippet oo "\infty" iA
+\infty$0
+--
+snippet >> ">>" iA
+\gg$0
+--
+snippet << "<<" iA
+\ll$0
+--
+snippet vrt "vertices" w
+$0
+--
+snippet digra "graph" w
+graph $0
+--
+snippet gra "graph" w
+$0
+--
+snippet redg "right edge" iA
+\mathrel{\bullet \!\!\!
+--
+snippet ledg "left edge" iA
+\mathrel{\leftarrow \!\!\!
+--
+snippet edg "edge" A
+\mathrel{\bullet \!
+--
+snippet surj "surjective" iA
+y \in
+--
+snippet inj "injective" iA
+x_1, x_2
+--
+snippet rel "relation" w
+$0
+--
+snippet rflx "reflexive" w
+$0
+--
+snippet sym "symmetric" w
+$0
+--
+snippet ttv "transitive" w
+$0
+--
+snippet eqv "equivalence" Options
+$0
+--
+snippet dom "domain" w
+$0
+--
+snippet cdom "codomain" w
+$0
+--
+snippet ran "range" w
+$0
+--
+snippet fun "function" w
+$0
+--
+snippet invs "inverse" w
+$0
+--
+snippet inj "injective" w
+$0
+--
+snippet surj "surjective" w
+$0
+--
+snippet bij "bijective" w
+$0
+--
+snippet oto "one-to-one" w
+$0
+--
+snippet mp "map(ped)" w
+$0
+--
+snippet udr "under" w
+$0
+--
+snippet cmpo "composition" w
+$0
+--
+snippet log "logarithm" w
+$0
+--
+snippet predi "predicate" iA
+\`\` $3
+--
+snippet ceil "ceil" iA
+$1 \right\rceil$0
+--
+snippet bceil "ceil" iA
+$1 \bigr\rceil$0
+--
+snippet floor "floor" iA
+$1 \right\rfloor$0
+--
+snippet log "logarthm" w
+\log_{${1:n}}($2)$0
+--
+snippet fun "function" iA
+: $2
+--
+snippet fx "function at x" iA
+${1:f}\left(${2:x}\right)$0
+--
+snippet fog "function composition" i
+\circ ${2:g}$0
+--
+snippet mpt "mapsto" iA
+\mapsto$0
+--
+snippet to "to" iA
+\to$0
+--
+snippet '(?<!\\)ln' "ln" rwA
+\ln($1)$0
+--
+snippet grp "group" w
+$0
+--
+snippet abel "abelian" w
+$0
+--
+snippet cmta "commutative" w
+$0
+--
+snippet cmuta "commutative" w
+$0
+--
+snippet deg "degree" w
+$0
+--
+snippet sol "solution(s)" w
+$0
+--
+snippet zo "zero(s)" w
+$0
+Binary file proof/.proof_words.snippets.swp matches
+--
+prf "Proof"
+\begin{proof}
+--
+prfbind "Proof
+\begin{proof}
+--
+arg "argument"
+argument $0
+--
+ftsoc "for
+for the sake of contradiction $0
+--
+seq "sequence"
+sequence $0
+--
+den "denoted"
+denoted $0
+--
+cld "called"
+called $0
+--
+clr "color"
+color${1:ing} $0
+--
+wst "we
+we say that $0
+--
+neq "not
+not equal $0
+--
+tech "technique"
+technique $0
+--
+sel "selected"
+selected $0
+--
+fxd "fixed"
+fixed
+--
+opt "options"
+options
+--
+aft "after"
+after
+--
+vac "vacuously"
+vacuously
+--
+ih "inductive
+inductive hypothesis
+--
+evt "everything"
+everything
+--
+win "wherein"
+wherein
+--
+cl "clause"
+clause
+--
+clo "closed"
+closed
+--
+fina "finally"
+finally
+--
+wtp "want
+want to prove
+--
+jst "justified"
+justified
+--
+dedu "deduction"
+deduction
+--
+obt "obtain"
+obtain${1:s}
+--
+ccrt "concretely"
+concretely
+--
+cpx "complexity"
+complex${1:ity}
+--
+exa "exactly"
+exactly
+--
+fund "fundamental"
+fundamental
+--
+csq "consequence"
+consequence
+--
+ind "induction"
+induction
+--
+ins "inspection"
+inspection
+--
+ojv "objective"
+objective
+--
+aw "as
+as well
+--
+ical "identical"
+identical
+--
+om "omit"
+omit
+--
+con "construct(ion)"
+construct${1:ion}
+--
+arb "arbitrary"
+arbitrary
+--
+wrt "with
+with respect to
+--
+can "canonical"
+canonical
+--
+sm "same"
+same
+--
+bal "but
+but also
+--
+und "understand"
+understand
+--
+sta "statement"
+statement
+--
+op "operation(s)"
+operation${1:s}
+--
+perf "perform"
+perform
+--
+q "question"
+question
+--
+wri "written"
+written
+--
+tir "their"
+their
+--
+dn "do
+do not
+--
+dne "does
+does not exist
+--
+wch "which"
+which
+--
+clr "clearly"
+clearly
+--
+ver "verified"
+verified
+--
+hvnt "have
+have not
+--
+smp "simply"
+simply
+--
+bef "before"
+before
+--
+cor "correct"
+correct
+--
+simp "simplify(ing)"
+simplify${1:ing}
+--
+cpt "compute"
+comput${1:ations}
+--
+sup "suppose"
+${1:s}uppose
+--
+Sup "Suppose"
+Suppose
+--
+subst "substitute"
+substitut${1:able}
+--
+nm "namely"
+namely
+--
+occ "occurs"
+occurs
+--
+anz "analyze"
+analyze
+--
+exp "expand"
+expand${1:ing}
+--
+idn "identity"
+identity
+--
+resp "respectively"
+respectively
+--
+disc "discussed"
+discussed
+--
+desc "describe"
+describe
+--
+wn "we
+${1:w}e note
+--
+wc "(W/w)e
+${1:w}e commence
+--
+alt "alternate"
+alternat${1:ively}
+--
+yld "yield(s)"
+yield${1:s}
+--
+wy "which
+which yields
+--
+fst "first"
+first
+--
+slv "solve"
+solve
+--
+prev "previously"
+previously
+--
+sat "satisfy"
+satisfy
+--
+val "value(s)"
+value${1:s}
+--
+poss "possible"
+possible
+--
+fd "find(ing)"
+find${1:ing}
+--
+giv "given"
+given
+--
+mvr "moreover"
+${1:m}oreover
+--
+corr "corresponding"
+corresponding
+--
+app "appl(ying)"
+appl${1:ying}
+--
+fac "factor"
+factor
+--
+dir "direction"
+direction
+--
+on "only"
+only
+--
+trv "trivial"
+trivial
+--
+ntrv "trivial"
+non-trivial
+--
+invo "invokes"
+invoke${1:s}
+--
+indu "induce"
+induce${1:s}
+--
+gen "generate"
+generate
+--
+unq "unique"
+unique
+--
+mtd "method"
+method
+--
+gnt "guarenteed"
+guarenteed
+--
+elem "elementary"
+elementary
+--
+prcs "process"
+process
+--
+pro "procedure"
+procedure
+--
+eval "eval"
+evalulate
+--
+equa "equation"
+equation
+--
+eq "equal"
+equal
+--
+iden "identity"
+identity
+--
+lkw "likewise"
+likewise
+--
+cnt "cannot"
+cannot
+--
+imp "impossible"
+impossible
+--
+exc "exceed"
+exceed
+--
+proc "proceed"
+proceed
+--
+no "number"
+number${1:s}
+--
+cons "consider"
+consider
+--
+cnst "consists"
+consists
+--
+ind "indeed"
+indeed
+--
+rec "recall"
+${1:r}ecall
+--
+recog "recognize"
+recognize
+--
+dif "different"
+different
+--
+orig "original"
+original
+--
+std "standard"
+standard
+--
+sim "similar(ly)"
+similar${1:ly}
+--
+simlt "simultaneously"
+simultaneously
+--
+rep "represent"
+represent
+--
+eqv "equivalently"
+${1:e}quivalent${2:ly}
+--
+agr "agree"
+agree
+--
+inv "invert"
+invert${1:ible}
+--
+obs "observation"
+${1:o}bserv${2:ation}
+--
+wo "we
+${1:w}e observe
+--
+conv "convert(s)"
+convert${1:s}
+--
+prop "propert(ies/y)"
+propert${1:ies}
+--
+th "that"
+that
+--
+tn "then"
+then
+--
+red "reduced"
+reduce${1:d}
+--
+areq "as
+as required.
+--
+aned "as
+as needed.
+--
+prec "precisely"
+precisely
+--
+req "require"
+require
+--
+ti "that
+${1:t}hat is
+--
+wt "what"
+what
+--
+dt "determine(d)"
+determine${1:d}
+--
+sn "since"
+${1:s}ince
+--
+ts "thus"
+${1:t}hus
+--
+twh "thus
+thus we have
+--
+stwh "so
+so then we have
+--
+wah "we
+we also have
+--
+wa "we
+we also
+--
+swk "so
+so we know
+--
+ws "we
+we say
+--
+swh "so
+so we have
+--
+aswht "and
+and so we have that
+--
+ath "and
+and that
+--
+ww "(W/w)e
+${1:w}e will
+--
+Th "The"
+The
+--
+ass "assum(e/ing)"
+${1:a}ssum${2:ing}
+--
+wh "we
+${1:w}e have
+--
+wk "we
+${1:w}e know
+--
+twk "thus
+${1:t}hus we know
+--
+ho "hold(s)"
+hold${1:s}
+--
+ia "is
+is a
+--
+ina "is
+is not a
+--
+Ts "To
+To show
+--
+whts "we
+we have to show
+--
+wwts "we
+we want to show
+--
+wws "we
+${1:w}e will show
+--
+wms "we
+${1:w}e must show
+--
+oms "one
+${1:o}ne must show
+--
+whs "we
+${1:w}e have shown
+--
+wwn "we
+${1:w}e will now
+--
+wwp "we
+${1:w}e will prove
+--
+ift "it
+it follows that
+--
+fol "following"
+follow${1:ing}
+--
+st "such
+such that
+--
+sot "so
+so that
+--
+sotn "so
+so then
+--
+rc "recall"
+recall
+--
+bc "because"
+because
+--
+bcm "become(s)"
+become${1:s}
+--
+fa "for
+for all
+--
+fey "for
+for every
+--
+fe "for
+for example
+--
+fay "for
+for any
+--
+fs "for
+for some
+--
+te "there
+there exists
+--
+ex "exist"
+exist${1:s}
+--
+nex "not
+not exist${1:s}
+--
+twc "(T/t)hus
+${1:t}hus we conclude
+--
+wkt "we
+${1:w}e know that
+--
+var "variable"
+variable${1:s}
+--
+tfae "the
+the following are equivalent
+--
+wlog "without
+without loss of generality
+--
+chg "change"
+change${1:s}
+--
+prv "prove"
+${1:p}rove
+--
+rmk "remark"
+remark
+--
+eqty "equality"
+equality
+--
+dist "distinct"
+distinct
+--
+arv "arrive"
+arrive
+--
+lat "latter"
+latter
+--
+rem "remember"
+remember
+--
+defd "defined"
+defined
+--
+bde "by
+by definition
+--
+def "definition"
+definition
+--
+tog "together"
+together
+--
+tot "total"
+total
+--
+parti "particular"
+particular
+--
+ft "fact"
+fact
+--
+abv "above"
+above
+--
+seq "sequence"
+\left \\{ a _ { n } \right \\} _ { n = 0 } ^ \infty
+--
+zz "zero"
+zero
+--
+cong "congruent"
+congruent
+--
+rmd "remainder"
+remainder $0
+--
+mod "modulo"
+modulo $0
+--
+mulpl "multiple(s)"
+multiple${1:s} $0
+--
+div "division"
+division $0
+--
+divd "divide"
+divide $0
+--
+divi "divisible"
+divisible $0
+--
+zz "zero"
+0
+--
+gcd "greatest
+\gcd($1)$0
+--
+% "modulo"
+~\%~
+--
+mod "modulo"
+\Mod{$1}$0
+--
+cong "a
+$1 \equiv $2 \;(\bmod\; $3)
+--
+|| "divides"
+\mid$0
+--
+n| "does
+\nmid$0
+--
+t. "therefore"
+\therefore$0
+--
+pos "positive"
+positive${1:ly} $0
+--
+neg "negative"
+negative${1:ly} $0
+--
+fin "finite"
+finite $0
+--
+nz "non-zero"
+non-zero $0
+--
+inf "infinite"
+infinite $0
+--
+abs "absolute
+absolute value $0
+--
+enu "enumerate"
+\begin{enumerate}
+--
+itz "itemize"
+\begin{itemize}
+--
+README.txt algebra
+\item $0
+--
+ali "Align"
+\begin{align*}
+--
+tali "Align"
+\begin{align*}
+--
+gather "Gather"
+\begin{gather*}
+--
+ar "Array"
+\begin{array*}{${1:rl}}
+--
+eq "Equation"
+\begin{equation}
+--
+eqnn "Equation
+\begin{equation*}
+--
+al "Align"
+\begin{align*}
+--
+-A 1
+i=0
+--
+col "column(s)"
+column${1:s} $0
+--
+rred "row
+row reduction $0
+--
+rref "reduced
+reduced row echelon form $0
+--
+mat "matrix"
+matrix $0
+--
+mats "matricies"
+matricies $0
+--
+lc "linear
+linear combination $0
+--
+pl "plane"
+plane $0
+--
+rnt "Rank
+Rank Nullity Theorem $0
+--
+ntlc "linear
+non-trivial linear combination $0
+--
+cxlc "convex
+convex linear combination${1:s} $0
+--
+piv "pivot(s)"
+pivot${1:s} $0
+--
+lin "linear"
+linear $0
+--
+li "linear
+linear independent $0
+--
+lyi "linearly
+linearly independent $0
+--
+lyd "linearly
+linearly dependent $0
+--
+ld "linearly
+linear dependent $0
+--
+sca "scalar"
+scalar${1:s} $0
+--
+eibas "eigen
+eigen basis $0
+--
+eivec "eigen
+eigen vector${1:s} $0
+--
+eival "eigen
+eigen value${1:s} $0
+--
+eisp "eigen
+eigen space $0
+--
+sp "space"
+space $0
+--
+geomul "geometric
+geometric multiplicity $0
+--
+algmul "algebraic
+algebraic multiplicity $0
+--
+ve "vector"
+vector${1:s} $0
+--
+ba "basis"
+basis $0
+--
+nsp "null
+null space $0
+--
+csp "column
+column space $0
+--
+rsp "row
+row space $0
+--
+vsp "vector
+vector space $0
+--
+proj "projection"
+project${1:ion} $0
+--
+ker "kernel"
+kernel $0
+--
+lt "linear
+linear transformation $0
+--
+trns "transformation"
+transformation $0
+--
+tpos "transpose"
+transpose $0
+--
+vspace "vector
+vector space$0 $0
+--
+dim "dimension"
+dimension${1:al} $0
+--
+det "determinant"
+determinant $0
+--
+chpoly "characteristic
+characteristic polynomial $0
+--
+im "image"
+image $0
+--
+orth "orthogonal"
+orthogonal $0
+--
+zv "zero
+zero vector $0
+--
+cpnt "component"
+component $0
+--
+dgzbl "diagonalizable"
+diagonalizable $0
+--
+dgzn "diagonalization"
+diagonalization $0
+--
+utri "upper
+upper triangular $0
+--
+ltri "lower
+lower triangular $0
+--
+trir "triangular"
+triangular $0
+--
+plp "parallelpiped"
+parallelpiped $0
+--
+plg "parallelogram"
+parallelogram $0
+--
+indp "independent"
+independent $0
+--
+dep "dependent"
+dependent $0
+--
+orie "oriented"
+oriented $0
+--
+str "stretch(es)"
+stretch${1:es} $0
+--
+diag "diagonal"
+diagonal $0
+--
+lwr "lower"
+lower $0
+--
+upr "upper"
+upper $0
+--
+vc "Vector"
+\vec{$1}$0
+--
+bv "Basis
+\left[ $1 \right]_{\mathcal{$2}}$0
+--
+comp "Comp"
+\mathit{comp}_{$1} {$2}$0
+--
+proj "Projection"
+\mathit{proj}_{$1} {$2}$0
+--
+span "Span"
+\mathit{span} {$1}$0
+--
+range "Range"
+\mathit{range} \left($1\right)$0
+--
+null "Null
+\mathit{null} \left($1\right)$0
+--
+rank "rank"
+\mathit{rank} \left($1\right)$0
+--
+rref "Row
+\mathit{rref} \left($1\right)$0
+--
+dim "dimension"
+\mathit{dim} \left($1\right)$0
+--
+det "determinant"
+\mathit{det} \left($1\right)$0
+--
+colsp "column
+\mathit{col} \left($1\right)$0
+--
+rowsp "row
+\mathit{row} \left($1\right)$0
+--
+e1 "Basis"
+\vec{e_1}$0
+--
+e2 "Basis"
+\vec{e_2}$0
+--
+e3 "Basis"
+\vec{e_3}$0
+--
+"[^i]mat(rix)?(\d+)x(\d+)" "Generate
+endsnippet
+--
+"imat(rix)?(\d+)x(\d+)" "Generate
+endsnippet
+--
+"(small|[gbBpvV])?ghp(rix)?(\d+)x(\d+)" "Generate
+endsnippet
+--
+3mat "3
+\mat{ $1 \\\\ $2 \\\\ $3 }$0
+--
+4mat "4
+\mat{ $1 \\\\ $2 \\\\ $3 \\\\ $4 }$0
+--
+5mat "4
+\mat{ $1 \\\\ $2 \\\\ $3 \\\\ $4 \\\\ $5 }$0
+--
+3rmat "1
+\mat{ $1 & $2 & $3 }$0
+--
+2mat "2
+\mat{ $1 \\\\ $2 }$0
+--
+2rmat "1
+\mat{ $1 & $2}$0
+--
+ges "Gauss
+gmat$1x$2
+--
+rop "Row
+R_{$1} \mapsto $2R_{$1} ${3: + $4R_{$5}}$0
+--
+rops "Start
+\rowops
+--
+rad "Add
+\add[$1]{$2}{$3}$0
+--
+rmul "Multiply
+\mult{$2}{\cdot $3}$0
+--
+rswap "Swap
+\swap{$1}{$2}$0
+--
+ynn "yn"
+y_{n}$0
+--
+xii "xi"
+x_{i}$0
+--
+yii "yi"
+y_{i}$0
+--
+xjj "xj"
+x_{j}$0
+--
+yjj "yj"
+y_{j}$0
+--
+xp1 "x"
+x_{n+1}$0
+--
+n0 "x"
+n_{0}$0
+--
+xmm "x"
+x_{m}$0
+--
+ss "subscript"
+_{$1}$0
+--
+sbp "sub-super
+_{$1}^{$2}$0
+--
+'([A-Za-z])\d(\d)' "auto
+#`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+--
+'([A-Za-z])_(\d\d)' "auto
+#`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+--
+srel "stackrel"
+\stackrel{$1}{$2}$0
+--
+cal "mathcal"
+\mathcal{$1}$0
+--
+fk "mathfrak"
+\mathfrak{$1}$0
+--
+bb "mathbb"
+\mathbb{$1}$0
+--
+tit "italicized
+\mathit{$1}$0
+--
+bf "text
+\textbf{$1}$0
+--
+txt "text"
+\text{$1}$0
+--
+sxt "spaced
+\text{ $1 }$0
+--
+rhs "right
+right hand side $0
+--
+lhs "left
+left hand side $0
+--
+edbo "expression
+$1 $2 $3 $2 \ldots $2 $4 $2 $5
+--
+sedbo "subscripted
+$1_1 $2 $1_2 $2 \ldots $2 $1_{${3:n}-1} $2 $1_{$3}
+--
+cli "comma
+$1, $2, \ldots, $4, $5
+--
+sli "subscript
+$1_{1}, $1_{2}, \ldots, $1_{$2 - 1}, $1_{$2}$0
+--
+dli "double
+$1_{1}$2_{1} ${3:operation/comma} $1_{2}$2_{2}$3 \ldots$3 $1_{$4 - 1}$2_{$4 - 1}$3 $1_{$4}$2_{$4}$0
+--
+tli "triple
+$1_{1}$2_{1}$3_{1} ${4:operation/comma} $1_{2}$2_{2}$2_{3} $4 \ldots $4 $1_{$5 - 1}$2_{$5 - 1}$3_{$5 - 1} $4 $1_{$5}$2_{$5}$3_{$5}$0
+--
+fvars "some
+$1_{1}, $1_{2}, \dots ,$1_{$2 - 1},$1_{$2}$0
+--
+dvar "some
+$1_{1}$2_{1} $3 $1_{2}$2_{2} $3 dots$4 $3 $1_{$5 - 1}$2_{$5 - 1} $3 $1_{$5}$2_{$5}$0
