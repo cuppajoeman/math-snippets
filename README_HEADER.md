@@ -36,6 +36,7 @@ map <leader>s :call UltiSnips#RefreshSnippets()
 * As of right now there isn't a specific convention for these snippets, but they should be easy to remember or just a small suffix of the actual word.
 * Try to keep collisions to a minimum, and feel free to re-structure the files.
 * If you add snippets try to keep it to at most four keystrokes per word
+* Feel free to improve any of the shell scripts too!
 
 
 TODO's:
