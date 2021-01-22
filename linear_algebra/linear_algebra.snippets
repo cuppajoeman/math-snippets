@@ -3,66 +3,66 @@ from math_snippet_helpers import *
 endglobal
 
 
-def create_matrix(snip):
-
-        matrix_str = (snip.buffer[snip.line].split('mat')[0]+'matrix').strip()
-
-        rows = 'x'.join(snip.buffer[snip.line].split("x", 2)[:-1])
-        cols = 'x'.join(snip.buffer[snip.line].split("x", 2)[-1:])
-
-        int_val = lambda string: int(''.join(s for s in string if s.isdigit()))
-
-        rows = int_val(rows)
-        cols = int_val(cols)
-
-        offset = cols + 1
-
-        line = snip.buffer[snip.line]
-        old_spacing = line[:len(line) - len(line.lstrip()) ]
-
-        snip.buffer[snip.line] = ''
-
-        final_str = old_spacing + "\\begin{"+matrix_str+"}${1:[$2]}\n"
-
-        for i in range(rows):
-                final_str += old_spacing + '\t'
-                final_str += " & ".join(['$' + str(i * cols + j + offset + 2) for j in range(cols)])
-
-                final_str += " \\\\\\\n"
-
-        final_str = final_str[:-4] + '\n'
-
-        final_str += old_spacing + "\\end{"+matrix_str+"}"
-
-        snip.expand_anon(final_str)
-
-
-def create_inline_matrix(snip):
-
-        until = int(snip.cursor[1])
-        rest = snip.buffer[snip.line][until:]
-        given_i = snip.buffer[snip.line][0:until].rfind('i') 
-        given = snip.buffer[snip.line][given_i:until]
-
-        # I don't think we'll be dealing with matricies over 1 digit in size...
-        rows = int(given.split("x", 2)[0][-1])
-        cols = int(given.split("x", 2)[-1][0])
-
-        offset = cols + 3
-
-        snip.buffer[snip.line] = snip.buffer[snip.line][0:until - 7] 
-
-        final_str = "\\mat ${1:[$2]}{"
-
-        for i in range(rows):
-                final_str += ' '
-                final_str += " & ".join(['$' + str(i * cols + j + offset) for j in range(cols)])
-                final_str += " \\\\\\"
-
-        final_str = final_str[:-3] +  "}$0"
-        final_str += rest
-
-        snip.expand_anon(final_str)
+#def create_matrix(snip):
+#
+#        matrix_str = (snip.buffer[snip.line].split('mat')[0]+'matrix').strip()
+#
+#        rows = 'x'.join(snip.buffer[snip.line].split("x", 2)[:-1])
+#        cols = 'x'.join(snip.buffer[snip.line].split("x", 2)[-1:])
+#
+#        int_val = lambda string: int(''.join(s for s in string if s.isdigit()))
+#
+#        rows = int_val(rows)
+#        cols = int_val(cols)
+#
+#        offset = cols + 1
+#
+#        line = snip.buffer[snip.line]
+#        old_spacing = line[:len(line) - len(line.lstrip()) ]
+#
+#        snip.buffer[snip.line] = ''
+#
+#        final_str = old_spacing + "\\begin{"+matrix_str+"}${1:[$2]}\n"
+#
+#        for i in range(rows):
+#                final_str += old_spacing + '\t'
+#                final_str += " & ".join(['$' + str(i * cols + j + offset + 2) for j in range(cols)])
+#
+#                final_str += " \\\\\\\n"
+#
+#        final_str = final_str[:-4] + '\n'
+#
+#        final_str += old_spacing + "\\end{"+matrix_str+"}"
+#
+#        snip.expand_anon(final_str)
+#
+#
+#def create_inline_matrix(snip):
+#
+#        until = int(snip.cursor[1])
+#        rest = snip.buffer[snip.line][until:]
+#        given_i = snip.buffer[snip.line][0:until].rfind('i') 
+#        given = snip.buffer[snip.line][given_i:until]
+#
+#        # I don't think we'll be dealing with matricies over 1 digit in size...
+#        rows = int(given.split("x", 2)[0][-1])
+#        cols = int(given.split("x", 2)[-1][0])
+#
+#        offset = cols + 3
+#
+#        snip.buffer[snip.line] = snip.buffer[snip.line][0:until - 7] 
+#
+#        final_str = "\\mat ${1:[$2]}{"
+#
+#        for i in range(rows):
+#                final_str += ' '
+#                final_str += " & ".join(['$' + str(i * cols + j + offset) for j in range(cols)])
+#                final_str += " \\\\\\"
+#
+#        final_str = final_str[:-3] +  "}$0"
+#        final_str += rest
+#
+#        snip.expand_anon(final_str)
 
 context "math()"
 snippet vc "Vector" iA
