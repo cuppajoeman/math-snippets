@@ -4,46 +4,51 @@ endglobal
 
 
 context "math()"
+snippet ' "prime" iA
+\prime
+endsnippet
+
+context "math()"
 snippet dint "integral" w
-\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}\: d${4:x}$0
+\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}\: d${4:x}
 endsnippet
 
 context "math()"
 snippet int "integral" iA
-\int ${1:${VISUAL}}\: d${2:x}$0
+\int ${1:${VISUAL}}\: d${2:x}
 endsnippet
 
 context "math()"
 snippet taylor "taylor" w
-\sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1$0
+\sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1
 endsnippet
 
 context "math()"
 snippet lim "limit" w
-\lim_{${1:n}\to${2:\infty}}$0
+\lim_{${1:n}\to${2:\infty}}
 endsnippet
 
 context "math()"
 snippet ddx "d/dx" wA
-\frac{d${1:}}{dx}$0
+\frac{d${1:}}{dx}
 endsnippet
 
 context "math()"
 snippet part "d/dx" w
-\frac{\partial ${1:}}{\partial ${2:x}}$0
+\frac{\partial ${1:}}{\partial ${2:x}}
 endsnippet
 
 context "math()"
 snippet oo "\infty" iA
-\infty$0
+\infty
 endsnippet
 
 context "math()"
 snippet >> ">>" iA
-\gg$0
+\gg
 endsnippet
 
 context "math()"
 snippet << "<<" iA
-\ll$0
+\ll
 endsnippet

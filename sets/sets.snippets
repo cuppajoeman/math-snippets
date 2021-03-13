@@ -3,86 +3,86 @@ from math_snippet_helpers import *
 endglobal
 
 context "math()"
-snippet CC "Complex Numbers" iA
+snippet CC "Complex Numbers" A
 \mathbb{C}$0
 endsnippet
 
 context "math()"
-snippet RR "real" iA
+snippet RR "real" A
 \mathbb{R}$0
 endsnippet
 
 context "math()"
-snippet QQ "Q" iA
+snippet QQ "Q" A
 \mathbb{Q}$0
 endsnippet
 
 context "math()"
-snippet NN "N" iA
+snippet NN "N" A
 \mathbb{N}$0
 endsnippet
 
 context "math()"
-snippet ZZ "Z" iA
+snippet ZZ "Z" A
 \mathbb{Z}$0
 endsnippet
 
 context "math()"
-snippet \\\ "setminus" iA
+snippet \\\ "setminus" A
 \setminus$0
 endsnippet
 
 context "math()"
-snippet pwr "Power set" iA
+snippet pwr "Power set" A
 \mathcal{P}($1)$0
 endsnippet
 
 context "math()"
-snippet cc "subset" iA
+snippet sbs "subset" A
 \subseteq$0
 endsnippet
 
 context "math()"
-snippet bs "backwards subset" w
+snippet sps "backwards subset" A
 \supseteq$0
 endsnippet
 
 context "math()"
-snippet c= "subset equal" iA
-\subseteq$0
-endsnippet
-
-context "math()"
-snippet neo "not in " iA
+snippet neo "not an element of" A
 \not\in$0
 endsnippet
 
 context "math()"
-snippet eo "in " A
-\in$0
+snippet eo "element of  " A
+\in
 endsnippet
 
 context "math()"
-snippet ^^ "cap" iA
+snippet ^^ "cap" A
 \cap$0
 endsnippet
 
 context "math()"
-snippet BU "Big Union" iA
+snippet BU "Big Union" A
 \bigcup_{${1:i}=${2:0}}^{${3:n}} ${4:${VISUAL}}$0
 endsnippet
 
 context "math()"
-snippet UU "cup" iA
+snippet BI "Big Intersection" A
+\bigcap_{${1:i}=${2:0}}^{${3:n}} ${4:${VISUAL}}$0
+endsnippet
+
+context "math()"
+snippet UU "cup" A
 \cup$0
 endsnippet
 
 context "math()"
-snippet OO "emptyset" iA
-\emptyset$0
+snippet OO "emptyset" A
+\varnothing
 endsnippet
 
 context "math()"
-snippet set "set" iA
+snippet set "set" A
 \\left\\{ $1 \\right\\}$0
 endsnippet

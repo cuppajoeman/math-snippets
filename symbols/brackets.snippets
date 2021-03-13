@@ -3,52 +3,52 @@ from math_snippet_helpers import *
 endglobal
 
 context "math()"
-snippet obrack "overbracket" iA
+snippet obrack "overbracket" A
 \overbracket{$1}^{$2}$0
 endsnippet
 
 context "math()"
-snippet ubrack "underbracket" iA
+snippet ubrack "underbracket" A
 \underbracket{$1}_{$2}$0
 endsnippet
 
 #context "math()"
-#snippet () "left( right)" iA
+#snippet () "left( right)" AA
 #\left( ${1:${VISUAL}} \right)$0
 #endsnippet
 
-#  Why is it so slow.
+#  Why As At so slow.
 #context "math()"
-#snippet [] "left[ right]" iA
+#snippet [] "left[ right]" AA
 #\left[ ${1:${VISUAL}} \right]$0
 #endsnippet
 
 context "math()"
-snippet pa "left( right)" iA
+snippet pa "left( right)" A
 \left( ${1:${VISUAL}} \right)$0
 endsnippet
 
 context "math()"
-snippet lr| "left| right|" i
+snippet lr| "left| right|" A
 \left| ${1:${VISUAL}} \right|$0
 endsnippet
 
 context "math()"
-snippet lr{ "left\{ right\}" i
+snippet lr{ "left\{ right\}" A
 \left\\{ ${1:${VISUAL}} \right\\}$0
 endsnippet
 
 context "math()"
-snippet lrb "left\{ right\}" i
+snippet lrb "left\{ right\}" A
 \left\\{ ${1:${VISUAL}} \right\\}$0
 endsnippet
 
 context "math()"
-snippet lrs "left[ right]" iA
+snippet sbr "left[ right]" A
 \left[ ${1:${VISUAL}} \right]$0
 endsnippet
 
 context "math()"
-snippet lra "leftangle rightangle" iA
-\left<${1:${VISUAL}} \right>$0
+snippet lra "leftangle rightangle" A
+\langle${1:${VISUAL}} \rangle
 endsnippet

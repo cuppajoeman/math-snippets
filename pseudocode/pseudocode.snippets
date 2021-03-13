@@ -1,0 +1,40 @@
+global !p
+from math_snippet_helpers import *
+endglobal
+
+snippet alg "Create Algorithm" iA
+\textbf{Algorithm} $1 \textbf{is}
+	\textbf{inputs}: $2
+\textbf{end Algorithm} $1 \textbf{is}
+endsnippet
+
+snippet fx "function evalution" iA
+$1($2)
+endsnippet
+
+snippet ass "variable assigment" iA
+$1 $\leftarrow$ $2
+endsnippet
+
+snippet for  "for loop" w
+\textbf{for} $1 $\leftarrow$ \textbf{to} $2 \textbf{do}
+	$3
+\textbf{end}
+endsnippet
+
+snippet if  "if statement" w
+\textbf{if} $1 \textbf{then}
+	$2
+\textbf{end}
+endsnippet
+
+snippet else "else statement" w
+\textbf{else}
+	$1
+endsnippet
+
+snippet elif  "if statement" w
+\textbf{else if} $1 \textbf{then}
+	$2
+endsnippet
+

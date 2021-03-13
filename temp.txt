@@ -1,0 +1,38 @@
+output.txt:295:snippet limp "implies" Aw
+output.txt:2499:limp "implies"
+output.txt:4475:snippet limp "implies" Aw
+output.txt:6682:limp "implies"
+output.txt:10027:limp "implies"
+output.txt:12004:limp "implies"
+logic/logic_symbols.snippets:26:snippet Limp "implies" Aw
+logic/logic_symbols.snippets:31:snippet limp "implies" Aw
+README.MD:179:* limp "implies" ~> \Leftarrow
+README.MD:1287:* limp "implies" ~> \Leftarrow
+README.MD:2505:* limp "implies" ~> \Leftarrow
+README.MD:3247:* limp "implies" ~> \Leftarrow
+README.MD:4355:* limp "implies" ~> \Leftarrow
+README.MD:5573:* limp "implies" ~> \Leftarrow
+README.MD:6324:* limp "implies" ~> \Leftarrow
+README.MD:7432:* limp "implies" ~> \Leftarrow
+README.MD:8650:* limp "implies" ~> \Leftarrow
+README.MD:9400:* limp "implies" ~> \Leftarrow
+README.MD:10508:* limp "implies" ~> \Leftarrow
+README.MD:11726:* limp "implies" ~> \Leftarrow
+README.MD:12509:* limp "implies" ~> \Leftarrow
+README.MD:13617:* limp "implies" ~> \Leftarrow
+README.MD:14835:* limp "implies" ~> \Leftarrow
+all_snips.md:137:* limp "implies" ~> \Leftarrow
+all_snips.md:1245:* limp "implies" ~> \Leftarrow
+all_snips.md:2463:* limp "implies" ~> \Leftarrow
+all_snips.md:3205:* limp "implies" ~> \Leftarrow
+all_snips.md:4313:* limp "implies" ~> \Leftarrow
+all_snips.md:5531:* limp "implies" ~> \Leftarrow
+all_snips.md:6282:* limp "implies" ~> \Leftarrow
+all_snips.md:7390:* limp "implies" ~> \Leftarrow
+all_snips.md:8608:* limp "implies" ~> \Leftarrow
+all_snips.md:9358:* limp "implies" ~> \Leftarrow
+all_snips.md:10466:* limp "implies" ~> \Leftarrow
+all_snips.md:11684:* limp "implies" ~> \Leftarrow
+all_snips.md:12467:* limp "implies" ~> \Leftarrow
+all_snips.md:13575:* limp "implies" ~> \Leftarrow
+all_snips.md:14793:* limp "implies" ~> \Leftarrow
