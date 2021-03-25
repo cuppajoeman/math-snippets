@@ -1,0 +1,3 @@
+# allows me to get complete snippets
+[cjm@cjm math-snippets]$ find $(pwd -L) -type f -name "*.snippets" -printf '%f\n' | grep complete >> prebuilt_contexts/prebuilt-everything.snippets 
+
