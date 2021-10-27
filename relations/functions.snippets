@@ -5,27 +5,32 @@ endglobal
 
 context "math()"
 snippet predi "predicate" iA
-$1($2): \`\` $3 "\text{, where } $2 \in $4$0
+$1($2): \`\` $3 "\text{, where } $2 \in $4 $0
+endsnippet
+
+context "math()"
+snippet fdom "domain of f" A
+\operatorname{dom} \left( $1 \right) $0
 endsnippet
 
 context "math()"
 snippet ceil "ceil" iA
-\left\lceil $1 \right\rceil$0
+\left\lceil $1 \right\rceil $0
 endsnippet
 
 context "math()"
 snippet bceil "ceil" iA
-\bigl\lceil $1 \bigr\rceil$0
+\bigl\lceil $1 \bigr\rceil $0
 endsnippet
 
 context "math()"
 snippet flr "floor" iA
-\left\lfloor $1 \right\rfloor$0
+\left\lfloor $1 \right\rfloor $0
 endsnippet
 
 context "math()"
 snippet log "logarthm" iA
-\log_{${1:n}}($2)$0
+\log_{${1:n}}($2) $0
 endsnippet
 
 context "math()"
@@ -35,26 +40,26 @@ endsnippet
 
 context "math()"
 snippet fx "function at x" iA
-${1:f}\left(${2:x}\right)$0
+${1:f}\left( ${2:x} \right) $0
 endsnippet
 
 context "math()"
 snippet fog "function composition" i
-${1:f} \circ ${2:g}$0
+${1:f} \circ ${2:g} $0
 endsnippet
 
 
 context "math()"
 snippet mpt "mapsto" iA
-\mapsto$0
+\mapsto $0
 endsnippet
 
 context "math()"
 snippet to "to" iA
-\to$0
+\to $0
 endsnippet
 
 context "math()"
 snippet '(?<!\\)ln' "ln" rwA
-\ln($1)$0
+\ln($1) $0
 endsnippet

@@ -2,80 +2,72 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
-
 context "math()"
 snippet pp "add two numbers" A
- + 
++ $0
 endsnippet
 
 context "math()"
 snippet pm "plus-minus" A
-\pm 
+\pm $0
 endsnippet
 
 context "math()"
 snippet nn "add the negative" A
- - 
+- $0
 endsnippet
 
 context "math()"
 snippet mm "multiply two numbers" A
- \cdot 
+\cdot $0
 endsnippet
-
 
 context "math()"
 snippet xx "cross" A
-\times$0
+\times $0
 endsnippet
-
-context "math()"
-snippet ** "cdot" A
-\cdot$0
-endsnippet
-
 
 context "math()"
 snippet sq "\sqrt{}" A
-\sqrt{${1:${VISUAL}}}$0
+\sqrt{ $1 } $0
 endsnippet
 
 context "math()"
 snippet norm "norm" A
-\left\Vert $1 \right\Vert$0
+\left\Vert $1 \right\Vert $0
 endsnippet
 
 context "math()"
 snippet abs "absolute" A
-\left| $1 \right|$0
+\left| $1 \right| $0
 endsnippet
 
 context "math()"
 snippet ttt "^2" A
-^2$0
+^2 $0
 endsnippet
 
 context "math()"
 snippet cb "^3" A
-^3$0
+^3 $0
 endsnippet
 
 context "math()"
 snippet tt "to the ... power" A
-^{$1}$0
+^{ $1 } $0
 endsnippet
 
 context "math()"
 snippet min "minimum" A
-\min\left($1, $2\right)$0
+\min\left( $1 , $2 \right) $0
 endsnippet
 
 context "math()"
 snippet max "maximum" A
-\max\left($1, $2\right)$0
+\max\left( $1 , $2 \right) $0
 endsnippet
 
 context "math()"
 snippet invs "inverse" A
-^{-1}$0
+^{-1} $0
 endsnippet

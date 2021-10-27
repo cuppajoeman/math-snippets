@@ -28,9 +28,11 @@ context "math()"
 snippet '(?<!\\)arctan' "tan" rwA
 \arctan $1 \left( ${2:\theta} \right)$0
 endsnippet
-# snippet '(?<!arc)(?<!\\)tan' "tan" rwA
-# \tan
-# endsnippet
+
+context "math()"
+snippet '(?<!arc)(?<!\\)tan' "tan" rwA
+\tan $1 \left( ${2:\theta} \right)$0
+endsnippet
 
 context "math()"
 snippet '(?<!\\)arccot' "cot" rwA

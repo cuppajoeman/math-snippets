@@ -2,72 +2,80 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
-snippet cen "center" bA
+snippet Ecen "center" bA
 \begin{center}
 	${1:${VISUAL}}
 \end{center}
 endsnippet
 
-snippet enu "enumerate" bA
+snippet Eca "cases" bA
+\begin{cases}
+	${1:${VISUAL}}
+\end{cases}
+endsnippet
+
+snippet Een "enumerate" bA
 \begin{enumerate}
 	${1:${VISUAL}}
 \end{enumerate}
 endsnippet
 
-snippet pf "custom proof env" bA
-\begin{pf}
-	${1:${VISUAL}}
-\end{pf}
-endsnippet
 
-snippet itz "itemize" bA
+snippet Eiz "itemize" bA
 \begin{itemize}
-	${1:${VISUAL}}
+	\item $0
 \end{itemize}
 endsnippet
 
-snippet * "bullet point in list" A
+snippet E* "bullet point in list" A
 \item $0
 endsnippet
 
 
-snippet ali "Align" bA
+snippet Eal "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
 \end{align*}
 endsnippet
 
-snippet tali "Align" bA
+snippet Etali "Align" bA
 \begin{align*}
 	$1 && $2
 \end{align*}
 endsnippet
 
-snippet gather "Gather" bA
+snippet Egather "Gather" bA
 \begin{gather*}
 	${1:${VISUAL}}
 \end{gather*}
 endsnippet
 
-snippet ar "Array" b
+snippet Ear "Array" b
 \begin{array*}{${1:rl}}
 	${2:} &= $3\\\\
 \end{array*}
 endsnippet
 
-snippet eq "Equation" b
+snippet Eeq "Equation" b
 \begin{equation}
 	$0
 \end{equation}
 endsnippet
 
-snippet eqnn "Equation without number" b
+snippet Eeqnn "Equation without number" b
 \begin{equation*}
 	$0
 \end{equation*}
 endsnippet
 
-snippet al "Align" b
+snippet Eex "examples" bA
+\subsubsection*{Examples}
+\begin{itemize}
+	$0
+\end{itemize}
+endsnippet
+
+snippet Eal "Align" b
 \begin{align*}
 	$0
 \end{align*}

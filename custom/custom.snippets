@@ -1,0 +1,33 @@
+global !p
+from math_snippet_helpers import *
+endglobal
+
+snippet kref "knowledge graph reference" A
+(\kref{$1}{$\mathfrak{K.G}$})
+endsnippet
+
+context "math()"
+snippet kg= "knowledge graph equals" A
+\stackrel{\kref{$1}{\mathfrak{K.G}}}{=} $0
+endsnippet
+
+
+snippet pf "custom proof env" bA
+\begin{pf}
+	${1:${VISUAL}}
+\end{pf}
+endsnippet
+
+snippet ex "custom example env" bA
+\begin{ex}
+	${1:${VISUAL}}
+\end{ex}
+endsnippet
+
+
+snippet rmk "custom remark env" bA
+\begin{rmk}
+	${1:${VISUAL}}
+\end{rmk}
+endsnippet
+

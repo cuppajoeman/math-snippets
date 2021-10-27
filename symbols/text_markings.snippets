@@ -17,12 +17,23 @@ snippet not "not" iA
 \not
 endsnippet
 
+context "math()"
+snippet cpl "complement" iA
+^{\complement}
+endsnippet
+
+
 snippet uline "underline" w
 \underline{$1}$0
 endsnippet
 
 snippet hat "hat" A
 \widehat{$1}
+endsnippet
+
+context "math()"
+snippet dum "dummy variable" A
+_{${1:i}=${2:0}} ^{${3:n}} $0
 endsnippet
 
 context "math()"
