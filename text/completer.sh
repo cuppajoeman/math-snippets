@@ -1,6 +1,7 @@
 #!/bin/bash
 rename 's/_/-/g' *
-touch $1
+# empty the file
+echo -n > $1
 for filename in *; do
   if [ "$filename" != "completer.sh" ] && [ "$filename" != "$1" ] 
   then

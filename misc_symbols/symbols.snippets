@@ -3,42 +3,45 @@ from math_snippet_helpers import *
 endglobal
 
 context "math()"
+snippet nabl "nabla" iA
+\nabla $0
+endsnippet
+
+context "math()"
+snippet star "star" iA
+\star $0
+endsnippet
+
+context "math()"
+snippet ring "ring" iA
+\mathring{$1} $0
+endsnippet
+
+context "math()"
 snippet defeq "definition equals" iA
-\stackrel{\mathtt{D}}{=}
+\stackrel{\mathtt{D}}{=} $0
 endsnippet
 
 context "math()"
 snippet bar "overline" iA
-\overline{$1}$0
+\overline{$1} $0
 endsnippet
 
 context "math()"
 snippet not "not" iA
-\not
+\not $0
 endsnippet
 
 context "math()"
 snippet cpl "complement" iA
-^{\complement}
+^{\complement} $0
 endsnippet
 
 
 snippet uline "underline" w
-\underline{$1}$0
+\underline{$1} $0
 endsnippet
 
 snippet hat "hat" A
-\widehat{$1}
-endsnippet
-
-context "math()"
-snippet dum "dummy variable" A
-_{${1:i}=${2:0}} ^{${3:n}} $0
-endsnippet
-
-context "math()"
-snippet dag "dag" bA
-\dag{`date +'%A %0d %B' | sed 's/.*/\u&/'`}
-
-$0
+\widehat{$1} $0
 endsnippet

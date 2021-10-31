@@ -4,60 +4,66 @@ endglobal
 
 
 context "math()"
-snippet C' "prime" iA
+snippet ' "prime" iA
 \prime
 endsnippet
 
 context "math()"
-snippet Cdint "integral" w
+snippet dint "integral" w
 \int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}\: d${4:x}
 endsnippet
 
 context "math()"
-snippet Cint "integral" iA
+snippet int "integral" iA
 \int ${1:${VISUAL}}\: d${2:x}
 endsnippet
 
 context "math()"
-snippet Ctaylor "taylor" w
+snippet taylor "taylor" w
 \sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1
 endsnippet
 
 context "math()"
-snippet Clim "limit" A
+snippet lim "limit" A
 \lim_{ ${1:x} \to ${2:a} }
 endsnippet
 
 context "math()"
-snippet CDlim "Calculus Definition limit" A
+snippet Dlim "Calculus Definition limit" A
 \forall \varepsilon \in \mathbb{R} ^{ + } , \exists \delta \in \mathbb{R} ^{ + }, \forall x \in  \operatorname{ dom } \left( f \right), \left| x -  a  \right| < \delta \Rightarrow \left| f\left( x \right) - L \right|  \varepsilon
 endsnippet
 
 context "math()"
-snippet CDmlim "Calculus Definition multivariable limit" A
+snippet Dmlim "Calculus Definition multivariable limit" A
 endsnippet
 
 context "math()"
-snippet Cddx "d/dx" wA
+snippet ddx "d/dx" wA
 \frac{d${1:}}{dx}
 endsnippet
 
+
 context "math()"
-snippet Cpart "d/dx" w
+snippet dird "directional derivative" w
+\partial_{\vec{$1}} $2 \left( $3 \right) $0 
+endsnippet
+
+context "math()"
+snippet pard "partial derivative" w
 \frac{\partial ${1:}}{\partial ${2:x}}
 endsnippet
 
 context "math()"
-snippet Coo "\infty" iA
+snippet oo "\infty" iA
 \infty
 endsnippet
 
 context "math()"
-snippet C>> ">>" iA
+snippet >> ">>" iA
 \gg
 endsnippet
 
 context "math()"
-snippet C<< "<<" iA
+snippet << "<<" iA
 \ll
 endsnippet

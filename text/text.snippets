@@ -1,0 +1,38 @@
+global !p
+from math_snippet_helpers import *
+endglobal
+
+context "math()"
+snippet oname "operatorname" w
+\operatorname{ $1 }$0 
+endsnippet
+
+context "math()"
+snippet srel "stackrel" w
+\stackrel{ $1 }{$2} $0 
+endsnippet
+
+context "math()"
+snippet cal "mathcal" w
+\mathcal{ $1 } $0 
+endsnippet
+
+context "math()"
+snippet fk "mathfrak" w
+\mathfrak{ $1 } $0 
+endsnippet
+
+context "math()"
+snippet bb "mathbb" w
+\mathbb{ $1 } $0 
+endsnippet
+
+snippet bf "text bf" w
+\textbf{ $1 } $0 
+endsnippet
+
+context "math()"
+snippet txt "text" w
+~\text{$1}~ $0 
+endsnippet
+
