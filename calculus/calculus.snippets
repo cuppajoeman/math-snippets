@@ -2,20 +2,19 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
-
 context "math()"
 snippet ' "prime" iA
-\prime
+\prime $0
 endsnippet
 
 context "math()"
 snippet dint "integral" w
-\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}\: d${4:x}
+\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}\: d${4:x} $0
 endsnippet
 
 context "math()"
 snippet int "integral" iA
-\int ${1:${VISUAL}}\: d${2:x}
+\int ${1:${VISUAL}}\: d${2:x} $0
 endsnippet
 
 context "math()"
@@ -25,23 +24,19 @@ endsnippet
 
 context "math()"
 snippet lim "limit" A
-\lim_{ ${1:x} \to ${2:a} }
+\lim_{ ${1:x} \to ${2:a} } $0
 endsnippet
 
 context "math()"
 snippet Dlim "Calculus Definition limit" A
-\forall \varepsilon \in \mathbb{R} ^{ + } , \exists \delta \in \mathbb{R} ^{ + }, \forall x \in  \operatorname{ dom } \left( f \right), \left| x -  a  \right| < \delta \Rightarrow \left| f\left( x \right) - L \right|  \varepsilon
+\forall \varepsilon \in \mathbb{R} ^{ + } , \exists \delta \in \mathbb{R} ^{ + }, \forall x \in  \operatorname{ dom } \left( f \right), \left| x -  a  \right| < \delta \Rightarrow \left| f\left( x \right) - L \right|  \varepsilon $0
 endsnippet
 
-context "math()"
-snippet Dmlim "Calculus Definition multivariable limit" A
-endsnippet
 
 context "math()"
 snippet ddx "d/dx" wA
-\frac{d${1:}}{dx}
+\frac{d${1:}}{dx} $0
 endsnippet
-
 
 context "math()"
 snippet dird "directional derivative" w
@@ -49,21 +44,21 @@ snippet dird "directional derivative" w
 endsnippet
 
 context "math()"
-snippet pard "partial derivative" w
-\frac{\partial ${1:}}{\partial ${2:x}}
+snippet pd "partial derivative" w
+\frac{\partial ${1:}}{\partial ${2:x}} $0
 endsnippet
 
 context "math()"
 snippet oo "\infty" iA
-\infty
+\infty $0
 endsnippet
 
 context "math()"
 snippet >> ">>" iA
-\gg
+\gg $0
 endsnippet
 
 context "math()"
 snippet << "<<" iA
-\ll
+\ll $0
 endsnippet

@@ -18,8 +18,13 @@ snippet Vimp "vertical bi-implication useful for gather env" Ai
 endsnippet
 
 context "math()"
-snippet tst "turnstile" Ai
+snippet ded "deduces" Ai
 \vdash $0
+endsnippet
+
+context "math()"
+snippet con "deduces" Ai
+\bot $0
 endsnippet
 
 context "math()"
@@ -48,7 +53,7 @@ snippet && "AND" iA
 endsnippet
 
 context "math()"
-snippet not "NOT" iA
+snippet ~ "NOT" iA
 \neg $0
 endsnippet
 
@@ -107,7 +112,3 @@ snippet iff "iff" Ai
 \iff $0
 endsnippet
 
-context "math()"
-snippet ~ "similar" Ai
-\sim $0
-endsnippet
