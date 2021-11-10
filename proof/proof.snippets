@@ -2,27 +2,23 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
-snippet prf "Proof" b
+snippet pf "Proof" bA
 \begin{proof}
-	$ $\newline
-	${1:${VISUAL}}
+	$0
 \end{proof}
 endsnippet
 
-snippet prfbind "Proof by induction" b
-\begin{proof}
-	$ $\newline
+
+
+snippet pind "Proof by induction" b
+\begin{itemize}
+	\item Base Case
 	\begin{itemize}
-	  \item We start by defining the following predicate: $1
-		\begin{itemize}
-			\item \textbf{Base Case:}\\\\
-				We show that $P(${2:0})$ holds, we know $3
-			\item \textbf{Induction Step:}\\\\
-				Let $k \in \mathbb{N}$ and assume that $P(k)$ holds, that is $4
-				We'll show that $P(k + 1)$ holds, so we must show that $5
-				We know $6
-		\end{itemize}
+		\item $1
 	\end{itemize}
-	Thus by the principle of induction we have proven the original statement.
-\end{proof}
+	\item Induction Step
+	\begin{itemize}
+		\item $2
+	\end{itemize}
+\end{itemize}
 endsnippet

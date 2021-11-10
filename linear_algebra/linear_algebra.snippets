@@ -106,6 +106,17 @@ snippet "(small|[gbBpvV])?ghp(rix)?(\d+)x(\d+)" "Generate (small|[bBpvV])?matrix
 endsnippet
 
 context "math()"
+snippet arbmat "arbitrary matrix" w
+\begin{bmatrix}
+		$1 & $2 & \ldots & $3 & $4    \\\\
+		$5 & $6 & \ldots & $7 & $8    \\\\
+	\vdots &    & \ddots &    & \vdots\\\\
+		$9 & $10 & \ldots & $11 & $12 \\\\
+		$13 & $14 & \ldots & $15 & $16 
+\end{bmatrix}
+endsnippet
+
+context "math()"
 snippet 3mat "3 by 1 Matrix" A
 \mat{ $1 \\\\ $2 \\\\ $3 } $0
 endsnippet

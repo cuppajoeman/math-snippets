@@ -3,17 +3,17 @@ from math_snippet_helpers import *
 endglobal
 
 context "math()"
-snippet bs "subscript" w
+snippet ss "subscript (subscript)" A
 _{ $1 } $0
 endsnippet
 
 context "math()"
-snippet ps "superscript" w
-_{ $1 } $0
+snippet tt "superscript (to the)" A
+^{ $1 } $0
 endsnippet
 
 context "math()"
-snippet bps "sub-super script" w
+snippet st "sub-super script" A
 _{ $1 }^{ $2 } $0
 endsnippet
 
