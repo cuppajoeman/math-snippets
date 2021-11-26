@@ -23,8 +23,23 @@ snippet fk "mathfrak" w
 endsnippet
 
 context "math()"
+snippet ty "typewriter/programming font" w
+\texttt{ $1 } $0
+endsnippet
+
+context "math()"
+snippet uset "underset" w
+\underset{ $1 }{ $2 } $0
+endsnippet
+
+context "math()"
 snippet bb "mathbb" A
 \mathbb{ $1 } $0 
+endsnippet
+
+context "math()"
+snippet amp "ampersand" A
+\enspace \& \enspace $0
 endsnippet
 
 context "math()"

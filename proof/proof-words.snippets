@@ -2,30 +2,82 @@ global !p
 from math_snippet_helpers import *
 endglobal
 
-snippet defsetup "Sets up a definition" w
-Suppose that $1, then we say that $2, when the following holds: 
-\[
-	$3
-\]$0
+snippet t. "therefore randomly" A
+`!p 
+import random as r
+pre = [
+	"thus",
+	"therefore",
+	"so",
+	"due to this",
+]
+mid = [
+	"we have",
+	"it holds",
+	"we have",
+	"we can see",
+	"we know",
+	"we note",
+	"it follows",
+	"one can see",
+	"we observe",
+	"it yields",
+	"it means",
+]
+post = [
+	"that",
+	"",
+]
+
+standalone = [
+	"yielding",
+	"in other words"
+]
+
+
+constructed = f"{r.choice(pre)} {r.choice(mid)} \
+{r.choice(post)}"
+
+result = constructed
+
+if r.random() > 1 - 0.2: # 0.2 percent chance
+	result = r.choice(standalone)
+
+if not snip.c: 
+	snip.rv = result + ' '
+`
 endsnippet
 
-snippet thmsetup "Sets up a theorem" w
-Suppose that $1, then the following holds: 
-\[
-	$2
-\]$0
+snippet sp "suppose" w
+suppose $0
+endsnippet
+
+snippet fs "for some" w
+for some $0
+endsnippet
+
+snippet wrt "with respect to" w
+with respect to $0
+endsnippet
+
+snippet tfae "the following are equivalent" w
+the following are equivalent $0
+endsnippet
+
+snippet te "there exists" w
+there exists $0
+endsnippet
+
+snippet iow "in other words" w
+in other words $0
+endsnippet
+
+snippet def "definition" w
+definition $0
 endsnippet
 
 snippet st "such that" w
 such that $0
-endsnippet
-
-snippet wcst "we can see that" w
-we can see that $0
-endsnippet
-
-snippet wkt "we know that" w
-we know that $0
 endsnippet
 
 snippet ftsoc "for the sake of contradiction" w
